@@ -1,0 +1,24 @@
+E:\Vienauto\Bitbucket\Vienauto\Core Library\Common.vdCore\bin\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Core Library\Common.vdCore\bin\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\Core Library\Common.vdCore\obj\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Core Library\Common.vdCore\obj\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\Framework\Common.vdCore\bin\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Framework\Common.vdCore\bin\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\Framework\Common.vdCore\obj\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Framework\Common.vdCore\obj\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\bin\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\bin\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\obj\Debug\Common.vdCore.csproj.CoreCompileInputs.cache
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\obj\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\obj\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Framework\Common.vdCore\bin\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\GarageManagement\Framework\Common.vdCore\bin\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Framework\Common.vdCore\obj\Debug\Common.vdCore.csproj.CoreCompileInputs.cache
+E:\Vienauto\Bitbucket\GarageManagement\Framework\Common.vdCore\obj\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\GarageManagement\Framework\Common.vdCore\obj\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\bin\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\bin\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\obj\Debug\Common.vdCore.csproj.CoreCompileInputs.cache
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\obj\Debug\Common.vdCore.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\obj\Debug\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\obj\Debug\Common.vdCore.csprojResolveAssemblyReference.cache

@@ -1,0 +1,11 @@
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\bin\Release\GarageManagement.Tracking.Entity.dll.config
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\bin\Release\GarageManagement.Tracking.Entity.dll
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\bin\Release\GarageManagement.Tracking.Entity.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\bin\Release\EntityFramework.dll
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\bin\Release\EntityFramework.SqlServer.dll
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\bin\Release\EntityFramework.xml
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\bin\Release\EntityFramework.SqlServer.xml
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\obj\Release\GarageManagement.Tracking.Entity.csproj.CoreCompileInputs.cache
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\obj\Release\GarageManagement.Tracking.Entity.dll
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\obj\Release\GarageManagement.Tracking.Entity.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Tracking.Entity\obj\Release\GarageManagement.Tracking.Entity.csprojResolveAssemblyReference.cache

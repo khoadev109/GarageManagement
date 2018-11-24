@@ -1,0 +1,9 @@
+E:\Vienauto\Bitbucket\Vienauto\vdcore\bin\Debug\vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\vdcore\bin\Debug\vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\vdcore\obj\Debug\vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\vdcore\obj\Debug\vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\vdcore\obj\Debug\vdCore.csprojResolveAssemblyReference.cache
+E:\Vienauto\Bitbucket\Vienauto\Core Library\vdcore\bin\Debug\vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Core Library\vdcore\bin\Debug\vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\Core Library\vdcore\obj\Debug\vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Core Library\vdcore\obj\Debug\vdCore.pdb

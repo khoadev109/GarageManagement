@@ -1,0 +1,640 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "AutoMapper/6.2.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net45/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AutoMapper.dll": {}
+        }
+      },
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Common.Core/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.vdCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.Core.dll": {}
+        }
+      },
+      "Common.vdCore/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Common.vdCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.vdCore.dll": {}
+        }
+      },
+      "GarageManagement.Garage.Entity/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GarageManagement.Garage.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Garage.Entity.dll": {}
+        }
+      },
+      "GarageManagement.Infrastructure/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0",
+          "GarageManagement.RepositoryInterface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Infrastructure.dll": {}
+        }
+      },
+      "GarageManagement.RepositoryInterface/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "Common.vdCore": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.RepositoryInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.RepositoryInterface.dll": {}
+        }
+      },
+      "GarageManagement.ServiceInterface/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "Common.vdCore": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0",
+          "GarageManagement.RepositoryInterface": "1.0.0",
+          "GarageManagement.Tracking.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.ServiceInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.ServiceInterface.dll": {}
+        }
+      },
+      "GarageManagement.Tracking.Entity/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GarageManagement.Tracking.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Tracking.Entity.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win": {
+      "AutoMapper/6.2.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net45/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AutoMapper.dll": {}
+        }
+      },
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Common.Core/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.vdCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.Core.dll": {}
+        }
+      },
+      "Common.vdCore/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Common.vdCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.vdCore.dll": {}
+        }
+      },
+      "GarageManagement.Garage.Entity/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GarageManagement.Garage.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Garage.Entity.dll": {}
+        }
+      },
+      "GarageManagement.Infrastructure/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0",
+          "GarageManagement.RepositoryInterface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Infrastructure.dll": {}
+        }
+      },
+      "GarageManagement.RepositoryInterface/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "Common.vdCore": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.RepositoryInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.RepositoryInterface.dll": {}
+        }
+      },
+      "GarageManagement.ServiceInterface/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "Common.vdCore": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0",
+          "GarageManagement.RepositoryInterface": "1.0.0",
+          "GarageManagement.Tracking.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.ServiceInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.ServiceInterface.dll": {}
+        }
+      },
+      "GarageManagement.Tracking.Entity/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GarageManagement.Tracking.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Tracking.Entity.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win-x64": {
+      "AutoMapper/6.2.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net45/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AutoMapper.dll": {}
+        }
+      },
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Common.Core/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.vdCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.Core.dll": {}
+        }
+      },
+      "Common.vdCore/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Common.vdCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.vdCore.dll": {}
+        }
+      },
+      "GarageManagement.Garage.Entity/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GarageManagement.Garage.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Garage.Entity.dll": {}
+        }
+      },
+      "GarageManagement.Infrastructure/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0",
+          "GarageManagement.RepositoryInterface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Infrastructure.dll": {}
+        }
+      },
+      "GarageManagement.RepositoryInterface/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "Common.vdCore": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.RepositoryInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.RepositoryInterface.dll": {}
+        }
+      },
+      "GarageManagement.ServiceInterface/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "Common.vdCore": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0",
+          "GarageManagement.RepositoryInterface": "1.0.0",
+          "GarageManagement.Tracking.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.ServiceInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.ServiceInterface.dll": {}
+        }
+      },
+      "GarageManagement.Tracking.Entity/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GarageManagement.Tracking.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Tracking.Entity.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win-x86": {
+      "AutoMapper/6.2.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net45/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AutoMapper.dll": {}
+        }
+      },
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Common.Core/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.vdCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.Core.dll": {}
+        }
+      },
+      "Common.vdCore/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Common.vdCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.vdCore.dll": {}
+        }
+      },
+      "GarageManagement.Garage.Entity/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GarageManagement.Garage.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Garage.Entity.dll": {}
+        }
+      },
+      "GarageManagement.Infrastructure/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0",
+          "GarageManagement.RepositoryInterface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Infrastructure.dll": {}
+        }
+      },
+      "GarageManagement.RepositoryInterface/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "Common.vdCore": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.RepositoryInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.RepositoryInterface.dll": {}
+        }
+      },
+      "GarageManagement.ServiceInterface/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Common.Core": "1.0.0",
+          "Common.vdCore": "1.0.0",
+          "GarageManagement.Garage.Entity": "1.0.0",
+          "GarageManagement.RepositoryInterface": "1.0.0",
+          "GarageManagement.Tracking.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GarageManagement.ServiceInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.ServiceInterface.dll": {}
+        }
+      },
+      "GarageManagement.Tracking.Entity/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GarageManagement.Tracking.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GarageManagement.Tracking.Entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AutoMapper/6.2.2": {
+      "sha512": "eGKcnJdoF5rYMWPUaSPtlWdvua9xw4hnQN5kM/X4AXLGKghrtPIaMv+RYoA3sj0kyZ3X6wZ1Qj67F+u0pCCPaw==",
+      "type": "package",
+      "path": "automapper/6.2.2",
+      "files": [
+        "automapper.6.2.2.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net40/AutoMapper.dll",
+        "lib/net40/AutoMapper.xml",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.xml",
+        "lib/netstandard1.1/AutoMapper.dll",
+        "lib/netstandard1.1/AutoMapper.xml",
+        "lib/netstandard1.3/AutoMapper.dll",
+        "lib/netstandard1.3/AutoMapper.xml"
+      ]
+    },
+    "EntityFramework/6.2.0": {
+      "sha512": "ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+      "type": "package",
+      "path": "entityframework/6.2.0",
+      "files": [
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.transform",
+        "entityframework.6.2.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "tools/EntityFramework.PowerShell.Utility.dll",
+        "tools/EntityFramework.PowerShell.dll",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/migrate.exe"
+      ]
+    },
+    "Common.Core/1.0.0": {
+      "type": "project",
+      "path": "../../Library/Common.Core/Common.Core.csproj",
+      "msbuildProject": "../../Library/Common.Core/Common.Core.csproj"
+    },
+    "Common.vdCore/1.0.0": {
+      "type": "project",
+      "path": "../../Library/Common.vdCore/Common.vdCore.csproj",
+      "msbuildProject": "../../Library/Common.vdCore/Common.vdCore.csproj"
+    },
+    "GarageManagement.Garage.Entity/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/GarageManagement.Garage.Entity/GarageManagement.Garage.Entity.csproj",
+      "msbuildProject": "../../Domain/GarageManagement.Garage.Entity/GarageManagement.Garage.Entity.csproj"
+    },
+    "GarageManagement.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../GarageManagement.Infrastructure/GarageManagement.Infrastructure.csproj",
+      "msbuildProject": "../GarageManagement.Infrastructure/GarageManagement.Infrastructure.csproj"
+    },
+    "GarageManagement.RepositoryInterface/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/GarageManagement.RepositoryInterface/GarageManagement.RepositoryInterface.csproj",
+      "msbuildProject": "../../Domain/GarageManagement.RepositoryInterface/GarageManagement.RepositoryInterface.csproj"
+    },
+    "GarageManagement.ServiceInterface/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/GarageManagement.ServiceInterface/GarageManagement.ServiceInterface.csproj",
+      "msbuildProject": "../../Domain/GarageManagement.ServiceInterface/GarageManagement.ServiceInterface.csproj"
+    },
+    "GarageManagement.Tracking.Entity/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/GarageManagement.Tracking.Entity/GarageManagement.Tracking.Entity.csproj",
+      "msbuildProject": "../../Domain/GarageManagement.Tracking.Entity/GarageManagement.Tracking.Entity.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "AutoMapper >= 6.2.2",
+      "Common.Core >= 1.0.0",
+      "Common.vdCore >= 1.0.0",
+      "EntityFramework >= 6.2.0",
+      "GarageManagement.Garage.Entity >= 1.0.0",
+      "GarageManagement.Infrastructure >= 1.0.0",
+      "GarageManagement.RepositoryInterface >= 1.0.0",
+      "GarageManagement.ServiceInterface >= 1.0.0",
+      "GarageManagement.Tracking.Entity >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Infrastructure\\GarageManagement.Business\\GarageManagement.Business.csproj",
+      "projectName": "GarageManagement.Business",
+      "projectPath": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Infrastructure\\GarageManagement.Business\\GarageManagement.Business.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Infrastructure\\GarageManagement.Business\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\Admin\\.dotnet\\NuGetFallbackFolder": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {
+            "E:\\Vienauto\\Bitbucket\\GarageManagement\\Domain\\GarageManagement.Garage.Entity\\GarageManagement.Garage.Entity.csproj": {
+              "projectPath": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Domain\\GarageManagement.Garage.Entity\\GarageManagement.Garage.Entity.csproj"
+            },
+            "E:\\Vienauto\\Bitbucket\\GarageManagement\\Domain\\GarageManagement.RepositoryInterface\\GarageManagement.RepositoryInterface.csproj": {
+              "projectPath": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Domain\\GarageManagement.RepositoryInterface\\GarageManagement.RepositoryInterface.csproj"
+            },
+            "E:\\Vienauto\\Bitbucket\\GarageManagement\\Domain\\GarageManagement.ServiceInterface\\GarageManagement.ServiceInterface.csproj": {
+              "projectPath": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Domain\\GarageManagement.ServiceInterface\\GarageManagement.ServiceInterface.csproj"
+            },
+            "E:\\Vienauto\\Bitbucket\\GarageManagement\\Domain\\GarageManagement.Tracking.Entity\\GarageManagement.Tracking.Entity.csproj": {
+              "projectPath": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Domain\\GarageManagement.Tracking.Entity\\GarageManagement.Tracking.Entity.csproj"
+            },
+            "E:\\Vienauto\\Bitbucket\\GarageManagement\\Library\\Common.Core\\Common.Core.csproj": {
+              "projectPath": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Library\\Common.Core\\Common.Core.csproj"
+            },
+            "E:\\Vienauto\\Bitbucket\\GarageManagement\\Library\\Common.vdCore\\Common.vdCore.csproj": {
+              "projectPath": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Library\\Common.vdCore\\Common.vdCore.csproj"
+            },
+            "E:\\Vienauto\\Bitbucket\\GarageManagement\\Infrastructure\\GarageManagement.Infrastructure\\GarageManagement.Infrastructure.csproj": {
+              "projectPath": "E:\\Vienauto\\Bitbucket\\GarageManagement\\Infrastructure\\GarageManagement.Infrastructure\\GarageManagement.Infrastructure.csproj"
+            }
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "AutoMapper": {
+        "target": "Package",
+        "version": "6.2.2"
+      },
+      "EntityFramework": {
+        "target": "Package",
+        "version": "6.2.0"
+      }
+    },
+    "frameworks": {
+      "net461": {
+        "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "6.2.2"
+          },
+          "EntityFramework": {
+            "target": "Package",
+            "version": "6.2.0"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

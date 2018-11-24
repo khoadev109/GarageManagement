@@ -1,0 +1,4 @@
+E:\Vienauto\Bitbucket\Vienauto\vdcore\bin\Release\vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\vdcore\bin\Release\vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\vdcore\obj\Release\vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\vdcore\obj\Release\vdCore.pdb

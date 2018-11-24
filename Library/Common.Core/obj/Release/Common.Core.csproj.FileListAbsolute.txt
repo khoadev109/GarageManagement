@@ -1,0 +1,229 @@
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Common.Core.dll.config
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Common.Core.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Common.Core.pdb
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\AntiXssLibrary.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Castle.Core.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Castle.Windsor.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Common.vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\HtmlSanitizationLibrary.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.AspNet.Identity.Core.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.Security.Cookies.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.Security.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.Security.OAuth.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Newtonsoft.Json.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\NHibernate.Caches.RtMemoryCache.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\NHibernate.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Owin.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.Helpers.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.Mvc.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.Razor.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.WebPages.Deployment.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.WebPages.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.WebPages.Razor.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\AntiXssLibrary.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Castle.Core.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Castle.Windsor.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\HtmlSanitizationLibrary.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.AspNet.Identity.Core.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.AspNet.Identity.Owin.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.Security.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.Security.Cookies.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Microsoft.Owin.Security.OAuth.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\Newtonsoft.Json.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\NHibernate.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.Helpers.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.Mvc.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.Razor.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.WebPages.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.WebPages.Deployment.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\bin\Release\System.Web.WebPages.Razor.xml
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\obj\Release\Common.Core.csprojResolveAssemblyReference.cache
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\obj\Release\Common.Core.csproj.CoreCompileInputs.cache
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\obj\Release\Common.Core.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.Core\obj\Release\Common.Core.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Common.Core.dll.config
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Common.Core.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Common.Core.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\AntiXssLibrary.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Castle.Core.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Castle.Windsor.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Common.vdCore.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\EntityFramework.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\EntityFramework.SqlServer.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\HtmlSanitizationLibrary.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.IdentityModel.Logging.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.IdentityModel.Tokens.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.Security.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Web.Infrastructure.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Newtonsoft.Json.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\NHibernate.Caches.RtMemoryCache.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\NHibernate.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Owin.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Net.Http.Formatting.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Cors.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Helpers.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Http.Cors.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Http.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Http.Owin.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Http.WebHost.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Mvc.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Razor.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.WebPages.Deployment.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.WebPages.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.WebPages.Razor.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\AntiXssLibrary.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Castle.Core.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Castle.Windsor.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\EntityFramework.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\EntityFramework.SqlServer.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\HtmlSanitizationLibrary.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.IdentityModel.Logging.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.IdentityModel.Tokens.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.Security.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Newtonsoft.Json.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\NHibernate.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Net.Http.Formatting.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Helpers.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Http.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Http.Cors.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Http.Owin.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Http.WebHost.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Mvc.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.Razor.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.WebPages.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.WebPages.Deployment.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\System.Web.WebPages.Razor.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Common.Core.dll.config
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Common.Core.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Common.Core.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\AntiXssLibrary.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Castle.Core.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Castle.Windsor.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Common.vdCore.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\EntityFramework.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\EntityFramework.SqlServer.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\HtmlSanitizationLibrary.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.Identity.Core.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.IdentityModel.Logging.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.IdentityModel.Tokens.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.Security.Cookies.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.Security.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.Security.OAuth.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Newtonsoft.Json.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\NHibernate.Caches.RtMemoryCache.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\NHibernate.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Owin.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.IdentityModel.Tokens.Jwt.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Net.Http.Formatting.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Cors.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Helpers.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Http.Cors.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Http.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Http.Owin.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Http.WebHost.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Mvc.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Razor.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.WebPages.Deployment.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.WebPages.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.WebPages.Razor.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\AntiXssLibrary.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Castle.Core.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Castle.Windsor.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\EntityFramework.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\EntityFramework.SqlServer.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\HtmlSanitizationLibrary.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.Identity.Core.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.Identity.Owin.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.IdentityModel.Logging.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.IdentityModel.Tokens.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.Security.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.Security.Cookies.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Owin.Security.OAuth.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Newtonsoft.Json.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\NHibernate.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.IdentityModel.Tokens.Jwt.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Net.Http.Formatting.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Helpers.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Http.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Http.Cors.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Http.Owin.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Http.WebHost.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Mvc.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.Razor.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.WebPages.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.WebPages.Deployment.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\System.Web.WebPages.Razor.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\obj\Release\Common.Core.csprojResolveAssemblyReference.cache
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\obj\Release\Common.Core.csproj.CoreCompileInputs.cache
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\obj\Release\Common.Core.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\obj\Release\Common.Core.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.DotNet.InternalAbstractions.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Extensions.DependencyModel.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Extensions.Primitives.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Settings.AppSettings.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Settings.Configuration.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.Debug.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.Email.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.File.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.MSSqlServer.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.PeriodicBatching.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.RollingFile.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.Slack.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Microsoft.Extensions.Primitives.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Settings.Configuration.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.Debug.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.Email.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.File.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.MSSqlServer.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.PeriodicBatching.xml
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.Core\bin\Release\Serilog.Sinks.RollingFile.xml

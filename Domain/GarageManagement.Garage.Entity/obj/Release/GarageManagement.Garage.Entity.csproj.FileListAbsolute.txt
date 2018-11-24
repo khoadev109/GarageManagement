@@ -1,0 +1,12 @@
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\bin\Release\GarageManagement.Garage.Entity.dll.config
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\bin\Release\GarageManagement.Garage.Entity.dll
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\bin\Release\GarageManagement.Garage.Entity.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\bin\Release\EntityFramework.dll
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\bin\Release\EntityFramework.SqlServer.dll
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\bin\Release\System.Data.SqlClient.dll
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\bin\Release\EntityFramework.xml
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\bin\Release\EntityFramework.SqlServer.xml
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\obj\Release\GarageManagement.Garage.Entity.csproj.CoreCompileInputs.cache
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\obj\Release\GarageManagement.Garage.Entity.dll
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\obj\Release\GarageManagement.Garage.Entity.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Domain\GarageManagement.Garage.Entity\obj\Release\GarageManagement.Garage.Entity.csprojResolveAssemblyReference.cache

@@ -1,0 +1,12 @@
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\bin\Release\Common.vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\bin\Release\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\obj\Release\Common.vdCore.csprojResolveAssemblyReference.cache
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\obj\Release\Common.vdCore.csproj.CoreCompileInputs.cache
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\obj\Release\Common.vdCore.dll
+E:\Vienauto\Bitbucket\Vienauto\Vienauto Framework\Common.vdCore\obj\Release\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\bin\Release\Common.vdCore.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\bin\Release\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\obj\Release\Common.vdCore.csproj.CoreCompileInputs.cache
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\obj\Release\Common.vdCore.dll
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\obj\Release\Common.vdCore.pdb
+E:\Vienauto\Bitbucket\GarageManagement\Library\Common.vdCore\obj\Release\Common.vdCore.csprojResolveAssemblyReference.cache
