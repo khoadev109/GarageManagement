@@ -1,0 +1,3486 @@
+[{
+        "dist_id": 1,
+        "dist_name": "Ba Đình",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 2,
+        "dist_name": "Hoàn Kiếm",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 3,
+        "dist_name": "Tây Hồ",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 4,
+        "dist_name": "Long Biên",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 5,
+        "dist_name": "Cầu Giấy",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 6,
+        "dist_name": "Đống Đa",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 7,
+        "dist_name": "Hai Bà Trưng",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 8,
+        "dist_name": "Hoàng Mai",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 9,
+        "dist_name": "Thanh Xuân",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 16,
+        "dist_name": "Sóc Sơn",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 17,
+        "dist_name": "Đông Anh",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 18,
+        "dist_name": "Gia Lâm",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 19,
+        "dist_name": "Từ Liêm",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 20,
+        "dist_name": "Thanh Trì",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 24,
+        "dist_name": "Hà Giang",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 26,
+        "dist_name": "Đồng Văn",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 27,
+        "dist_name": "Mèo Vạc",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 28,
+        "dist_name": "Yên Minh",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 29,
+        "dist_name": "Quản Bạ",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 30,
+        "dist_name": "Vị Xuyên",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 31,
+        "dist_name": "Bắc Mê",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 32,
+        "dist_name": "Hoàng Su Phì",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 33,
+        "dist_name": "Xín Mần",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 34,
+        "dist_name": "Bắc Quang",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 35,
+        "dist_name": "Quang Bình",
+        "dist_prov_id": 2
+    },
+    {
+        "dist_id": 40,
+        "dist_name": "Cao Bằng",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 42,
+        "dist_name": "Bảo Lâm",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 43,
+        "dist_name": "Bảo Lạc",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 44,
+        "dist_name": "Thông Nông",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 45,
+        "dist_name": "Hà Quảng",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 46,
+        "dist_name": "Trà Lĩnh",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 47,
+        "dist_name": "Trùng Khánh",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 48,
+        "dist_name": "Hạ Lang",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 49,
+        "dist_name": "Quảng Uyên",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 50,
+        "dist_name": "Phục Hoà",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 51,
+        "dist_name": "Hoà An",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 52,
+        "dist_name": "Nguyên Bình",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 53,
+        "dist_name": "Thạch An",
+        "dist_prov_id": 4
+    },
+    {
+        "dist_id": 58,
+        "dist_name": "Bắc Kạn",
+        "dist_prov_id": 6
+    },
+    {
+        "dist_id": 60,
+        "dist_name": "Pác Nặm",
+        "dist_prov_id": 6
+    },
+    {
+        "dist_id": 61,
+        "dist_name": "Ba Bể",
+        "dist_prov_id": 6
+    },
+    {
+        "dist_id": 62,
+        "dist_name": "Ngân Sơn",
+        "dist_prov_id": 6
+    },
+    {
+        "dist_id": 63,
+        "dist_name": "Bạch Thông",
+        "dist_prov_id": 6
+    },
+    {
+        "dist_id": 64,
+        "dist_name": "Chợ Đồn",
+        "dist_prov_id": 6
+    },
+    {
+        "dist_id": 65,
+        "dist_name": "Chợ Mới",
+        "dist_prov_id": 6
+    },
+    {
+        "dist_id": 66,
+        "dist_name": "Na Rì",
+        "dist_prov_id": 6
+    },
+    {
+        "dist_id": 70,
+        "dist_name": "Tuyên Quang",
+        "dist_prov_id": 8
+    },
+    {
+        "dist_id": 72,
+        "dist_name": "Nà Hang",
+        "dist_prov_id": 8
+    },
+    {
+        "dist_id": 73,
+        "dist_name": "Chiêm Hóa",
+        "dist_prov_id": 8
+    },
+    {
+        "dist_id": 74,
+        "dist_name": "Hàm Yên",
+        "dist_prov_id": 8
+    },
+    {
+        "dist_id": 75,
+        "dist_name": "Yên Sơn",
+        "dist_prov_id": 8
+    },
+    {
+        "dist_id": 76,
+        "dist_name": "Sơn Dương",
+        "dist_prov_id": 8
+    },
+    {
+        "dist_id": 80,
+        "dist_name": "Lào Cai",
+        "dist_prov_id": 10
+    },
+    {
+        "dist_id": 82,
+        "dist_name": "Bát Xát",
+        "dist_prov_id": 10
+    },
+    {
+        "dist_id": 83,
+        "dist_name": "Mường Khương",
+        "dist_prov_id": 10
+    },
+    {
+        "dist_id": 84,
+        "dist_name": "Si Ma Cai",
+        "dist_prov_id": 10
+    },
+    {
+        "dist_id": 85,
+        "dist_name": "Bắc Hà",
+        "dist_prov_id": 10
+    },
+    {
+        "dist_id": 86,
+        "dist_name": "Bảo Thắng",
+        "dist_prov_id": 10
+    },
+    {
+        "dist_id": 87,
+        "dist_name": "Bảo Yên",
+        "dist_prov_id": 10
+    },
+    {
+        "dist_id": 88,
+        "dist_name": "Sa Pa",
+        "dist_prov_id": 10
+    },
+    {
+        "dist_id": 89,
+        "dist_name": "Văn Bàn",
+        "dist_prov_id": 10
+    },
+    {
+        "dist_id": 94,
+        "dist_name": "Điện Biên Phủ",
+        "dist_prov_id": 11
+    },
+    {
+        "dist_id": 95,
+        "dist_name": "Mường Lay",
+        "dist_prov_id": 11
+    },
+    {
+        "dist_id": 96,
+        "dist_name": "Mường Nhé",
+        "dist_prov_id": 11
+    },
+    {
+        "dist_id": 97,
+        "dist_name": "Mường Chà",
+        "dist_prov_id": 11
+    },
+    {
+        "dist_id": 98,
+        "dist_name": "Tủa Chùa",
+        "dist_prov_id": 11
+    },
+    {
+        "dist_id": 99,
+        "dist_name": "Tuần Giáo",
+        "dist_prov_id": 11
+    },
+    {
+        "dist_id": 100,
+        "dist_name": "Điện Biên",
+        "dist_prov_id": 11
+    },
+    {
+        "dist_id": 101,
+        "dist_name": "Điện Biên Đông",
+        "dist_prov_id": 11
+    },
+    {
+        "dist_id": 102,
+        "dist_name": "Mường Ảng",
+        "dist_prov_id": 11
+    },
+    {
+        "dist_id": 104,
+        "dist_name": "Lai Châu",
+        "dist_prov_id": 12
+    },
+    {
+        "dist_id": 106,
+        "dist_name": "Tam Đường",
+        "dist_prov_id": 12
+    },
+    {
+        "dist_id": 107,
+        "dist_name": "Mường Tè",
+        "dist_prov_id": 12
+    },
+    {
+        "dist_id": 108,
+        "dist_name": "Sìn Hồ",
+        "dist_prov_id": 12
+    },
+    {
+        "dist_id": 109,
+        "dist_name": "Phong Thổ",
+        "dist_prov_id": 12
+    },
+    {
+        "dist_id": 110,
+        "dist_name": "Than Uyên",
+        "dist_prov_id": 12
+    },
+    {
+        "dist_id": 111,
+        "dist_name": "Tân Uyên",
+        "dist_prov_id": 12
+    },
+    {
+        "dist_id": 116,
+        "dist_name": "Sơn La",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 118,
+        "dist_name": "Quỳnh Nhai",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 119,
+        "dist_name": "Thuận Châu",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 120,
+        "dist_name": "Mường La",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 121,
+        "dist_name": "Bắc Yên",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 122,
+        "dist_name": "Phù Yên",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 123,
+        "dist_name": "Mộc Châu",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 124,
+        "dist_name": "Yên Châu",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 125,
+        "dist_name": "Mai Sơn",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 126,
+        "dist_name": "Sông Mã",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 127,
+        "dist_name": "Sốp Cộp",
+        "dist_prov_id": 14
+    },
+    {
+        "dist_id": 132,
+        "dist_name": "Yên Bái",
+        "dist_prov_id": 15
+    },
+    {
+        "dist_id": 133,
+        "dist_name": "Nghĩa Lộ",
+        "dist_prov_id": 15
+    },
+    {
+        "dist_id": 135,
+        "dist_name": "Lục Yên",
+        "dist_prov_id": 15
+    },
+    {
+        "dist_id": 136,
+        "dist_name": "Văn Yên",
+        "dist_prov_id": 15
+    },
+    {
+        "dist_id": 137,
+        "dist_name": "Mù Cang Chải",
+        "dist_prov_id": 15
+    },
+    {
+        "dist_id": 138,
+        "dist_name": "Trấn Yên",
+        "dist_prov_id": 15
+    },
+    {
+        "dist_id": 139,
+        "dist_name": "Trạm Tấu",
+        "dist_prov_id": 15
+    },
+    {
+        "dist_id": 140,
+        "dist_name": "Văn Chấn",
+        "dist_prov_id": 15
+    },
+    {
+        "dist_id": 141,
+        "dist_name": "Yên Bình",
+        "dist_prov_id": 15
+    },
+    {
+        "dist_id": 148,
+        "dist_name": "Hòa Bình",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 150,
+        "dist_name": "Đà Bắc",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 151,
+        "dist_name": "Kỳ Sơn",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 152,
+        "dist_name": "Lương Sơn",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 153,
+        "dist_name": "Kim Bôi",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 154,
+        "dist_name": "Cao Phong",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 155,
+        "dist_name": "Tân Lạc",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 156,
+        "dist_name": "Mai Châu",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 157,
+        "dist_name": "Lạc Sơn",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 158,
+        "dist_name": "Yên Thủy",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 159,
+        "dist_name": "Lạc Thủy",
+        "dist_prov_id": 17
+    },
+    {
+        "dist_id": 164,
+        "dist_name": "Thái Nguyên",
+        "dist_prov_id": 19
+    },
+    {
+        "dist_id": 165,
+        "dist_name": "Sông Công",
+        "dist_prov_id": 19
+    },
+    {
+        "dist_id": 167,
+        "dist_name": "Định Hóa",
+        "dist_prov_id": 19
+    },
+    {
+        "dist_id": 168,
+        "dist_name": "Phú Lương",
+        "dist_prov_id": 19
+    },
+    {
+        "dist_id": 169,
+        "dist_name": "Đồng Hỷ",
+        "dist_prov_id": 19
+    },
+    {
+        "dist_id": 170,
+        "dist_name": "Võ Nhai",
+        "dist_prov_id": 19
+    },
+    {
+        "dist_id": 171,
+        "dist_name": "Đại Từ",
+        "dist_prov_id": 19
+    },
+    {
+        "dist_id": 172,
+        "dist_name": "Phổ Yên",
+        "dist_prov_id": 19
+    },
+    {
+        "dist_id": 173,
+        "dist_name": "Phú Bình",
+        "dist_prov_id": 19
+    },
+    {
+        "dist_id": 178,
+        "dist_name": "Lạng Sơn",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 180,
+        "dist_name": "Tràng Định",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 181,
+        "dist_name": "Bình Gia",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 182,
+        "dist_name": "Văn Lãng",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 183,
+        "dist_name": "Cao Lộc",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 184,
+        "dist_name": "Văn Quan",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 185,
+        "dist_name": "Bắc Sơn",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 186,
+        "dist_name": "Hữu Lũng",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 187,
+        "dist_name": "Chi Lăng",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 188,
+        "dist_name": "Lộc Bình",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 189,
+        "dist_name": "Đình Lập",
+        "dist_prov_id": 20
+    },
+    {
+        "dist_id": 193,
+        "dist_name": "Hạ Long",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 194,
+        "dist_name": "Móng Cái",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 195,
+        "dist_name": "Cẩm Phả",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 196,
+        "dist_name": "Uông Bí",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 198,
+        "dist_name": "Bình Liêu",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 199,
+        "dist_name": "Tiên Yên",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 200,
+        "dist_name": "Đầm Hà",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 201,
+        "dist_name": "Hải Hà",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 202,
+        "dist_name": "Ba Chẽ",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 203,
+        "dist_name": "Vân Đồn",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 204,
+        "dist_name": "Hoành Bồ",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 205,
+        "dist_name": "Đông Triều",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 206,
+        "dist_name": "Yên Hưng",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 207,
+        "dist_name": "Cô Tô",
+        "dist_prov_id": 22
+    },
+    {
+        "dist_id": 213,
+        "dist_name": "Bắc Giang",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 215,
+        "dist_name": "Yên Thế",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 216,
+        "dist_name": "Tân Yên",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 217,
+        "dist_name": "Lạng Giang",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 218,
+        "dist_name": "Lục Nam",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 219,
+        "dist_name": "Lục Ngạn",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 220,
+        "dist_name": "Sơn Động",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 221,
+        "dist_name": "Yên Dũng",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 222,
+        "dist_name": "Việt Yên",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 223,
+        "dist_name": "Hiệp Hòa",
+        "dist_prov_id": 24
+    },
+    {
+        "dist_id": 227,
+        "dist_name": "Việt Trì",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 228,
+        "dist_name": "Phú Thọ",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 230,
+        "dist_name": "Đoan Hùng",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 231,
+        "dist_name": "Hạ Hoà",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 232,
+        "dist_name": "Thanh Ba",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 233,
+        "dist_name": "Phù Ninh",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 234,
+        "dist_name": "Yên Lập",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 235,
+        "dist_name": "Cẩm Khê",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 236,
+        "dist_name": "Tam Nông",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 237,
+        "dist_name": "Lâm Thao",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 238,
+        "dist_name": "Thanh Sơn",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 239,
+        "dist_name": "Thanh Thuỷ",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 240,
+        "dist_name": "Tân Sơn",
+        "dist_prov_id": 25
+    },
+    {
+        "dist_id": 243,
+        "dist_name": "Vĩnh Yên",
+        "dist_prov_id": 26
+    },
+    {
+        "dist_id": 244,
+        "dist_name": "Phúc Yên",
+        "dist_prov_id": 26
+    },
+    {
+        "dist_id": 246,
+        "dist_name": "Lập Thạch",
+        "dist_prov_id": 26
+    },
+    {
+        "dist_id": 247,
+        "dist_name": "Tam Dương",
+        "dist_prov_id": 26
+    },
+    {
+        "dist_id": 248,
+        "dist_name": "Tam Đảo",
+        "dist_prov_id": 26
+    },
+    {
+        "dist_id": 249,
+        "dist_name": "Bình Xuyên",
+        "dist_prov_id": 26
+    },
+    {
+        "dist_id": 250,
+        "dist_name": "Mê Linh",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 251,
+        "dist_name": "Yên Lạc",
+        "dist_prov_id": 26
+    },
+    {
+        "dist_id": 252,
+        "dist_name": "Vĩnh Tường",
+        "dist_prov_id": 26
+    },
+    {
+        "dist_id": 253,
+        "dist_name": "Sông Lô",
+        "dist_prov_id": 26
+    },
+    {
+        "dist_id": 256,
+        "dist_name": "Bắc Ninh",
+        "dist_prov_id": 27
+    },
+    {
+        "dist_id": 258,
+        "dist_name": "Yên Phong",
+        "dist_prov_id": 27
+    },
+    {
+        "dist_id": 259,
+        "dist_name": "Quế Võ",
+        "dist_prov_id": 27
+    },
+    {
+        "dist_id": 260,
+        "dist_name": "Tiên Du",
+        "dist_prov_id": 27
+    },
+    {
+        "dist_id": 261,
+        "dist_name": "Từ Sơn",
+        "dist_prov_id": 27
+    },
+    {
+        "dist_id": 262,
+        "dist_name": "Thuận Thành",
+        "dist_prov_id": 27
+    },
+    {
+        "dist_id": 263,
+        "dist_name": "Gia Bình",
+        "dist_prov_id": 27
+    },
+    {
+        "dist_id": 264,
+        "dist_name": "Lương Tài",
+        "dist_prov_id": 27
+    },
+    {
+        "dist_id": 268,
+        "dist_name": "Hà Đông",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 269,
+        "dist_name": "Sơn Tây",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 271,
+        "dist_name": "Ba Vì",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 272,
+        "dist_name": "Phúc Thọ",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 273,
+        "dist_name": "Đan Phượng",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 274,
+        "dist_name": "Hoài Đức",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 275,
+        "dist_name": "Quốc Oai",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 276,
+        "dist_name": "Thạch Thất",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 277,
+        "dist_name": "Chương Mỹ",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 278,
+        "dist_name": "Thanh Oai",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 279,
+        "dist_name": "Thường Tín",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 280,
+        "dist_name": "Phú Xuyên",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 281,
+        "dist_name": "Ứng Hòa",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 282,
+        "dist_name": "Mỹ Đức",
+        "dist_prov_id": 1
+    },
+    {
+        "dist_id": 288,
+        "dist_name": "Hải Dương",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 290,
+        "dist_name": "Chí Linh",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 291,
+        "dist_name": "Nam Sách",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 292,
+        "dist_name": "Kinh Môn",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 293,
+        "dist_name": "Kim Thành",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 294,
+        "dist_name": "Thanh Hà",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 295,
+        "dist_name": "Cẩm Giàng",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 296,
+        "dist_name": "Bình Giang",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 297,
+        "dist_name": "Gia Lộc",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 298,
+        "dist_name": "Tứ Kỳ",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 299,
+        "dist_name": "Ninh Giang",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 300,
+        "dist_name": "Thanh Miện",
+        "dist_prov_id": 30
+    },
+    {
+        "dist_id": 303,
+        "dist_name": "Hồng Bàng",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 304,
+        "dist_name": "Ngô Quyền",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 305,
+        "dist_name": "Lê Chân",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 306,
+        "dist_name": "Hải An",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 307,
+        "dist_name": "Kiến An",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 308,
+        "dist_name": "Đồ Sơn",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 309,
+        "dist_name": "Kinh Dương",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 311,
+        "dist_name": "Thuỷ Nguyên",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 312,
+        "dist_name": "An Dương",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 313,
+        "dist_name": "An Lão",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 314,
+        "dist_name": "Kiến Thụy",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 315,
+        "dist_name": "Tiên Lãng",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 316,
+        "dist_name": "Vĩnh Bảo",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 317,
+        "dist_name": "Cát Hải",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 318,
+        "dist_name": "Bạch Long Vĩ",
+        "dist_prov_id": 31
+    },
+    {
+        "dist_id": 323,
+        "dist_name": "Hưng Yên",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 325,
+        "dist_name": "Văn Lâm",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 326,
+        "dist_name": "Văn Giang",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 327,
+        "dist_name": "Yên Mỹ",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 328,
+        "dist_name": "Mỹ Hào",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 329,
+        "dist_name": "Ân Thi",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 330,
+        "dist_name": "Khoái Châu",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 331,
+        "dist_name": "Kim Động",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 332,
+        "dist_name": "Tiên Lữ",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 333,
+        "dist_name": "Phù Cừ",
+        "dist_prov_id": 33
+    },
+    {
+        "dist_id": 336,
+        "dist_name": "Thái Bình",
+        "dist_prov_id": 34
+    },
+    {
+        "dist_id": 338,
+        "dist_name": "Quỳnh Phụ",
+        "dist_prov_id": 34
+    },
+    {
+        "dist_id": 339,
+        "dist_name": "Hưng Hà",
+        "dist_prov_id": 34
+    },
+    {
+        "dist_id": 340,
+        "dist_name": "Đông Hưng",
+        "dist_prov_id": 34
+    },
+    {
+        "dist_id": 341,
+        "dist_name": "Thái Thụy",
+        "dist_prov_id": 34
+    },
+    {
+        "dist_id": 342,
+        "dist_name": "Tiền Hải",
+        "dist_prov_id": 34
+    },
+    {
+        "dist_id": 343,
+        "dist_name": "Kiến Xương",
+        "dist_prov_id": 34
+    },
+    {
+        "dist_id": 344,
+        "dist_name": "Vũ Thư",
+        "dist_prov_id": 34
+    },
+    {
+        "dist_id": 347,
+        "dist_name": "Phủ Lý",
+        "dist_prov_id": 35
+    },
+    {
+        "dist_id": 349,
+        "dist_name": "Duy Tiên",
+        "dist_prov_id": 35
+    },
+    {
+        "dist_id": 350,
+        "dist_name": "Kim Bảng",
+        "dist_prov_id": 35
+    },
+    {
+        "dist_id": 351,
+        "dist_name": "Thanh Liêm",
+        "dist_prov_id": 35
+    },
+    {
+        "dist_id": 352,
+        "dist_name": "Bình Lục",
+        "dist_prov_id": 35
+    },
+    {
+        "dist_id": 353,
+        "dist_name": "Lý Nhân",
+        "dist_prov_id": 35
+    },
+    {
+        "dist_id": 356,
+        "dist_name": "Nam Định",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 358,
+        "dist_name": "Mỹ Lộc",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 359,
+        "dist_name": "Vụ Bản",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 360,
+        "dist_name": "Ý Yên",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 361,
+        "dist_name": "Nghĩa Hưng",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 362,
+        "dist_name": "Nam Trực",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 363,
+        "dist_name": "Trực Ninh",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 364,
+        "dist_name": "Xuân Trường",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 365,
+        "dist_name": "Giao Thủy",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 366,
+        "dist_name": "Hải Hậu",
+        "dist_prov_id": 36
+    },
+    {
+        "dist_id": 369,
+        "dist_name": "Ninh Bình",
+        "dist_prov_id": 37
+    },
+    {
+        "dist_id": 370,
+        "dist_name": "Tam Điệp",
+        "dist_prov_id": 37
+    },
+    {
+        "dist_id": 372,
+        "dist_name": "Nho Quan",
+        "dist_prov_id": 37
+    },
+    {
+        "dist_id": 373,
+        "dist_name": "Gia Viễn",
+        "dist_prov_id": 37
+    },
+    {
+        "dist_id": 374,
+        "dist_name": "Hoa Lư",
+        "dist_prov_id": 37
+    },
+    {
+        "dist_id": 375,
+        "dist_name": "Yên Khánh",
+        "dist_prov_id": 37
+    },
+    {
+        "dist_id": 376,
+        "dist_name": "Kim Sơn",
+        "dist_prov_id": 37
+    },
+    {
+        "dist_id": 377,
+        "dist_name": "Yên Mô",
+        "dist_prov_id": 37
+    },
+    {
+        "dist_id": 380,
+        "dist_name": "Thanh Hóa",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 381,
+        "dist_name": "Bỉm Sơn",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 382,
+        "dist_name": "Sầm Sơn",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 384,
+        "dist_name": "Mường Lát",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 385,
+        "dist_name": "Quan Hóa",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 386,
+        "dist_name": "Bá Thước",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 387,
+        "dist_name": "Quan Sơn",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 388,
+        "dist_name": "Lang Chánh",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 389,
+        "dist_name": "Ngọc Lặc",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 390,
+        "dist_name": "Cẩm Thủy",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 391,
+        "dist_name": "Thạch Thành",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 392,
+        "dist_name": "Hà Trung",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 393,
+        "dist_name": "Vĩnh Lộc",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 394,
+        "dist_name": "Yên Định",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 395,
+        "dist_name": "Thọ Xuân",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 396,
+        "dist_name": "Thường Xuân",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 397,
+        "dist_name": "Triệu Sơn",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 398,
+        "dist_name": "Thiệu Hoá",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 399,
+        "dist_name": "Hoằng Hóa",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 400,
+        "dist_name": "Hậu Lộc",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 401,
+        "dist_name": "Nga Sơn",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 402,
+        "dist_name": "Như Xuân",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 403,
+        "dist_name": "Như Thanh",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 404,
+        "dist_name": "Nông Cống",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 405,
+        "dist_name": "Đông Sơn",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 406,
+        "dist_name": "Quảng Xương",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 407,
+        "dist_name": "Tĩnh Gia",
+        "dist_prov_id": 38
+    },
+    {
+        "dist_id": 412,
+        "dist_name": "Vinh",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 413,
+        "dist_name": "Cửa Lò",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 414,
+        "dist_name": "Thái Hoà",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 415,
+        "dist_name": "Quế Phong",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 416,
+        "dist_name": "Quỳ Châu",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 417,
+        "dist_name": "Kỳ Sơn",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 418,
+        "dist_name": "Tương Dương",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 419,
+        "dist_name": "Nghĩa Đàn",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 420,
+        "dist_name": "Quỳ Hợp",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 421,
+        "dist_name": "Quỳnh Lưu",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 422,
+        "dist_name": "Con Cuông",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 423,
+        "dist_name": "Tân Kỳ",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 424,
+        "dist_name": "Anh Sơn",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 425,
+        "dist_name": "Diễn Châu",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 426,
+        "dist_name": "Yên Thành",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 427,
+        "dist_name": "Đô Lương",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 428,
+        "dist_name": "Thanh Chương",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 429,
+        "dist_name": "Nghi Lộc",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 430,
+        "dist_name": "Nam Đàn",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 431,
+        "dist_name": "Hưng Nguyên",
+        "dist_prov_id": 40
+    },
+    {
+        "dist_id": 436,
+        "dist_name": "Hà Tĩnh",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 437,
+        "dist_name": "Hồng Lĩnh",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 439,
+        "dist_name": "Hương Sơn",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 440,
+        "dist_name": "Đức Thọ",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 441,
+        "dist_name": "Vũ Quang",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 442,
+        "dist_name": "Nghi Xuân",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 443,
+        "dist_name": "Can Lộc",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 444,
+        "dist_name": "Hương Khê",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 445,
+        "dist_name": "Thạch Hà",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 446,
+        "dist_name": "Cẩm Xuyên",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 447,
+        "dist_name": "Kỳ Anh",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 448,
+        "dist_name": "Lộc Hà",
+        "dist_prov_id": 42
+    },
+    {
+        "dist_id": 450,
+        "dist_name": "Đồng Hới",
+        "dist_prov_id": 44
+    },
+    {
+        "dist_id": 452,
+        "dist_name": "Minh Hóa",
+        "dist_prov_id": 44
+    },
+    {
+        "dist_id": 453,
+        "dist_name": "Tuyên Hóa",
+        "dist_prov_id": 44
+    },
+    {
+        "dist_id": 454,
+        "dist_name": "Quảng Trạch",
+        "dist_prov_id": 44
+    },
+    {
+        "dist_id": 455,
+        "dist_name": "Bố Trạch",
+        "dist_prov_id": 44
+    },
+    {
+        "dist_id": 456,
+        "dist_name": "Quảng Ninh",
+        "dist_prov_id": 44
+    },
+    {
+        "dist_id": 457,
+        "dist_name": "Lệ Thủy",
+        "dist_prov_id": 44
+    },
+    {
+        "dist_id": 461,
+        "dist_name": "Đông Hà",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 462,
+        "dist_name": "Quảng Trị",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 464,
+        "dist_name": "Vĩnh Linh",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 465,
+        "dist_name": "Hướng Hóa",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 466,
+        "dist_name": "Gio Linh",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 467,
+        "dist_name": "Đa Krông",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 468,
+        "dist_name": "Cam Lộ",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 469,
+        "dist_name": "Triệu Phong",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 470,
+        "dist_name": "Hải Lăng",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 471,
+        "dist_name": "Cồn Cỏ",
+        "dist_prov_id": 45
+    },
+    {
+        "dist_id": 474,
+        "dist_name": "Huế",
+        "dist_prov_id": 46
+    },
+    {
+        "dist_id": 476,
+        "dist_name": "Phong Điền",
+        "dist_prov_id": 46
+    },
+    {
+        "dist_id": 477,
+        "dist_name": "Quảng Điền",
+        "dist_prov_id": 46
+    },
+    {
+        "dist_id": 478,
+        "dist_name": "Phú Vang",
+        "dist_prov_id": 46
+    },
+    {
+        "dist_id": 479,
+        "dist_name": "Hương Thủy",
+        "dist_prov_id": 46
+    },
+    {
+        "dist_id": 480,
+        "dist_name": "Hương Trà",
+        "dist_prov_id": 46
+    },
+    {
+        "dist_id": 481,
+        "dist_name": "A Lưới",
+        "dist_prov_id": 46
+    },
+    {
+        "dist_id": 482,
+        "dist_name": "Phú Lộc",
+        "dist_prov_id": 46
+    },
+    {
+        "dist_id": 483,
+        "dist_name": "Nam Đông",
+        "dist_prov_id": 46
+    },
+    {
+        "dist_id": 490,
+        "dist_name": "Liên Chiểu",
+        "dist_prov_id": 48
+    },
+    {
+        "dist_id": 491,
+        "dist_name": "Thanh Khê",
+        "dist_prov_id": 48
+    },
+    {
+        "dist_id": 492,
+        "dist_name": "Hải Châu",
+        "dist_prov_id": 48
+    },
+    {
+        "dist_id": 493,
+        "dist_name": "Sơn Trà",
+        "dist_prov_id": 48
+    },
+    {
+        "dist_id": 494,
+        "dist_name": "Ngũ Hành Sơn",
+        "dist_prov_id": 48
+    },
+    {
+        "dist_id": 495,
+        "dist_name": "Cẩm Lệ",
+        "dist_prov_id": 48
+    },
+    {
+        "dist_id": 497,
+        "dist_name": "Hoà Vang",
+        "dist_prov_id": 48
+    },
+    {
+        "dist_id": 498,
+        "dist_name": "Hoàng Sa",
+        "dist_prov_id": 48
+    },
+    {
+        "dist_id": 502,
+        "dist_name": "Tam Kỳ",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 503,
+        "dist_name": "Hội An",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 504,
+        "dist_name": "Tây Giang",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 505,
+        "dist_name": "Đông Giang",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 506,
+        "dist_name": "Đại Lộc",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 507,
+        "dist_name": "Điện Bàn",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 508,
+        "dist_name": "Duy Xuyên",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 509,
+        "dist_name": "Quế Sơn",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 510,
+        "dist_name": "Nam Giang",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 511,
+        "dist_name": "Phước Sơn",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 512,
+        "dist_name": "Hiệp Đức",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 513,
+        "dist_name": "Thăng Bình",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 514,
+        "dist_name": "Tiên Phước",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 515,
+        "dist_name": "Bắc Trà My",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 516,
+        "dist_name": "Nam Trà My",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 517,
+        "dist_name": "Núi Thành",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 518,
+        "dist_name": "Phú Ninh",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 519,
+        "dist_name": "Nông Sơn",
+        "dist_prov_id": 49
+    },
+    {
+        "dist_id": 522,
+        "dist_name": "Quảng Ngãi",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 524,
+        "dist_name": "Bình Sơn",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 525,
+        "dist_name": "Trà Bồng",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 526,
+        "dist_name": "Tây Trà",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 527,
+        "dist_name": "Sơn Tịnh",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 528,
+        "dist_name": "Tư Nghĩa",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 529,
+        "dist_name": "Sơn Hà",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 530,
+        "dist_name": "Sơn Tây",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 531,
+        "dist_name": "Minh Long",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 532,
+        "dist_name": "Nghĩa Hành",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 533,
+        "dist_name": "Mộ Đức",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 534,
+        "dist_name": "Đức Phổ",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 535,
+        "dist_name": "Ba Tơ",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 536,
+        "dist_name": "Lý Sơn",
+        "dist_prov_id": 51
+    },
+    {
+        "dist_id": 540,
+        "dist_name": "Qui Nhơn",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 542,
+        "dist_name": "An Lão",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 543,
+        "dist_name": "Hoài Nhơn",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 544,
+        "dist_name": "Hoài Ân",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 545,
+        "dist_name": "Phù Mỹ",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 546,
+        "dist_name": "Vĩnh Thạnh",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 547,
+        "dist_name": "Tây Sơn",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 548,
+        "dist_name": "Phù Cát",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 549,
+        "dist_name": "An Nhơn",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 550,
+        "dist_name": "Tuy Phước",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 551,
+        "dist_name": "Vân Canh",
+        "dist_prov_id": 52
+    },
+    {
+        "dist_id": 555,
+        "dist_name": "Tuy Hòa",
+        "dist_prov_id": 54
+    },
+    {
+        "dist_id": 557,
+        "dist_name": "Sông Cầu",
+        "dist_prov_id": 54
+    },
+    {
+        "dist_id": 558,
+        "dist_name": "Đồng Xuân",
+        "dist_prov_id": 54
+    },
+    {
+        "dist_id": 559,
+        "dist_name": "Tuy An",
+        "dist_prov_id": 54
+    },
+    {
+        "dist_id": 560,
+        "dist_name": "Sơn Hòa",
+        "dist_prov_id": 54
+    },
+    {
+        "dist_id": 561,
+        "dist_name": "Sông Hinh",
+        "dist_prov_id": 54
+    },
+    {
+        "dist_id": 562,
+        "dist_name": "Tây Hoà",
+        "dist_prov_id": 54
+    },
+    {
+        "dist_id": 563,
+        "dist_name": "Phú Hoà",
+        "dist_prov_id": 54
+    },
+    {
+        "dist_id": 564,
+        "dist_name": "Đông Hoà",
+        "dist_prov_id": 54
+    },
+    {
+        "dist_id": 568,
+        "dist_name": "Nha Trang",
+        "dist_prov_id": 56
+    },
+    {
+        "dist_id": 569,
+        "dist_name": "Cam Ranh",
+        "dist_prov_id": 56
+    },
+    {
+        "dist_id": 570,
+        "dist_name": "Cam Lâm",
+        "dist_prov_id": 56
+    },
+    {
+        "dist_id": 571,
+        "dist_name": "Vạn Ninh",
+        "dist_prov_id": 56
+    },
+    {
+        "dist_id": 572,
+        "dist_name": "Ninh Hòa",
+        "dist_prov_id": 56
+    },
+    {
+        "dist_id": 573,
+        "dist_name": "Khánh Vĩnh",
+        "dist_prov_id": 56
+    },
+    {
+        "dist_id": 574,
+        "dist_name": "Diên Khánh",
+        "dist_prov_id": 56
+    },
+    {
+        "dist_id": 575,
+        "dist_name": "Khánh Sơn",
+        "dist_prov_id": 56
+    },
+    {
+        "dist_id": 576,
+        "dist_name": "Trường Sa",
+        "dist_prov_id": 56
+    },
+    {
+        "dist_id": 582,
+        "dist_name": "Phan Rang-Tháp Chàm",
+        "dist_prov_id": 58
+    },
+    {
+        "dist_id": 584,
+        "dist_name": "Bác Ái",
+        "dist_prov_id": 58
+    },
+    {
+        "dist_id": 585,
+        "dist_name": "Ninh Sơn",
+        "dist_prov_id": 58
+    },
+    {
+        "dist_id": 586,
+        "dist_name": "Ninh Hải",
+        "dist_prov_id": 58
+    },
+    {
+        "dist_id": 587,
+        "dist_name": "Ninh Phước",
+        "dist_prov_id": 58
+    },
+    {
+        "dist_id": 588,
+        "dist_name": "Thuận Bắc",
+        "dist_prov_id": 58
+    },
+    {
+        "dist_id": 589,
+        "dist_name": "Thuận Nam",
+        "dist_prov_id": 58
+    },
+    {
+        "dist_id": 593,
+        "dist_name": "Phan Thiết",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 594,
+        "dist_name": "La Gi",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 595,
+        "dist_name": "Tuy Phong",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 596,
+        "dist_name": "Bắc Bình",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 597,
+        "dist_name": "Hàm Thuận Bắc",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 598,
+        "dist_name": "Hàm Thuận Nam",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 599,
+        "dist_name": "Tánh Linh",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 600,
+        "dist_name": "Đức Linh",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 601,
+        "dist_name": "Hàm Tân",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 602,
+        "dist_name": "Phú Quí",
+        "dist_prov_id": 60
+    },
+    {
+        "dist_id": 608,
+        "dist_name": "Kon Tum",
+        "dist_prov_id": 62
+    },
+    {
+        "dist_id": 610,
+        "dist_name": "Đắk Glei",
+        "dist_prov_id": 62
+    },
+    {
+        "dist_id": 611,
+        "dist_name": "Ngọc Hồi",
+        "dist_prov_id": 62
+    },
+    {
+        "dist_id": 612,
+        "dist_name": "Đắk Tô",
+        "dist_prov_id": 62
+    },
+    {
+        "dist_id": 613,
+        "dist_name": "Kon Plông",
+        "dist_prov_id": 62
+    },
+    {
+        "dist_id": 614,
+        "dist_name": "Kon Rẫy",
+        "dist_prov_id": 62
+    },
+    {
+        "dist_id": 615,
+        "dist_name": "Đắk Hà",
+        "dist_prov_id": 62
+    },
+    {
+        "dist_id": 616,
+        "dist_name": "Sa Thầy",
+        "dist_prov_id": 62
+    },
+    {
+        "dist_id": 617,
+        "dist_name": "Tu Mơ Rông",
+        "dist_prov_id": 62
+    },
+    {
+        "dist_id": 622,
+        "dist_name": "Pleiku",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 623,
+        "dist_name": "An Khê",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 624,
+        "dist_name": "Ayun Pa",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 625,
+        "dist_name": "Kbang",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 626,
+        "dist_name": "Đăk Đoa",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 627,
+        "dist_name": "Chư Păh",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 628,
+        "dist_name": "Ia Grai",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 629,
+        "dist_name": "Mang Yang",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 630,
+        "dist_name": "Kông Chro",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 631,
+        "dist_name": "Đức Cơ",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 632,
+        "dist_name": "Chư Prông",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 633,
+        "dist_name": "Chư Sê",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 634,
+        "dist_name": "Đăk Pơ",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 635,
+        "dist_name": "Ia Pa",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 637,
+        "dist_name": "Krông Pa",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 638,
+        "dist_name": "Phú Thiện",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 639,
+        "dist_name": "Chư Pưh",
+        "dist_prov_id": 64
+    },
+    {
+        "dist_id": 643,
+        "dist_name": "Buôn Ma Thuột",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 644,
+        "dist_name": "Buôn Hồ",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 645,
+        "dist_name": "Ea H'leo",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 646,
+        "dist_name": "Ea Súp",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 647,
+        "dist_name": "Buôn Đôn",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 648,
+        "dist_name": "Cư M'gar",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 649,
+        "dist_name": "Krông Búk",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 650,
+        "dist_name": "Krông Năng",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 651,
+        "dist_name": "Ea Kar",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 652,
+        "dist_name": "M'đrắk",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 653,
+        "dist_name": "Krông Bông",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 654,
+        "dist_name": "Krông Pắc",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 655,
+        "dist_name": "Krông A Na",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 656,
+        "dist_name": "Lắk",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 657,
+        "dist_name": "Cư Kuin",
+        "dist_prov_id": 66
+    },
+    {
+        "dist_id": 660,
+        "dist_name": "Gia Nghĩa",
+        "dist_prov_id": 67
+    },
+    {
+        "dist_id": 661,
+        "dist_name": "Đắk Glong",
+        "dist_prov_id": 67
+    },
+    {
+        "dist_id": 662,
+        "dist_name": "Cư Jút",
+        "dist_prov_id": 67
+    },
+    {
+        "dist_id": 663,
+        "dist_name": "Đắk Mil",
+        "dist_prov_id": 67
+    },
+    {
+        "dist_id": 664,
+        "dist_name": "Krông Nô",
+        "dist_prov_id": 67
+    },
+    {
+        "dist_id": 665,
+        "dist_name": "Đắk Song",
+        "dist_prov_id": 67
+    },
+    {
+        "dist_id": 666,
+        "dist_name": "Đắk R'lấp",
+        "dist_prov_id": 67
+    },
+    {
+        "dist_id": 667,
+        "dist_name": "Tuy Đức",
+        "dist_prov_id": 67
+    },
+    {
+        "dist_id": 672,
+        "dist_name": "Đà Lạt",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 673,
+        "dist_name": "Bảo Lộc",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 674,
+        "dist_name": "Đam Rông",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 675,
+        "dist_name": "Lạc Dương",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 676,
+        "dist_name": "Lâm Hà",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 677,
+        "dist_name": "Đơn Dương",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 678,
+        "dist_name": "Đức Trọng",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 679,
+        "dist_name": "Di Linh",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 680,
+        "dist_name": "Bảo Lâm",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 681,
+        "dist_name": "Đạ Huoai",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 682,
+        "dist_name": "Đạ Tẻh",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 683,
+        "dist_name": "Cát Tiên",
+        "dist_prov_id": 68
+    },
+    {
+        "dist_id": 688,
+        "dist_name": "Phước Long",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 689,
+        "dist_name": "Đồng Xoài",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 690,
+        "dist_name": "Bình Long",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 691,
+        "dist_name": "Bù Gia Mập",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 692,
+        "dist_name": "Lộc Ninh",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 693,
+        "dist_name": "Bù Đốp",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 694,
+        "dist_name": "Hớn Quản",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 695,
+        "dist_name": "Đồng Phù",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 696,
+        "dist_name": "Bù Đăng",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 697,
+        "dist_name": "Chơn Thành",
+        "dist_prov_id": 70
+    },
+    {
+        "dist_id": 703,
+        "dist_name": "Tây Ninh",
+        "dist_prov_id": 72
+    },
+    {
+        "dist_id": 705,
+        "dist_name": "Tân Biên",
+        "dist_prov_id": 72
+    },
+    {
+        "dist_id": 706,
+        "dist_name": "Tân Châu",
+        "dist_prov_id": 72
+    },
+    {
+        "dist_id": 707,
+        "dist_name": "Dương Minh Châu",
+        "dist_prov_id": 72
+    },
+    {
+        "dist_id": 708,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 72
+    },
+    {
+        "dist_id": 709,
+        "dist_name": "Hòa Thành",
+        "dist_prov_id": 72
+    },
+    {
+        "dist_id": 710,
+        "dist_name": "Gò Dầu",
+        "dist_prov_id": 72
+    },
+    {
+        "dist_id": 711,
+        "dist_name": "Bến Cầu",
+        "dist_prov_id": 72
+    },
+    {
+        "dist_id": 712,
+        "dist_name": "Trảng Bàng",
+        "dist_prov_id": 72
+    },
+    {
+        "dist_id": 718,
+        "dist_name": "Thủ Dầu Một",
+        "dist_prov_id": 74
+    },
+    {
+        "dist_id": 720,
+        "dist_name": "Dầu Tiếng",
+        "dist_prov_id": 74
+    },
+    {
+        "dist_id": 721,
+        "dist_name": "Bến Cát",
+        "dist_prov_id": 74
+    },
+    {
+        "dist_id": 722,
+        "dist_name": "Phú Giáo",
+        "dist_prov_id": 74
+    },
+    {
+        "dist_id": 723,
+        "dist_name": "Tân Uyên",
+        "dist_prov_id": 74
+    },
+    {
+        "dist_id": 724,
+        "dist_name": "Dĩ An",
+        "dist_prov_id": 74
+    },
+    {
+        "dist_id": 725,
+        "dist_name": "Thuận An",
+        "dist_prov_id": 74
+    },
+    {
+        "dist_id": 731,
+        "dist_name": "Biên Hòa",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 732,
+        "dist_name": "Long Khánh",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 734,
+        "dist_name": "Tân Phú",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 735,
+        "dist_name": "Vĩnh Cửu",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 736,
+        "dist_name": "Định Quán",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 737,
+        "dist_name": "Trảng Bom",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 738,
+        "dist_name": "Thống Nhất",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 739,
+        "dist_name": "Cẩm Mỹ",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 740,
+        "dist_name": "Long Thành",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 741,
+        "dist_name": "Xuân Lộc",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 742,
+        "dist_name": "Nhơn Trạch",
+        "dist_prov_id": 75
+    },
+    {
+        "dist_id": 747,
+        "dist_name": "Vũng Tầu",
+        "dist_prov_id": 77
+    },
+    {
+        "dist_id": 748,
+        "dist_name": "Bà Rịa",
+        "dist_prov_id": 77
+    },
+    {
+        "dist_id": 750,
+        "dist_name": "Châu Đức",
+        "dist_prov_id": 77
+    },
+    {
+        "dist_id": 751,
+        "dist_name": "Xuyên Mộc",
+        "dist_prov_id": 77
+    },
+    {
+        "dist_id": 752,
+        "dist_name": "Long Điền",
+        "dist_prov_id": 77
+    },
+    {
+        "dist_id": 753,
+        "dist_name": "Đất Đỏ",
+        "dist_prov_id": 77
+    },
+    {
+        "dist_id": 754,
+        "dist_name": "Tân Thành",
+        "dist_prov_id": 77
+    },
+    {
+        "dist_id": 755,
+        "dist_name": "Côn Đảo",
+        "dist_prov_id": 77
+    },
+    {
+        "dist_id": 760,
+        "dist_name": "1",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 761,
+        "dist_name": "12",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 762,
+        "dist_name": "Thủ Đức",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 763,
+        "dist_name": "9",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 764,
+        "dist_name": "Gò Vấp",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 765,
+        "dist_name": "Bình Thạnh",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 766,
+        "dist_name": "Tân Bình",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 767,
+        "dist_name": "Tân Phú",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 768,
+        "dist_name": "Phú Nhuận",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 769,
+        "dist_name": "2",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 770,
+        "dist_name": "3",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 771,
+        "dist_name": "10",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 772,
+        "dist_name": "11",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 773,
+        "dist_name": "4",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 774,
+        "dist_name": "5",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 775,
+        "dist_name": "6",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 776,
+        "dist_name": "8",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 777,
+        "dist_name": "Bình Tân",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 778,
+        "dist_name": "7",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 783,
+        "dist_name": "Củ Chi",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 784,
+        "dist_name": "Hóc Môn",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 785,
+        "dist_name": "Bình Chánh",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 786,
+        "dist_name": "Nhà Bè",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 787,
+        "dist_name": "Cần Giờ",
+        "dist_prov_id": 79
+    },
+    {
+        "dist_id": 794,
+        "dist_name": "Tân An",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 796,
+        "dist_name": "Tân Hưng",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 797,
+        "dist_name": "Vĩnh Hưng",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 798,
+        "dist_name": "Mộc Hóa",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 799,
+        "dist_name": "Tân Thạnh",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 800,
+        "dist_name": "Thạnh Hóa",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 801,
+        "dist_name": "Đức Huệ",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 802,
+        "dist_name": "Đức Hòa",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 803,
+        "dist_name": "Bến Lức",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 804,
+        "dist_name": "Thủ Thừa",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 805,
+        "dist_name": "Tân Trụ",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 806,
+        "dist_name": "Cần Đước",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 807,
+        "dist_name": "Cần Giuộc",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 808,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 80
+    },
+    {
+        "dist_id": 815,
+        "dist_name": "Mỹ Tho",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 816,
+        "dist_name": "Gò Công",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 818,
+        "dist_name": "Tân Phước",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 819,
+        "dist_name": "Cái Bè",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 820,
+        "dist_name": "Cai Lậy",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 821,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 822,
+        "dist_name": "Chợ Gạo",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 823,
+        "dist_name": "Gò Công Tây",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 824,
+        "dist_name": "Gò Công Đông",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 825,
+        "dist_name": "Tân Phú Đông",
+        "dist_prov_id": 82
+    },
+    {
+        "dist_id": 829,
+        "dist_name": "Bến Tre",
+        "dist_prov_id": 83
+    },
+    {
+        "dist_id": 831,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 83
+    },
+    {
+        "dist_id": 832,
+        "dist_name": "Chợ Lách",
+        "dist_prov_id": 83
+    },
+    {
+        "dist_id": 833,
+        "dist_name": "Mỏ Cày Nam",
+        "dist_prov_id": 83
+    },
+    {
+        "dist_id": 834,
+        "dist_name": "Giồng Trôm",
+        "dist_prov_id": 83
+    },
+    {
+        "dist_id": 835,
+        "dist_name": "Bình Đại",
+        "dist_prov_id": 83
+    },
+    {
+        "dist_id": 836,
+        "dist_name": "Ba Tri",
+        "dist_prov_id": 83
+    },
+    {
+        "dist_id": 837,
+        "dist_name": "Thạnh Phú",
+        "dist_prov_id": 83
+    },
+    {
+        "dist_id": 838,
+        "dist_name": "Mỏ Cày Bắc",
+        "dist_prov_id": 83
+    },
+    {
+        "dist_id": 842,
+        "dist_name": "Trà Vinh",
+        "dist_prov_id": 84
+    },
+    {
+        "dist_id": 844,
+        "dist_name": "Càng Long",
+        "dist_prov_id": 84
+    },
+    {
+        "dist_id": 845,
+        "dist_name": "Cầu Kè",
+        "dist_prov_id": 84
+    },
+    {
+        "dist_id": 846,
+        "dist_name": "Tiểu Cần",
+        "dist_prov_id": 84
+    },
+    {
+        "dist_id": 847,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 84
+    },
+    {
+        "dist_id": 848,
+        "dist_name": "Cầu Ngang",
+        "dist_prov_id": 84
+    },
+    {
+        "dist_id": 849,
+        "dist_name": "Trà Cú",
+        "dist_prov_id": 84
+    },
+    {
+        "dist_id": 850,
+        "dist_name": "Duyên Hải",
+        "dist_prov_id": 84
+    },
+    {
+        "dist_id": 855,
+        "dist_name": "Vĩnh Long",
+        "dist_prov_id": 86
+    },
+    {
+        "dist_id": 857,
+        "dist_name": "Long Hồ",
+        "dist_prov_id": 86
+    },
+    {
+        "dist_id": 858,
+        "dist_name": "Mang Thít",
+        "dist_prov_id": 86
+    },
+    {
+        "dist_id": 859,
+        "dist_name": "Vũng Liêm",
+        "dist_prov_id": 86
+    },
+    {
+        "dist_id": 860,
+        "dist_name": "Tam Bình",
+        "dist_prov_id": 86
+    },
+    {
+        "dist_id": 861,
+        "dist_name": "Bình Minh",
+        "dist_prov_id": 86
+    },
+    {
+        "dist_id": 862,
+        "dist_name": "Trà Ôn",
+        "dist_prov_id": 86
+    },
+    {
+        "dist_id": 863,
+        "dist_name": "Bình Tân",
+        "dist_prov_id": 86
+    },
+    {
+        "dist_id": 866,
+        "dist_name": "Cao Lãnh",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 867,
+        "dist_name": "Sa Đéc",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 868,
+        "dist_name": "Hồng Ngự",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 869,
+        "dist_name": "Tân Hồng",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 870,
+        "dist_name": "Hồng Ngự",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 871,
+        "dist_name": "Tam Nông",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 872,
+        "dist_name": "Tháp Mười",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 873,
+        "dist_name": "Cao Lãnh",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 874,
+        "dist_name": "Thanh Bình",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 875,
+        "dist_name": "Lấp Vò",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 876,
+        "dist_name": "Lai Vung",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 877,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 87
+    },
+    {
+        "dist_id": 883,
+        "dist_name": "Long Xuyên",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 884,
+        "dist_name": "Châu Đốc",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 886,
+        "dist_name": "An Phú",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 887,
+        "dist_name": "Tân Châu",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 888,
+        "dist_name": "Phú Tân",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 889,
+        "dist_name": "Châu Phú",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 890,
+        "dist_name": "Tịnh Biên",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 891,
+        "dist_name": "Tri Tôn",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 892,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 893,
+        "dist_name": "Chợ Mới",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 894,
+        "dist_name": "Thoại Sơn",
+        "dist_prov_id": 89
+    },
+    {
+        "dist_id": 899,
+        "dist_name": "Rạch Giá",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 900,
+        "dist_name": "Hà Tiên",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 902,
+        "dist_name": "Kiên Lương",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 903,
+        "dist_name": "Hòn Đất",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 904,
+        "dist_name": "Tân Hiệp",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 905,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 906,
+        "dist_name": "Giồng Giềng",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 907,
+        "dist_name": "Gò Quao",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 908,
+        "dist_name": "An Biên",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 909,
+        "dist_name": "An Minh",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 910,
+        "dist_name": "Vĩnh Thuận",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 911,
+        "dist_name": "Phú Quốc",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 912,
+        "dist_name": "Kiên Hải",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 913,
+        "dist_name": "U Minh Thượng",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 914,
+        "dist_name": "Giang Thành",
+        "dist_prov_id": 91
+    },
+    {
+        "dist_id": 916,
+        "dist_name": "Ninh Kiều",
+        "dist_prov_id": 92
+    },
+    {
+        "dist_id": 917,
+        "dist_name": "Ô Môn",
+        "dist_prov_id": 92
+    },
+    {
+        "dist_id": 918,
+        "dist_name": "Bình Thuỷ",
+        "dist_prov_id": 92
+    },
+    {
+        "dist_id": 919,
+        "dist_name": "Cái Răng",
+        "dist_prov_id": 92
+    },
+    {
+        "dist_id": 923,
+        "dist_name": "Thốt Nốt",
+        "dist_prov_id": 92
+    },
+    {
+        "dist_id": 924,
+        "dist_name": "Vĩnh Thạnh",
+        "dist_prov_id": 92
+    },
+    {
+        "dist_id": 925,
+        "dist_name": "Cờ Đỏ",
+        "dist_prov_id": 92
+    },
+    {
+        "dist_id": 926,
+        "dist_name": "Phong Điền",
+        "dist_prov_id": 92
+    },
+    {
+        "dist_id": 927,
+        "dist_name": "Thới Lai",
+        "dist_prov_id": 92
+    },
+    {
+        "dist_id": 930,
+        "dist_name": "Vị Thanh",
+        "dist_prov_id": 93
+    },
+    {
+        "dist_id": 931,
+        "dist_name": "Ngã Bảy",
+        "dist_prov_id": 93
+    },
+    {
+        "dist_id": 932,
+        "dist_name": "Châu Thành A",
+        "dist_prov_id": 93
+    },
+    {
+        "dist_id": 933,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 93
+    },
+    {
+        "dist_id": 934,
+        "dist_name": "Phụng Hiệp",
+        "dist_prov_id": 93
+    },
+    {
+        "dist_id": 935,
+        "dist_name": "Vị Thuỷ",
+        "dist_prov_id": 93
+    },
+    {
+        "dist_id": 936,
+        "dist_name": "Long Mỹ",
+        "dist_prov_id": 93
+    },
+    {
+        "dist_id": 941,
+        "dist_name": "Sóc Trăng",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 942,
+        "dist_name": "Châu Thành",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 943,
+        "dist_name": "Kế Sách",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 944,
+        "dist_name": "Mỹ Tú",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 945,
+        "dist_name": "Cù Lao Dung",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 946,
+        "dist_name": "Long Phú",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 947,
+        "dist_name": "Mỹ Xuyên",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 948,
+        "dist_name": "Ngã Năm",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 949,
+        "dist_name": "Thạnh Trị",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 950,
+        "dist_name": "Vĩnh Châu",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 951,
+        "dist_name": "Trần Đề",
+        "dist_prov_id": 94
+    },
+    {
+        "dist_id": 954,
+        "dist_name": "Bạc Liêu",
+        "dist_prov_id": 95
+    },
+    {
+        "dist_id": 956,
+        "dist_name": "Hồng Dân",
+        "dist_prov_id": 95
+    },
+    {
+        "dist_id": 957,
+        "dist_name": "Phước Long",
+        "dist_prov_id": 95
+    },
+    {
+        "dist_id": 958,
+        "dist_name": "Vĩnh Lợi",
+        "dist_prov_id": 95
+    },
+    {
+        "dist_id": 959,
+        "dist_name": "Giá Rai",
+        "dist_prov_id": 95
+    },
+    {
+        "dist_id": 960,
+        "dist_name": "Đông Hải",
+        "dist_prov_id": 95
+    },
+    {
+        "dist_id": 961,
+        "dist_name": "Hoà Bình",
+        "dist_prov_id": 95
+    },
+    {
+        "dist_id": 964,
+        "dist_name": "Cà Mau",
+        "dist_prov_id": 96
+    },
+    {
+        "dist_id": 966,
+        "dist_name": "U Minh",
+        "dist_prov_id": 96
+    },
+    {
+        "dist_id": 967,
+        "dist_name": "Thới Bình",
+        "dist_prov_id": 96
+    },
+    {
+        "dist_id": 968,
+        "dist_name": "Trần Văn Thời",
+        "dist_prov_id": 96
+    },
+    {
+        "dist_id": 969,
+        "dist_name": "Cái Nước",
+        "dist_prov_id": 96
+    },
+    {
+        "dist_id": 970,
+        "dist_name": "Đầm Dơi",
+        "dist_prov_id": 96
+    },
+    {
+        "dist_id": 971,
+        "dist_name": "Năm Căn",
+        "dist_prov_id": 96
+    },
+    {
+        "dist_id": 972,
+        "dist_name": "Phú Tân",
+        "dist_prov_id": 96
+    },
+    {
+        "dist_id": 973,
+        "dist_name": "Ngọc Hiển",
+        "dist_prov_id": 96
+    }
+]

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AE46D2E-9E3A-4A99-A5DB-CC08B4F0BC27}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GarageManagement.Garage.Entity</RootNamespace>
+    <AssemblyName>GarageManagement.Garage.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.2.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Data.SqlClient.4.4.2\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Accessary.cs" />
+    <Compile Include="Entities\AccessaryUnit.cs" />
+    <Compile Include="Entities\AuditTrailLog.cs" />
+    <Compile Include="Entities\Branch.cs" />
+    <Compile Include="Entities\Car.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\CustomerExchange.cs" />
+    <Compile Include="Entities\CustomerType.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Context\GarageDbContext.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\GarageInfo.cs" />
+    <Compile Include="Entities\GarageLayout.cs" />
+    <Compile Include="Entities\GarageSetting.cs" />
+    <Compile Include="Entities\Insuer.cs" />
+    <Compile Include="Entities\Inventory.cs" />
+    <Compile Include="Entities\InventoryStatus.cs" />
+    <Compile Include="Entities\Module.cs" />
+    <Compile Include="Entities\MaintenanceSchedule.cs" />
+    <Compile Include="Entities\Manufacturer.cs" />
+    <Compile Include="Entities\Model.cs" />
+    <Compile Include="Entities\PaySlipBill.cs" />
+    <Compile Include="Entities\PrintTemplate.cs" />
+    <Compile Include="Entities\Quotation.cs" />
+    <Compile Include="Entities\QuotationEmployee.cs" />
+    <Compile Include="Entities\QuotationItem.cs" />
+    <Compile Include="Entities\QuotationNote.cs" />
+    <Compile Include="Entities\QuotationStatus.cs" />
+    <Compile Include="Entities\ReceiptsBill.cs" />
+    <Compile Include="Entities\RefreshToken.cs" />
+    <Compile Include="Entities\Right.cs" />
+    <Compile Include="Entities\RightModule.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\RoleRightModule.cs" />
+    <Compile Include="Entities\Service.cs" />
+    <Compile Include="Entities\ServiceType.cs" />
+    <Compile Include="Entities\ServiceUnit.cs" />
+    <Compile Include="Entities\Style.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Year.cs" />
+    <Compile Include="Enum\ModuleEnum.cs" />
+    <Compile Include="Enum\QuotationStatusEnum.cs" />
+    <Compile Include="Enum\RightEnum.cs" />
+    <Compile Include="Mapping\AccessaryMap.cs" />
+    <Compile Include="Mapping\AccessaryUnitMap.cs" />
+    <Compile Include="Mapping\AuditTrailLogMap.cs" />
+    <Compile Include="Mapping\BranchMap.cs" />
+    <Compile Include="Mapping\CarMap.cs" />
+    <Compile Include="Mapping\CategoryMap.cs" />
+    <Compile Include="Mapping\CustomerExchangeMap.cs" />
+    <Compile Include="Mapping\CustomerMap.cs" />
+    <Compile Include="Mapping\CustomerTypeMap.cs" />
+    <Compile Include="Mapping\EmployeeMap.cs" />
+    <Compile Include="Mapping\GarageInfoMap.cs" />
+    <Compile Include="Mapping\GarageLayoutMap.cs" />
+    <Compile Include="Mapping\GarageSettingMap.cs" />
+    <Compile Include="Mapping\InsuerMap.cs" />
+    <Compile Include="Mapping\InventoryMap.cs" />
+    <Compile Include="Mapping\InventoryStatusMap.cs" />
+    <Compile Include="Mapping\ModuleMap.cs" />
+    <Compile Include="Mapping\MaintenanceScheduleMap.cs" />
+    <Compile Include="Mapping\ManufactureMap.cs" />
+    <Compile Include="Mapping\ModelMap.cs" />
+    <Compile Include="Mapping\PaySlipBillMap.cs" />
+    <Compile Include="Mapping\PrintTemplateMap.cs" />
+    <Compile Include="Mapping\QuotationEmployeeMap.cs" />
+    <Compile Include="Mapping\QuotationItemMap.cs" />
+    <Compile Include="Mapping\QuotationMap.cs" />
+    <Compile Include="Mapping\QuotationNoteMap.cs" />
+    <Compile Include="Mapping\QuotationStatusMap.cs" />
+    <Compile Include="Mapping\ReceiptsBillMap.cs" />
+    <Compile Include="Mapping\RefreshTokenMap.cs" />
+    <Compile Include="Mapping\RightMap.cs" />
+    <Compile Include="Mapping\RightModuleMap.cs" />
+    <Compile Include="Mapping\RoleMap.cs" />
+    <Compile Include="Mapping\RoleRightModuleMap.cs" />
+    <Compile Include="Mapping\ServiceMap.cs" />
+    <Compile Include="Mapping\ServiceTypeMap.cs" />
+    <Compile Include="Mapping\ServiceUnitMap.cs" />
+    <Compile Include="Mapping\StyleMap.cs" />
+    <Compile Include="Mapping\UserMap.cs" />
+    <Compile Include="Mapping\YearMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

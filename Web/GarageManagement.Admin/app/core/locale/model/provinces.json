@@ -1,0 +1,254 @@
+[    
+    {
+        "prov_id": 1,
+        "prov_name": "Hà Nội"
+    },
+    {
+        "prov_id": 2,
+        "prov_name": "Hà Giang"
+    },
+    {
+        "prov_id": 4,
+        "prov_name": "Cao Bằng"
+    },
+    {
+        "prov_id": 6,
+        "prov_name": "Bắc Kạn"
+    },
+    {
+        "prov_id": 8,
+        "prov_name": "Tuyên Quang"
+    },
+    {
+        "prov_id": 10,
+        "prov_name": "Lào Cai"
+    },
+    {
+        "prov_id": 11,
+        "prov_name": "Điện Biên"
+    },
+    {
+        "prov_id": 12,
+        "prov_name": "Lai Châu"
+    },
+    {
+        "prov_id": 14,
+        "prov_name": "Sơn La"
+    },
+    {
+        "prov_id": 15,
+        "prov_name": "Yên Bái"
+    },
+    {
+        "prov_id": 17,
+        "prov_name": "Hòa Bình"
+    },
+    {
+        "prov_id": 19,
+        "prov_name": "Thái Nguyên"
+    },
+    {
+        "prov_id": 20,
+        "prov_name": "Lạng Sơn"
+    },
+    {
+        "prov_id": 22,
+        "prov_name": "Quảng Ninh"
+    },
+    {
+        "prov_id": 24,
+        "prov_name": "Bắc Giang"
+    },
+    {
+        "prov_id": 25,
+        "prov_name": "Phú Thọ"
+    },
+    {
+        "prov_id": 26,
+        "prov_name": "Vĩnh Phúc"
+    },
+    {
+        "prov_id": 27,
+        "prov_name": "Bắc Ninh"
+    },
+    {
+        "prov_id": 30,
+        "prov_name": "Hải Dương"
+    },
+    {
+        "prov_id": 31,
+        "prov_name": "Hải Phòng"
+    },
+    {
+        "prov_id": 33,
+        "prov_name": "Hưng Yên"
+    },
+    {
+        "prov_id": 34,
+        "prov_name": "Thái Bình"
+    },
+    {
+        "prov_id": 35,
+        "prov_name": "Hà Nam"
+    },
+    {
+        "prov_id": 36,
+        "prov_name": "Nam Định"
+    },
+    {
+        "prov_id": 37,
+        "prov_name": "Ninh Bình"
+    },
+    {
+        "prov_id": 38,
+        "prov_name": "Thanh Hóa"
+    },
+    {
+        "prov_id": 40,
+        "prov_name": "Nghệ An"
+    },
+    {
+        "prov_id": 42,
+        "prov_name": "Hà Tĩnh"
+    },
+    {
+        "prov_id": 44,
+        "prov_name": "Quảng Bình"
+    },
+    {
+        "prov_id": 45,
+        "prov_name": "Quảng Trị"
+    },
+    {
+        "prov_id": 46,
+        "prov_name": "Thừa Thiên Huế"
+    },
+    {
+        "prov_id": 48,
+        "prov_name": "Đà Nẵng"
+    },
+    {
+        "prov_id": 49,
+        "prov_name": "Quảng Nam"
+    },
+    {
+        "prov_id": 51,
+        "prov_name": "Quảng Ngãi"
+    },
+    {
+        "prov_id": 52,
+        "prov_name": "Bình Định"
+    },
+    {
+        "prov_id": 54,
+        "prov_name": "Phú Yên"
+    },
+    {
+        "prov_id": 56,
+        "prov_name": "Khánh Hòa"
+    },
+    {
+        "prov_id": 58,
+        "prov_name": "Ninh Thuận"
+    },
+    {
+        "prov_id": 60,
+        "prov_name": "Bình Thuận"
+    },
+    {
+        "prov_id": 62,
+        "prov_name": "Kon Tum"
+    },
+    {
+        "prov_id": 64,
+        "prov_name": "Gia Lai"
+    },
+    {
+        "prov_id": 66,
+        "prov_name": "Đắk Lắk"
+    },
+    {
+        "prov_id": 67,
+        "prov_name": "Đắk Nông"
+    },
+    {
+        "prov_id": 68,
+        "prov_name": "Lâm Đồng"
+    },
+    {
+        "prov_id": 70,
+        "prov_name": "Bình Phước"
+    },
+    {
+        "prov_id": 72,
+        "prov_name": "Tây Ninh"
+    },
+    {
+        "prov_id": 74,
+        "prov_name": "Bình Dương"
+    },
+    {
+        "prov_id": 75,
+        "prov_name": "Đồng Nai"
+    },
+    {
+        "prov_id": 77,
+        "prov_name": "Bà Rịa - Vũng Tàu"
+    },
+    {
+        "prov_id": 79,
+        "prov_name": "Hồ Chí Minh"
+    },
+    {
+        "prov_id": 80,
+        "prov_name": "Long An"
+    },
+    {
+        "prov_id": 82,
+        "prov_name": "Tiền Giang"
+    },
+    {
+        "prov_id": 83,
+        "prov_name": "Bến Tre"
+    },
+    {
+        "prov_id": 84,
+        "prov_name": "Trà Vinh"
+    },
+    {
+        "prov_id": 86,
+        "prov_name": "Vĩnh Long"
+    },
+    {
+        "prov_id": 87,
+        "prov_name": "Đồng Tháp"
+    },
+    {
+        "prov_id": 89,
+        "prov_name": "An Giang"
+    },
+    {
+        "prov_id": 91,
+        "prov_name": "Kiên Giang"
+    },
+    {
+        "prov_id": 92,
+        "prov_name": "Cần Thơ"
+    },
+    {
+        "prov_id": 93,
+        "prov_name": "Hậu Giang"
+    },
+    {
+        "prov_id": 94,
+        "prov_name": "Sóc Trăng"
+    },
+    {
+        "prov_id": 95,
+        "prov_name": "Bạc Liêu"
+    },
+    {
+        "prov_id": 96,
+        "prov_name": "Cà Mau"
+    }        
+]

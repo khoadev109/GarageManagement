@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "moduleResolution": "node",
+        "baseUrl": "app",
+        "allowSyntheticDefaultImports": true,
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "outDir": "static",
+        "jsx": "react",
+        "types": [
+            "node"
+        ]
+    },
+    "files": [
+        "config/webpack.config.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

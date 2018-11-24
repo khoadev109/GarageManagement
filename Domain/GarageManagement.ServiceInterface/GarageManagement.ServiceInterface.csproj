@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D990ACB-55E5-4BDD-B128-271551E2D0F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GarageManagement.ServiceInterface</RootNamespace>
+    <AssemblyName>GarageManagement.ServiceInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityPrefix.cs" />
+    <Compile Include="Garage\DTO\DTOAccessary.cs" />
+    <Compile Include="Garage\DTO\DTOAccessaryUnit.cs" />
+    <Compile Include="Garage\DTO\DTOAuditTrailLog.cs" />
+    <Compile Include="Garage\DTO\DTOBase.cs" />
+    <Compile Include="Garage\DTO\DTOBranch.cs" />
+    <Compile Include="Garage\DTO\DTOCar.cs" />
+    <Compile Include="Garage\DTO\DTOCategory.cs" />
+    <Compile Include="Garage\DTO\DTOCustomer.cs" />
+    <Compile Include="Garage\DTO\DTOCustomerExchange.cs" />
+    <Compile Include="Garage\DTO\DTOCustomerType.cs" />
+    <Compile Include="Garage\DTO\DTOEmployee.cs" />
+    <Compile Include="Garage\DTO\DTOGarage.cs" />
+    <Compile Include="Garage\DTO\DTOMaintenanceSchedule.cs" />
+    <Compile Include="Garage\DTO\DTOManufacturer.cs" />
+    <Compile Include="Garage\DTO\DTOModel.cs" />
+    <Compile Include="Garage\DTO\DTOModule.cs" />
+    <Compile Include="Garage\DTO\DTOPaySlipBill.cs" />
+    <Compile Include="Garage\DTO\DTOPrintTemplate.cs" />
+    <Compile Include="Garage\DTO\DTOQuotation.cs" />
+    <Compile Include="Garage\DTO\DTOQuotationItem.cs" />
+    <Compile Include="Garage\DTO\DTOQuotationNote.cs" />
+    <Compile Include="Garage\DTO\DTOReceiptsBill.cs" />
+    <Compile Include="Garage\DTO\DTORefreshToken.cs" />
+    <Compile Include="Garage\DTO\DTORight.cs" />
+    <Compile Include="Garage\DTO\DTORole.cs" />
+    <Compile Include="Garage\DTO\DTORoleRightModule.cs" />
+    <Compile Include="Garage\DTO\DTOService.cs" />
+    <Compile Include="Garage\DTO\DTOServiceType.cs" />
+    <Compile Include="Garage\DTO\DTOStyle.cs" />
+    <Compile Include="Garage\DTO\DTOUser.cs" />
+    <Compile Include="Garage\DTO\DTOUserRight.cs" />
+    <Compile Include="Garage\DTO\DTOYear.cs" />
+    <Compile Include="Garage\IAuditTrailBusinessService.cs" />
+    <Compile Include="Garage\ICarBusinessService.cs" />
+    <Compile Include="Garage\ICategoryBusinessService.cs" />
+    <Compile Include="Garage\ICustomerExchangeBusinessService.cs" />
+    <Compile Include="Garage\IEmployeeBusinessService.cs" />
+    <Compile Include="Garage\IGarageBusinessService.cs" />
+    <Compile Include="Garage\IMaintenanceScheduleBusinessService.cs" />
+    <Compile Include="Garage\IRightHandlerBusinessService.cs" />
+    <Compile Include="Garage\IModuleBusinessService.cs" />
+    <Compile Include="Garage\IQuotationBusinessService.cs" />
+    <Compile Include="Garage\IRefreshTokenBusinessService.cs" />
+    <Compile Include="Garage\IRoleBusinessService.cs" />
+    <Compile Include="Garage\IRoleRightModuleBusinessService.cs" />
+    <Compile Include="Garage\IServiceTypeBusinessService.cs" />
+    <Compile Include="Garage\IModelBusinessService.cs" />
+    <Compile Include="Garage\IUserBusinessService.cs" />
+    <Compile Include="Garage\IYearBusinessService.cs" />
+    <Compile Include="Garage\IStyleBusinessService.cs" />
+    <Compile Include="Garage\IManufacturerBusinessService.cs" />
+    <Compile Include="Garage\DTO\DTOServiceUnit.cs" />
+    <Compile Include="Garage\IAccessaryBusinessService.cs" />
+    <Compile Include="Garage\IBranchBusinessService.cs" />
+    <Compile Include="Garage\ICustomerBusinessService.cs" />
+    <Compile Include="Garage\ICustomerTypeBusinessService.cs" />
+    <Compile Include="Garage\IServiceBusinessService.cs" />
+    <Compile Include="Garage\IServiceUnitBusinessService.cs" />
+    <Compile Include="IServiceBase.cs" />
+    <Compile Include="Garage\IAccessaryUnitBusinessService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result\DataResult.cs" />
+    <Compile Include="Result\ErrorDescriber.cs" />
+    <Compile Include="Result\ErrorLog.cs" />
+    <Compile Include="Tracking\DTO\DTOBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Library\Common.Core\Common.Core.csproj">
+      <Project>{a05eaebb-5193-4801-bee9-cfea3820448d}</Project>
+      <Name>Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Library\Common.vdCore\Common.vdCore.csproj">
+      <Project>{064b166d-3f8e-4a52-beb7-ceee1674f663}</Project>
+      <Name>Common.vdCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GarageManagement.Garage.Entity\GarageManagement.Garage.Entity.csproj">
+      <Project>{2ae46d2e-9e3a-4a99-a5db-cc08b4f0bc27}</Project>
+      <Name>GarageManagement.Garage.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GarageManagement.RepositoryInterface\GarageManagement.RepositoryInterface.csproj">
+      <Project>{38e72635-8fcb-402c-bc1b-5c23d0028161}</Project>
+      <Name>GarageManagement.RepositoryInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GarageManagement.Tracking.Entity\GarageManagement.Tracking.Entity.csproj">
+      <Project>{65f51918-b3a3-414f-9e12-5d02dc4d461a}</Project>
+      <Name>GarageManagement.Tracking.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
