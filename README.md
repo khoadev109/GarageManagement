@@ -32,15 +32,15 @@ This README would normally document whatever steps are necessary to get your app
 * Back end:
   - Restrict method length is equal to screen's height
   - A class cannot exceed 500 lines
-  - Public and Protected field should not have underline _ before name
+  - Constant should format in snake case and uppercase all characters
+  - Field or variable should follow camel case
+  - Public and Protected field should not have underline _ before name. Example: carName, customerName
   - Private field should have underline _ before name. Example: _ carName, _ customerName
   - Property should begin with uppercase character. Example: UserName
-  - Constant should format with snake case with all uppercase all characters
-  - Field or variable should follow camel case
   - Name of: namespace, class, interface, field, variable, property should be a noun
   - Name of method should begin with verb
-  - Don't use Hungary Notation standard. Example: carList, customerList, intAge, strEmployeeName.
-    Instead using the meaningful name. Example: cars, customers, age, employeeName
+  - Don't use Hungary Notation naming convention. Example: carList, customerList, intAge, strEmployeeName.
+    Instead using the meaningful name without type. Example: cars, customers, age, employeeName
   - Don't attach class name with property name. 
     Example: 
     class Customer 
@@ -55,4 +55,4 @@ This README would normally document whatever steps are necessary to get your app
       public int ID { get; set; }
       public string Name { get; set; }
     }
-    
+  - Limit to use comment. Instead expose meaning in variable name, method name,...
