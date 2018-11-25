@@ -8,11 +8,11 @@ using System.Linq.Expressions;
 using System.Collections.Generic;
 using Common.Core.Extension;
 using Common.Core.AutoGenerate;
+using Common.Core.WebAPI.Result;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
 using GarageManagement.ServiceInterface;
 using GarageManagement.ServiceInterface.Garage;
-using GarageManagement.ServiceInterface.Result;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.RepositoryInterface;
 using GarageManagement.RepositoryInterface.Paging;
@@ -22,18 +22,15 @@ namespace GarageManagement.Business.Garage
 {
     public class CustomerBusinessService : ServiceBase<GarageDbContext>, ICustomerBusinessService
     {
-        public IMapper _mapper;
+        private readonly IRepository<Customer> _customerRepository;
+        private readonly IRepository<GarageInfo> _garageInfoRepository;
+        private readonly IRepository<CustomerExchange> _customerExchangeRepository;
 
-        private readonly IRepository<Customer> customerRepository;
-        private readonly IRepository<GarageInfo> garageInfoRepository;
-        private readonly IRepository<CustomerExchange> customerExchangeRepository;
-
-        public CustomerBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public CustomerBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            customerRepository = _unitOfWork.GetRepository<Customer>();
-            garageInfoRepository = _unitOfWork.GetRepository<GarageInfo>();
-            customerExchangeRepository = _unitOfWork.GetRepository<CustomerExchange>();
+            _customerRepository = base.unitOfWork.GetRepository<Customer>();
+            _garageInfoRepository = base.unitOfWork.GetRepository<GarageInfo>();
+            _customerExchangeRepository = base.unitOfWork.GetRepository<CustomerExchange>();
         }
 
         public Task<DataResult<DTOCustomer>> GetCustomerByIdAsync(string customerId)
@@ -42,14 +39,14 @@ namespace GarageManagement.Business.Garage
             {
                 var customerDTO = new DTOCustomer();
 
-                var customer = customerRepository.GetById(customerId);
+                var customer = _customerRepository.GetById(customerId);
                 if (customer != null)
                 {
-                    customerDTO = _mapper.Map<DTOCustomer>(customer);
+                    customerDTO = mapper.Map<DTOCustomer>(customer);
                 }
                 else
                 {
-                    var identityNumber = customerRepository.Identity(x => x.GenerateId) != null ? customerRepository.Identity(x => x.GenerateId).GenerateId : 0;
+                    var identityNumber = _customerRepository.Identity(x => x.GenerateId) != null ? _customerRepository.Identity(x => x.GenerateId).GenerateId : 0;
                     customerDTO.Id = IdentityGenerate.Create(identityNumber, new string[] { "", EntityPrefix.Customer.ToDefaultValue() }, NumberUnitType.Large);
                 }
 
@@ -71,12 +68,12 @@ namespace GarageManagement.Business.Garage
                 searchQuery.IncludeProperties = "Branch,CustomerType";
                 searchQuery.SubqueryCondition = x => subQuery.Any(s => x.Id == s.Id);
 
-                var pagedCustomers = customerRepository.Search(searchQuery);
+                var pagedCustomers = _customerRepository.Search(searchQuery);
 
                 return new DataResult<IPagedListResult<DTOCustomer>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOCustomer, Customer>(_mapper, pagedCustomers)
+                    Target = GetDefaultPagingDtoResult<DTOCustomer, Customer>(mapper, pagedCustomers)
                 };
 
             }, cancellationToken);
@@ -103,8 +100,8 @@ namespace GarageManagement.Business.Garage
                     searchQuery.AddFilter(searchCondition);
                 }
 
-                var pagedCustomerWithCar = customerExchangeRepository.Search(searchQuery);
-                var pagedCustomerWithCarDTOs = GetDefaultPagingDtoResult<DTOCustomerExchange, CustomerExchange>(_mapper, pagedCustomerWithCar);
+                var pagedCustomerWithCar = _customerExchangeRepository.Search(searchQuery);
+                var pagedCustomerWithCarDTOs = GetDefaultPagingDtoResult<DTOCustomerExchange, CustomerExchange>(mapper, pagedCustomerWithCar);
 
                 // Mapping customer, car and quotations to DTO
                 pagedCustomerWithCarDTOs.DTOs = MappingCustomerAndCarDTO(pagedCustomerWithCar.DTOs.ToList(), pagedCustomerWithCarDTOs.DTOs.ToList());
@@ -133,18 +130,18 @@ namespace GarageManagement.Business.Garage
                 //if (customerRepository.ExistByCondition(x => !string.IsNullOrEmpty(x.Email) && x.Email == customerDTO.Email))
                 //    return new DataResult<DTOCustomer> { Errors = new List<ErrorDescriber> { new ErrorDescriber("Existed Customer Email") }, Target = customerDTO };
 
-                var customerEntity = _mapper.Map<Customer>(customerDTO);
+                var customerEntity = mapper.Map<Customer>(customerDTO);
 
-                string garageShortName = garageInfoRepository.GetFirstOrDefault()?.ShortName;
-                var identityNumber = customerRepository.Identity(x => x.GenerateId) != null ? customerRepository.Identity(x => x.GenerateId).GenerateId : 0;
+                string garageShortName = _garageInfoRepository.GetFirstOrDefault()?.ShortName;
+                var identityNumber = _customerRepository.Identity(x => x.GenerateId) != null ? _customerRepository.Identity(x => x.GenerateId).GenerateId : 0;
 
                 customerEntity.Id = garageShortName + IdentityGenerate.Create(identityNumber, new string[] { "", EntityPrefix.Customer.ToDefaultValue() }, NumberUnitType.Large);
                 customerEntity.CreatedDate = DateTime.Now;
 
-                var createdCustomerEntity = customerRepository.Insert(customerEntity);
-                _unitOfWork.SaveChanges();
+                var createdCustomerEntity = _customerRepository.Insert(customerEntity);
+                unitOfWork.SaveChanges();
 
-                createdCustomerDTO = _mapper.Map<DTOCustomer>(createdCustomerEntity);
+                createdCustomerDTO = mapper.Map<DTOCustomer>(createdCustomerEntity);
 
                 return new DataResult<DTOCustomer> { Errors = new List<ErrorDescriber>(), Target = createdCustomerDTO };
             });
@@ -163,16 +160,16 @@ namespace GarageManagement.Business.Garage
                 //if (customerRepository.ExistByCondition(x => x.Email == customerDTO.Email && !string.IsNullOrEmpty(x.Email) && x.Id != customerDTO.Id))
                 //    return new DataResult<DTOCustomer> { Errors = new List<ErrorDescriber> { new ErrorDescriber("Existed Customer Email") }, Target = customerDTO };
 
-                var customerEntity = _mapper.Map<Customer>(customerDTO);
+                var customerEntity = mapper.Map<Customer>(customerDTO);
                 var updatedCustomerDTO = new DTOCustomer();
-                if ((customerRepository.ExistByCondition(x => (x.Name == customerEntity.Name && x.Id == customerEntity.Id))) || (!customerRepository.ExistByCondition(x => x.Name == customerEntity.Name)))
+                if ((_customerRepository.ExistByCondition(x => (x.Name == customerEntity.Name && x.Id == customerEntity.Id))) || (!_customerRepository.ExistByCondition(x => x.Name == customerEntity.Name)))
                 {
                     customerEntity.ModifiedDate = DateTime.Now;
 
-                    var updatedCustomerEntity = customerRepository.Update(customerEntity);
-                    _unitOfWork.SaveChanges();
+                    var updatedCustomerEntity = _customerRepository.Update(customerEntity);
+                    unitOfWork.SaveChanges();
 
-                    updatedCustomerDTO = _mapper.Map<DTOCustomer>(updatedCustomerEntity);
+                    updatedCustomerDTO = mapper.Map<DTOCustomer>(updatedCustomerEntity);
 
                     return new DataResult<DTOCustomer> { Errors = new List<ErrorDescriber>(), Target = updatedCustomerDTO };
                 }
@@ -187,10 +184,10 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                if (!customerExchangeRepository.ExistByCondition(x => x.CustomerId == customerId))
+                if (!_customerExchangeRepository.ExistByCondition(x => x.CustomerId == customerId))
                 {
-                    customerRepository.Delete(customerId);
-                    _unitOfWork.SaveChanges();
+                    _customerRepository.Delete(customerId);
+                    unitOfWork.SaveChanges();
 
                     return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
                 }
@@ -216,9 +213,9 @@ namespace GarageManagement.Business.Garage
                 var customerExchangeDTO = customerExchangeDTOs[index];
                 if (customerExchangeDTO != null)
                 {
-                    customerExchangeDTO.Car = _mapper.Map<DTOCar>(x.Car);
-                    customerExchangeDTO.Customer = _mapper.Map<DTOCustomer>(x.Customer);
-                    customerExchangeDTO.Quotations = _mapper.Map<List<DTOQuotation>>(x.Quotations);
+                    customerExchangeDTO.Car = mapper.Map<DTOCar>(x.Car);
+                    customerExchangeDTO.Customer = mapper.Map<DTOCustomer>(x.Customer);
+                    customerExchangeDTO.Quotations = mapper.Map<List<DTOQuotation>>(x.Quotations);
                 }
                 index++;
             });
@@ -228,7 +225,7 @@ namespace GarageManagement.Business.Garage
 
         private IQueryable<Customer> GetFilterCustomersFromCustomerExchange(string searchTerm)
         {
-            var query = _unitOfWork.DbContext.CustomerExchanges.Include("Customer,Car");
+            var query = unitOfWork.DbContext.CustomerExchanges.Include("Customer,Car");
 
             if (!string.IsNullOrEmpty(searchTerm))
             {

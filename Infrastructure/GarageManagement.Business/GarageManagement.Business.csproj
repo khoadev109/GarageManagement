@@ -85,10 +85,6 @@
       <Project>{7D990ACB-55E5-4BDD-B128-271551E2D0F7}</Project>
       <Name>GarageManagement.ServiceInterface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Domain\GarageManagement.Tracking.Entity\GarageManagement.Tracking.Entity.csproj">
-      <Project>{65f51918-b3a3-414f-9e12-5d02dc4d461a}</Project>
-      <Name>GarageManagement.Tracking.Entity</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Library\Common.Core\Common.Core.csproj">
       <Project>{a05eaebb-5193-4801-bee9-cfea3820448d}</Project>
       <Name>Common.Core</Name>
@@ -102,9 +98,7 @@
       <Name>GarageManagement.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tracking\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

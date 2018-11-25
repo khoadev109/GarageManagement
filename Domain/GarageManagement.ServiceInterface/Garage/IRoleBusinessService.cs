@@ -1,5 +1,5 @@
 ﻿using GarageManagement.ServiceInterface.Garage.DTO;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.WebAPI.Result;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

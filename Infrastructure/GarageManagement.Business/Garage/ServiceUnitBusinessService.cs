@@ -4,39 +4,37 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.Extension;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
 using GarageManagement.RepositoryInterface.Paging;
 using GarageManagement.RepositoryInterface;
-using Common.Core.Extension;
 
 namespace GarageManagement.Business.Garage
 {
     public class ServiceUnitBusinessService : ServiceBase<GarageDbContext>, IServiceUnitBusinessService
     {
-        public IMapper _mapper;
+        private readonly IRepository<ServiceUnit> _serviceUnitRepository;
+        private readonly IRepository<Service> _serviceRepository;
 
-        private readonly IRepository<ServiceUnit> serviceUnitRepository;
-        private readonly IRepository<Service> serviceRepository;
-
-        public ServiceUnitBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public ServiceUnitBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            serviceUnitRepository = _unitOfWork.GetRepository<ServiceUnit>();
-            serviceRepository = _unitOfWork.GetRepository<Service>();
+            base.mapper = mapper;
+            _serviceUnitRepository = base.unitOfWork.GetRepository<ServiceUnit>();
+            _serviceRepository = base.unitOfWork.GetRepository<Service>();
         }
 
         public Task<DataResult<List<DTOServiceUnit>>> GetAllAsync()
         {
             return Task.Run(() =>
             {
-                var units = serviceUnitRepository.GetAll().ToList();
+                var units = _serviceUnitRepository.GetAll().ToList();
                 units.Add(new ServiceUnit { Id = 0, Name = "Chọn đơn vị" });
 
-                var unitsDTO = _mapper.Map<List<DTOServiceUnit>>(units.ToList());
+                var unitsDTO = mapper.Map<List<DTOServiceUnit>>(units.ToList());
 
                 return new DataResult<List<DTOServiceUnit>> { Errors = new List<ErrorDescriber>(), Target = unitsDTO };
             });
@@ -47,10 +45,10 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var serviceUnitDTO = new DTOServiceUnit();
-                var service = serviceUnitRepository.GetById(id);
+                var service = _serviceUnitRepository.GetById(id);
 
                 if (service != null)
-                    serviceUnitDTO = _mapper.Map<DTOServiceUnit>(service);
+                    serviceUnitDTO = mapper.Map<DTOServiceUnit>(service);
 
                 return new DataResult<DTOServiceUnit> { Errors = new List<ErrorDescriber>(), Target = serviceUnitDTO };
             });
@@ -73,12 +71,12 @@ namespace GarageManagement.Business.Garage
                 if (!string.IsNullOrEmpty(searchTerm))
                     searchQuery.AddFilter(x => x.Name.Contains(searchTerm));
 
-                var pagedServicesUnit = serviceUnitRepository.Search(searchQuery);
+                var pagedServicesUnit = _serviceUnitRepository.Search(searchQuery);
 
                 return new DataResult<IPagedListResult<DTOServiceUnit>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOServiceUnit, ServiceUnit>(_mapper, pagedServicesUnit)
+                    Target = GetDefaultPagingDtoResult<DTOServiceUnit, ServiceUnit>(mapper, pagedServicesUnit)
                 };
 
             }, cancellationToken);
@@ -89,14 +87,14 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var createdServiceUnitDTO = new DTOServiceUnit();
-                var serviceUnitEntity = _mapper.Map<ServiceUnit>(serviceUnitDTO);
+                var serviceUnitEntity = mapper.Map<ServiceUnit>(serviceUnitDTO);
 
-                if (!serviceUnitRepository.ExistByCondition(x => x.Name == serviceUnitEntity.Name))
+                if (!_serviceUnitRepository.ExistByCondition(x => x.Name == serviceUnitEntity.Name))
                 {
-                    var createdAccessaryUnitEntity = serviceUnitRepository.Insert(serviceUnitEntity);
-                    _unitOfWork.SaveChanges();
+                    var createdAccessaryUnitEntity = _serviceUnitRepository.Insert(serviceUnitEntity);
+                    unitOfWork.SaveChanges();
 
-                    createdServiceUnitDTO = _mapper.Map<DTOServiceUnit>(createdAccessaryUnitEntity);
+                    createdServiceUnitDTO = mapper.Map<DTOServiceUnit>(createdAccessaryUnitEntity);
                 }
 
                 return new DataResult<DTOServiceUnit> { Errors = new List<ErrorDescriber>(), Target = createdServiceUnitDTO };
@@ -107,15 +105,15 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var serivceUnitEntity = _mapper.Map<ServiceUnit>(serviceUnitDTO);
+                var serivceUnitEntity = mapper.Map<ServiceUnit>(serviceUnitDTO);
                 var updatedServiceUnitDTO = new DTOServiceUnit();
 
-                if ((serviceUnitRepository.ExistByCondition(x => (x.Name == serivceUnitEntity.Name && x.Id == serivceUnitEntity.Id))) || (!serviceUnitRepository.ExistByCondition(x => x.Name == serivceUnitEntity.Name)))
+                if ((_serviceUnitRepository.ExistByCondition(x => (x.Name == serivceUnitEntity.Name && x.Id == serivceUnitEntity.Id))) || (!_serviceUnitRepository.ExistByCondition(x => x.Name == serivceUnitEntity.Name)))
                 {
-                    var updatedCustomerEntity = serviceUnitRepository.Update(serivceUnitEntity);
-                    _unitOfWork.SaveChanges();
+                    var updatedCustomerEntity = _serviceUnitRepository.Update(serivceUnitEntity);
+                    unitOfWork.SaveChanges();
 
-                    updatedServiceUnitDTO = _mapper.Map<DTOServiceUnit>(updatedCustomerEntity);
+                    updatedServiceUnitDTO = mapper.Map<DTOServiceUnit>(updatedCustomerEntity);
 
                     return new DataResult<DTOServiceUnit> { Errors = new List<ErrorDescriber>(), Target = updatedServiceUnitDTO };
                 }
@@ -130,10 +128,10 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                if (!serviceRepository.ExistByCondition(x => x.UnitId == serviceUnitId))
+                if (!_serviceRepository.ExistByCondition(x => x.UnitId == serviceUnitId))
                 {
-                    serviceUnitRepository.Delete(serviceUnitId);
-                    _unitOfWork.SaveChanges();
+                    _serviceUnitRepository.Delete(serviceUnitId);
+                    unitOfWork.SaveChanges();
                     return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
                 }
                 else

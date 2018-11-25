@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Linq.Expressions;
 using System.Collections.Generic;
 using GarageManagement.Garage.Entity.Entities;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.RepositoryInterface.Paging;
 using GarageManagement.Garage.Entity.Context;

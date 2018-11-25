@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GarageManagement.ServiceInterface.Result
+namespace Common.Core.WebAPI.Result
 {
     public class ErrorDescriber
     {

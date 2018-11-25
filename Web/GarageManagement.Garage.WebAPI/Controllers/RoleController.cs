@@ -1,8 +1,8 @@
-﻿using GarageManagement.Garage.WebAPI.Attributes;
-using GarageManagement.ServiceInterface.Garage;
+﻿using GarageManagement.ServiceInterface.Garage;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Http;
+using static Common.Core.WebAPI.Authentication.Utilities.ClaimExtension;
 
 namespace GarageManagement.Garage.WebAPI.Controllers
 {

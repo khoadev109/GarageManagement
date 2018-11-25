@@ -5,12 +5,12 @@ using System.Threading;
 using Common.Core.Extension;
 using System.Threading.Tasks;
 using Common.Core.AutoGenerate;
+using Common.Core.WebAPI.Result;
 using System.Collections.Generic;
 using GarageManagement.ServiceInterface;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
 using GarageManagement.ServiceInterface.Garage;
-using GarageManagement.ServiceInterface.Result;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.RepositoryInterface;
 using GarageManagement.RepositoryInterface.Paging;
@@ -19,24 +19,21 @@ namespace GarageManagement.Business.Garage
 {
     public class AccessaryBusinessService : ServiceBase<GarageDbContext>, IAccessaryBusinessService
     {
-        public IMapper _mapper;
+        private readonly IRepository<Accessary> _accessaryRepository;
+        private readonly IRepository<QuotationItem> _quotationItemRepository;
 
-        private readonly IRepository<Accessary> accessaryRepository;
-        private readonly IRepository<QuotationItem> quotationItemRepository;
-
-        public AccessaryBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public AccessaryBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            accessaryRepository = _unitOfWork.GetRepository<Accessary>();
-            quotationItemRepository = _unitOfWork.GetRepository<QuotationItem>();
+            _accessaryRepository = base.unitOfWork.GetRepository<Accessary>();
+            _quotationItemRepository = base.unitOfWork.GetRepository<QuotationItem>();
         }
 
         public Task<DataResult<List<DTOAccessary>>> GetAllAccessariesAsync()
         {
             return Task.Run(() =>
             {
-                var accessaries = accessaryRepository.GetAll(includes: x => x.Unit).ToList();
-                var accessariesDTO = _mapper.Map<List<DTOAccessary>>(accessaries.ToList());
+                var accessaries = _accessaryRepository.GetAll(includes: x => x.Unit).ToList();
+                var accessariesDTO = mapper.Map<List<DTOAccessary>>(accessaries.ToList());
 
                 return new DataResult<List<DTOAccessary>> { Errors = new List<ErrorDescriber>(), Target = accessariesDTO };
             });
@@ -47,15 +44,15 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var accessaryDTO = new DTOAccessary();
-                var service = accessaryRepository.GetById(id);
+                var service = _accessaryRepository.GetById(id);
 
                 if (service != null)
                 {
-                    accessaryDTO = _mapper.Map<DTOAccessary>(service);
+                    accessaryDTO = mapper.Map<DTOAccessary>(service);
                 }
                 else
                 {
-                    var identityNumber = accessaryRepository.Identity(x => x.GenerateId) != null ? accessaryRepository.Identity(x => x.GenerateId).GenerateId : 0;
+                    var identityNumber = _accessaryRepository.Identity(x => x.GenerateId) != null ? _accessaryRepository.Identity(x => x.GenerateId).GenerateId : 0;
                     accessaryDTO.Id = IdentityGenerate.Create(identityNumber, new string[] { "", EntityPrefix.Accessary.ToDefaultValue() }, NumberUnitType.Medium);
                 }
 
@@ -80,12 +77,12 @@ namespace GarageManagement.Business.Garage
                 if (!string.IsNullOrEmpty(searchTerm))
                     searchQuery.AddFilter(x => x.Name.Contains(searchTerm) || x.Description.Contains(searchTerm));
 
-                var pagedAccessaries = accessaryRepository.Search(searchQuery);
+                var pagedAccessaries = _accessaryRepository.Search(searchQuery);
 
                 return new DataResult<IPagedListResult<DTOAccessary>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOAccessary, Accessary>(_mapper, pagedAccessaries)
+                    Target = GetDefaultPagingDtoResult<DTOAccessary, Accessary>(mapper, pagedAccessaries)
                 };
 
             }, cancellationToken);
@@ -96,14 +93,14 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var createdAccessaryDTO = new DTOAccessary();
-                var accessaryEntity = _mapper.Map<Accessary>(accessaryDTO);
+                var accessaryEntity = mapper.Map<Accessary>(accessaryDTO);
 
-                if (!accessaryRepository.ExistByCondition(x => x.Name == accessaryEntity.Name))
+                if (!_accessaryRepository.ExistByCondition(x => x.Name == accessaryEntity.Name))
                 {
-                    var createdAccessaryEntity = accessaryRepository.Insert(accessaryEntity);
-                    _unitOfWork.SaveChanges();
+                    var createdAccessaryEntity = _accessaryRepository.Insert(accessaryEntity);
+                    unitOfWork.SaveChanges();
 
-                    createdAccessaryDTO = _mapper.Map<DTOAccessary>(createdAccessaryEntity);
+                    createdAccessaryDTO = mapper.Map<DTOAccessary>(createdAccessaryEntity);
                 }
 
                 return new DataResult<DTOAccessary> { Errors = new List<ErrorDescriber>(), Target = createdAccessaryDTO };
@@ -115,14 +112,14 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var updatedAccessaryDTO = new DTOAccessary();
-                var accessaryEntity = _mapper.Map<Accessary>(accessaryDTO);
+                var accessaryEntity = mapper.Map<Accessary>(accessaryDTO);
 
-                if ((accessaryRepository.ExistByCondition(x => (x.Name == accessaryEntity.Name && x.Id == accessaryEntity.Id))) || (!accessaryRepository.ExistByCondition(x => x.Name == accessaryEntity.Name)))
+                if ((_accessaryRepository.ExistByCondition(x => (x.Name == accessaryEntity.Name && x.Id == accessaryEntity.Id))) || (!_accessaryRepository.ExistByCondition(x => x.Name == accessaryEntity.Name)))
                 {
-                    var updatedCustomerEntity = accessaryRepository.Update(accessaryEntity);
-                    _unitOfWork.SaveChanges();
+                    var updatedCustomerEntity = _accessaryRepository.Update(accessaryEntity);
+                    unitOfWork.SaveChanges();
 
-                    updatedAccessaryDTO = _mapper.Map<DTOAccessary>(updatedCustomerEntity);
+                    updatedAccessaryDTO = mapper.Map<DTOAccessary>(updatedCustomerEntity);
 
                     return new DataResult<DTOAccessary> { Errors = new List<ErrorDescriber>(), Target = updatedAccessaryDTO };
                 }
@@ -137,10 +134,10 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                if (!quotationItemRepository.ExistByCondition(x => x.AccessaryId == accessaryId))
+                if (!_quotationItemRepository.ExistByCondition(x => x.AccessaryId == accessaryId))
                 {
-                    accessaryRepository.Delete(accessaryId);
-                    _unitOfWork.SaveChanges();
+                    _accessaryRepository.Delete(accessaryId);
+                    unitOfWork.SaveChanges();
 
                     return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
                 }

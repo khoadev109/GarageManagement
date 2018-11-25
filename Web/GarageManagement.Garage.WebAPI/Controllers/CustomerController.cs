@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Linq.Expressions;
 using System.Collections.Generic;
 using System.Web.Http.ModelBinding;
+using Common.Core.WebAPI.Result;
 using GarageManagement.Garage.Entity.Entities;
 using GarageManagement.Garage.WebAPI.ModelBinder;
 using GarageManagement.ServiceInterface.Garage;
@@ -77,7 +78,7 @@ namespace GarageManagement.Garage.WebAPI.Controllers
 
         public async Task<IHttpActionResult> Post([FromBody] DTOCustomer customerDTO)
         {
-            Result errorResult = null;
+            ApiResult errorResult = null;
             var customerCreatedResult = await dependency.CustomerService.CreateAsync(customerDTO);
             if (!customerCreatedResult.HasErrors)
             {

@@ -5,36 +5,33 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.Extension;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.RepositoryInterface;
-
 using GarageManagement.RepositoryInterface.Paging;
-using Common.Core.Extension;
 
 namespace GarageManagement.Business.Garage
 {
     public class ManufacturerBusinessService : ServiceBase<GarageDbContext>, IManufacturerBusinessService
     {
-        public IMapper _mapper;
+        private readonly IRepository<Car> _carRepository;
+        private readonly IRepository<Manufacturer> _manufacturerRepository;
 
-        private readonly IRepository<Manufacturer> manufacturerRepository;
-        private readonly IRepository<Car> carRepository;
-
-        public ManufacturerBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public ManufacturerBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            manufacturerRepository = _unitOfWork.GetRepository<Manufacturer>();
-            carRepository = _unitOfWork.GetRepository<Car>();
+            base.mapper = mapper;
+            _manufacturerRepository = base.unitOfWork.GetRepository<Manufacturer>();
+            _carRepository = base.unitOfWork.GetRepository<Car>();
         }
 
         public Task<DataResult<List<DTOManufacturer>>> GetAllAsync()
         {
             return Task.Run(() =>
             {
-                var manufacturers = manufacturerRepository.GetAll();
-                var manufacturersDto = _mapper.Map<List<DTOManufacturer>>(manufacturers);
+                var manufacturers = _manufacturerRepository.GetAll();
+                var manufacturersDto = mapper.Map<List<DTOManufacturer>>(manufacturers);
 
                 return new DataResult<List<DTOManufacturer>> { Errors = new List<ErrorDescriber>(), Target = manufacturersDto };
             });
@@ -45,10 +42,10 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var manufacturerDTO = new DTOManufacturer();
-                var manufacturer = manufacturerRepository.GetById(id);
+                var manufacturer = _manufacturerRepository.GetById(id);
 
                 if (manufacturer != null)
-                    manufacturerDTO = _mapper.Map<DTOManufacturer>(manufacturer);
+                    manufacturerDTO = mapper.Map<DTOManufacturer>(manufacturer);
 
                 return new DataResult<DTOManufacturer> { Errors = new List<ErrorDescriber>(), Target = manufacturerDTO };
             });
@@ -70,12 +67,12 @@ namespace GarageManagement.Business.Garage
                 if (!string.IsNullOrEmpty(searchTerm))
                     searchQuery.AddFilter(x => x.Name.Contains(searchTerm) || x.Description.Contains(searchTerm));
 
-                var pagedManufacturers = manufacturerRepository.Search(searchQuery);
+                var pagedManufacturers = _manufacturerRepository.Search(searchQuery);
 
                 return new DataResult<IPagedListResult<DTOManufacturer>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOManufacturer, Manufacturer>(_mapper, pagedManufacturers)
+                    Target = GetDefaultPagingDtoResult<DTOManufacturer, Manufacturer>(mapper, pagedManufacturers)
                 };
 
             }, cancellationToken);
@@ -86,12 +83,12 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var createdManufacturerDTO = new DTOManufacturer();
-                var manufacturerEntity = _mapper.Map<Manufacturer>(manufacturerDTO);
-                var createdManufacturerEntity = manufacturerRepository.Insert(manufacturerEntity);
+                var manufacturerEntity = mapper.Map<Manufacturer>(manufacturerDTO);
+                var createdManufacturerEntity = _manufacturerRepository.Insert(manufacturerEntity);
 
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                createdManufacturerDTO = _mapper.Map<DTOManufacturer>(createdManufacturerEntity);
+                createdManufacturerDTO = mapper.Map<DTOManufacturer>(createdManufacturerEntity);
 
                 return new DataResult<DTOManufacturer> { Errors = new List<ErrorDescriber>(), Target = createdManufacturerDTO };
             });
@@ -101,15 +98,15 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var manufacturerEntity = _mapper.Map<Manufacturer>(manufacturerDTO);
+                var manufacturerEntity = mapper.Map<Manufacturer>(manufacturerDTO);
                 var updatedManufacturerDTO = new DTOManufacturer();
 
-                if ((manufacturerRepository.ExistByCondition(x => (x.Name == manufacturerEntity.Name && x.Id == manufacturerEntity.Id))) || (!manufacturerRepository.ExistByCondition(x => x.Name == manufacturerEntity.Name)))
+                if ((_manufacturerRepository.ExistByCondition(x => (x.Name == manufacturerEntity.Name && x.Id == manufacturerEntity.Id))) || (!_manufacturerRepository.ExistByCondition(x => x.Name == manufacturerEntity.Name)))
                 {
-                    var updatedManufacturerEntity = manufacturerRepository.Update(manufacturerEntity);
-                    _unitOfWork.SaveChanges();
+                    var updatedManufacturerEntity = _manufacturerRepository.Update(manufacturerEntity);
+                    unitOfWork.SaveChanges();
 
-                    updatedManufacturerDTO = _mapper.Map<DTOManufacturer>(updatedManufacturerEntity);
+                    updatedManufacturerDTO = mapper.Map<DTOManufacturer>(updatedManufacturerEntity);
 
                     return new DataResult<DTOManufacturer> { Errors = new List<ErrorDescriber>(), Target = updatedManufacturerDTO };
                 }
@@ -124,10 +121,10 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                if (!carRepository.ExistByCondition(x => x.ManufacturerId == manufacturerId))
+                if (!_carRepository.ExistByCondition(x => x.ManufacturerId == manufacturerId))
                 {
-                    manufacturerRepository.Delete(manufacturerId);
-                    _unitOfWork.SaveChanges();
+                    _manufacturerRepository.Delete(manufacturerId);
+                    unitOfWork.SaveChanges();
 
                     return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
                 }

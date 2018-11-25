@@ -4,40 +4,40 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.Extension;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
 using GarageManagement.RepositoryInterface;
-
 using GarageManagement.RepositoryInterface.Paging;
-using Common.Core.Extension;
 
 namespace GarageManagement.Business.Garage
 {
     public class CategoryBusinessService : ServiceBase<GarageDbContext>, ICategoryBusinessService
     {
-        public IMapper _mapper;
+        private readonly IRepository<Category> _categoryRepository;
 
-        private readonly IRepository<Category> categoryRepository;
-
-        public CategoryBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public CategoryBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            categoryRepository = _unitOfWork.GetRepository<Category>();
+            _categoryRepository = base.unitOfWork.GetRepository<Category>();
         }
 
         public Task<DataResult<List<DTOCategory>>> GetAllAsync()
         {
             return Task.Run(() =>
             {
-                var categories = categoryRepository.GetAll().ToList();
+                var categories = _categoryRepository.GetAll().ToList();
                 categories.Add(new Category { Id = 0, Name = "Chọn danh mục" });
 
-                var categoriesDTO = _mapper.Map<List<DTOCategory>>(categories.ToList());
+                var result = new DataResult<List<DTOCategory>>
+                {
+                    Errors = new List<ErrorDescriber>(),
+                    Target = mapper.Map<List<DTOCategory>>(categories.ToList())
+                };
 
-                return new DataResult<List<DTOCategory>> { Errors = new List<ErrorDescriber>(), Target = categoriesDTO };
+                return result;
             });
         }
 
@@ -45,10 +45,10 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var categories = categoryRepository.Get(x => x.ParentId == null).ToList();
+                var categories = _categoryRepository.Get(x => x.ParentId == null).ToList();
                 categories.Add(new Category { Id = 0, Name = "Chọn danh mục" });
 
-                var categoriesDTO = _mapper.Map<List<DTOCategory>>(categories.ToList());
+                var categoriesDTO = mapper.Map<List<DTOCategory>>(categories.ToList());
 
                 return new DataResult<List<DTOCategory>> { Errors = new List<ErrorDescriber>(), Target = categoriesDTO };
             });
@@ -60,10 +60,10 @@ namespace GarageManagement.Business.Garage
             {
                 var categoryDTO = new DTOCategory();
 
-                var category = categoryRepository.GetFirstOrDefault(x => x.Id == id, i => i.Parent);
+                var category = _categoryRepository.GetFirstOrDefault(x => x.Id == id, i => i.Parent);
                 if (category != null)
                 {
-                    categoryDTO = _mapper.Map<DTOCategory>(category);
+                    categoryDTO = mapper.Map<DTOCategory>(category);
                 }
 
                 return new DataResult<DTOCategory> { Errors = new List<ErrorDescriber>(), Target = categoryDTO };
@@ -87,12 +87,12 @@ namespace GarageManagement.Business.Garage
                 if (!string.IsNullOrEmpty(searchTerm))
                     searchQuery.AddFilter(x => x.Name.Contains(searchTerm));
 
-                var pagedCategories = categoryRepository.Search(searchQuery);
+                var pagedCategories = _categoryRepository.Search(searchQuery);
 
                 return new DataResult<IPagedListResult<DTOCategory>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOCategory, Category>(_mapper, pagedCategories)
+                    Target = GetDefaultPagingDtoResult<DTOCategory, Category>(mapper, pagedCategories)
                 };
 
             }, cancellationToken);
@@ -103,15 +103,15 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var createdCategoryDTO = new DTOCategory();
-                var categoryEntity = _mapper.Map<Category>(categoryDTO);
+                var categoryEntity = mapper.Map<Category>(categoryDTO);
 
-                if (!categoryRepository.ExistByCondition(x => x.Name == categoryEntity.Name))
+                if (!_categoryRepository.ExistByCondition(x => x.Name == categoryEntity.Name))
                 {
                     categoryEntity.ParentId = categoryEntity.ParentId > 0 ? categoryEntity.ParentId : null;
-                    var createdCategoryEntity = categoryRepository.Insert(categoryEntity);
-                    _unitOfWork.SaveChanges();
+                    var createdCategoryEntity = _categoryRepository.Insert(categoryEntity);
+                    unitOfWork.SaveChanges();
 
-                    createdCategoryDTO = _mapper.Map<DTOCategory>(createdCategoryEntity);
+                    createdCategoryDTO = mapper.Map<DTOCategory>(createdCategoryEntity);
                 }
 
                 return new DataResult<DTOCategory> { Errors = new List<ErrorDescriber>(), Target = createdCategoryDTO };
@@ -122,15 +122,15 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var categoryEntity = _mapper.Map<Category>(categoryDTO);
+                var categoryEntity = mapper.Map<Category>(categoryDTO);
                 var updatedCategoryDTO = new DTOCategory();
 
-                if ((categoryRepository.ExistByCondition(x => (x.Name == categoryEntity.Name && x.Id == categoryEntity.Id))) || (!categoryRepository.ExistByCondition(x => x.Name == categoryEntity.Name)))
+                if ((_categoryRepository.ExistByCondition(x => (x.Name == categoryEntity.Name && x.Id == categoryEntity.Id))) || (!_categoryRepository.ExistByCondition(x => x.Name == categoryEntity.Name)))
                 {
-                    var updatedCategoryEntity = categoryRepository.Update(categoryEntity);
-                    _unitOfWork.SaveChanges();
+                    var updatedCategoryEntity = _categoryRepository.Update(categoryEntity);
+                    unitOfWork.SaveChanges();
 
-                    updatedCategoryDTO = _mapper.Map<DTOCategory>(updatedCategoryEntity);
+                    updatedCategoryDTO = mapper.Map<DTOCategory>(updatedCategoryEntity);
 
                     return new DataResult<DTOCategory> { Errors = new List<ErrorDescriber>(), Target = updatedCategoryDTO };
                 }
@@ -145,10 +145,10 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                if (!categoryRepository.ExistByCondition(x => x.ParentId == categoryId))
+                if (!_categoryRepository.ExistByCondition(x => x.ParentId == categoryId))
                 {
-                    categoryRepository.Delete(categoryId);
-                    _unitOfWork.SaveChanges();
+                    _categoryRepository.Delete(categoryId);
+                    unitOfWork.SaveChanges();
 
                     return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
                 }

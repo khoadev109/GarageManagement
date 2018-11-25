@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.RepositoryInterface;
@@ -12,21 +12,24 @@ namespace GarageManagement.Business.Garage
 {
     public class RefreshTokenBusinessService : ServiceBase<GarageDbContext>, IRefreshTokenBusinessService
     {
-        public IMapper _mapper;
+        private readonly IRepository<RefreshToken> _refreshTokenRepository;
 
-        public RefreshTokenBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public RefreshTokenBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
+            base.mapper = mapper;
         }
 
         public Task<DataResult<DTORefreshToken>> FindRefreshTokenAsync(string refreshToken)
         {
             return Task.Run(() => {
 
-                var findedToken = _unitOfWork.GetRepository<RefreshToken>().GetFirstOrDefault(i => i.Token == refreshToken);
-                var findedTokenDTO = _mapper.Map<DTORefreshToken>(findedToken);
-
-                return new DataResult<DTORefreshToken> { Errors = new List<ErrorDescriber>(), Target = findedTokenDTO };
+                var findedToken = _refreshTokenRepository.GetFirstOrDefault(i => i.Token == refreshToken);
+                
+                return new DataResult<DTORefreshToken>
+                {
+                    Errors = new List<ErrorDescriber>(),
+                    Target = mapper.Map<DTORefreshToken>(findedToken)
+                };
             });
         }
 
@@ -35,7 +38,7 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() => {
 
                 bool result = false;
-                var refreshTokenRepository = _unitOfWork.GetRepository<RefreshToken>();
+                var refreshTokenRepository = unitOfWork.GetRepository<RefreshToken>();
 
                 var existingToken = refreshTokenRepository.GetFirstOrDefault(r => r.UserId == refreshTokenDTO.UserId);
                 if (existingToken != null)
@@ -44,10 +47,10 @@ namespace GarageManagement.Business.Garage
                 }
                 else
                 {
-                    var newToken = _mapper.Map<RefreshToken>(refreshTokenDTO);
+                    var newToken = mapper.Map<RefreshToken>(refreshTokenDTO);
                     refreshTokenRepository.Insert(newToken);
 
-                    result = _unitOfWork.SaveChanges() > 0;
+                    result = unitOfWork.SaveChanges() > 0;
                 }
 
                 return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = result };
@@ -58,7 +61,7 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var refreshToken = _mapper.Map<RefreshToken>(refreshTokenDTO);
+                var refreshToken = mapper.Map<RefreshToken>(refreshTokenDTO);
                 var result = RemoveToken(refreshToken);
                 
                 return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = result };
@@ -67,8 +70,8 @@ namespace GarageManagement.Business.Garage
 
         private bool RemoveToken(RefreshToken refreshToken)
         {
-            _unitOfWork.GetRepository<RefreshToken>().Delete(refreshToken.Id);
-            return _unitOfWork.SaveChanges() > 0;
+            unitOfWork.GetRepository<RefreshToken>().Delete(refreshToken.Id);
+            return unitOfWork.SaveChanges() > 0;
         }
     }
 }

@@ -4,44 +4,40 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.Extension;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
 using GarageManagement.RepositoryInterface.Paging;
-
 using GarageManagement.RepositoryInterface;
-using Common.Core.Extension;
 
 namespace GarageManagement.Business.Garage
 {
     public class CustomerTypeBusinessService : ServiceBase<GarageDbContext>, ICustomerTypeBusinessService
     {
-        public IMapper _mapper;
-
-        private readonly IRepository<CustomerType> customerTypeRepository;
-        private readonly IRepository<Customer> customerRepository;
-
-
-        public CustomerTypeBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        private readonly IRepository<CustomerType> _customerTypeRepository;
+        private readonly IRepository<Customer> _customerRepository;
+        
+        public CustomerTypeBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            customerTypeRepository = _unitOfWork.GetRepository<CustomerType>();
-            customerRepository = _unitOfWork.GetRepository<Customer>();
+            _customerTypeRepository = base.unitOfWork.GetRepository<CustomerType>();
+            _customerRepository = base.unitOfWork.GetRepository<Customer>();
         }
 
         public Task<DataResult<List<DTOCustomerType>>> GetAllAsync()
         {
             return Task.Run(() =>
             {
-                var customerTypes = customerTypeRepository.GetAll().ToList();
-
+                var customerTypes = _customerTypeRepository.GetAll().ToList();
                 customerTypes.Add(new CustomerType { Id = 0, Name = "Chọn nhóm khách hàng" });
 
-                var customerTypesDTO = _mapper.Map<List<DTOCustomerType>>(customerTypes.ToList());
-
-                return new DataResult<List<DTOCustomerType>> { Errors = new List<ErrorDescriber>(), Target = customerTypesDTO };
+                return new DataResult<List<DTOCustomerType>>
+                {
+                    Errors = new List<ErrorDescriber>(),
+                    Target = mapper.Map<List<DTOCustomerType>>(customerTypes.ToList())
+                };
             });
         }
 
@@ -50,10 +46,12 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var customerTypeDTO = new DTOCustomerType();
-                var customerType = customerTypeRepository.GetById(id);
+                var customerType = _customerTypeRepository.GetById(id);
 
                 if (customerType != null)
-                    customerTypeDTO = _mapper.Map<DTOCustomerType>(customerType);
+                {
+                    customerTypeDTO = mapper.Map<DTOCustomerType>(customerType);
+                }
 
                 return new DataResult<DTOCustomerType> { Errors = new List<ErrorDescriber>(), Target = customerTypeDTO };
             });
@@ -63,11 +61,7 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var searchQuery = new SearchQuery<CustomerType>();
-
-                searchQuery.CurrentPage = pageIndex;
-                searchQuery.Skip = pageSize * (pageIndex - 1);
-                searchQuery.Take = pageSize;
+                var searchQuery = GenerateDefaultSearchQuery<CustomerType>(pageIndex, pageSize);
 
                 var sort = new FieldSortCriteria<CustomerType>(sortName, (SortDirection)Enum.Parse(typeof(SortDirection), sortDirection));
                 searchQuery.AddSortCriteria(sort);
@@ -75,12 +69,12 @@ namespace GarageManagement.Business.Garage
                 if (!string.IsNullOrEmpty(searchTerm))
                     searchQuery.AddFilter(x => x.Name.Contains(searchTerm));
 
-                var pagedCustomerTypes = customerTypeRepository.Search(searchQuery);
+                var pagedCustomerTypes = _customerTypeRepository.Search(searchQuery);
 
                 return new DataResult<IPagedListResult<DTOCustomerType>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOCustomerType, CustomerType>(_mapper, pagedCustomerTypes)
+                    Target = GetDefaultPagingDtoResult<DTOCustomerType, CustomerType>(mapper, pagedCustomerTypes)
                 };
 
             }, cancellationToken);
@@ -91,14 +85,14 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var createdCustomerTypeDTO = new DTOCustomerType();
-                var customerEntity = _mapper.Map<CustomerType>(customerTypeDTO);
+                var customerEntity = mapper.Map<CustomerType>(customerTypeDTO);
 
-                if (!customerTypeRepository.ExistByCondition(x => x.Name == customerEntity.Name))
+                if (!_customerTypeRepository.ExistByCondition(x => x.Name == customerEntity.Name))
                 {
-                    var createdCustomerTypeEntity = customerTypeRepository.Insert(customerEntity);
-                    _unitOfWork.SaveChanges();
+                    var createdCustomerTypeEntity = _customerTypeRepository.Insert(customerEntity);
+                    unitOfWork.SaveChanges();
 
-                    createdCustomerTypeDTO = _mapper.Map<DTOCustomerType>(createdCustomerTypeEntity);
+                    createdCustomerTypeDTO = mapper.Map<DTOCustomerType>(createdCustomerTypeEntity);
                 }
 
                 return new DataResult<DTOCustomerType> { Errors = new List<ErrorDescriber>(), Target = createdCustomerTypeDTO };
@@ -109,15 +103,15 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var customerTypeEntity = _mapper.Map<CustomerType>(customerTypeDTO);
+                var customerTypeEntity = mapper.Map<CustomerType>(customerTypeDTO);
                 var updatedCustomerTypeDTO = new DTOCustomerType();
 
-                if ((customerTypeRepository.ExistByCondition(x => (x.Name == customerTypeEntity.Name && x.Id == customerTypeEntity.Id))) || (!customerTypeRepository.ExistByCondition(x => x.Name == customerTypeEntity.Name)))
+                if ((_customerTypeRepository.ExistByCondition(x => (x.Name == customerTypeEntity.Name && x.Id == customerTypeEntity.Id))) || (!_customerTypeRepository.ExistByCondition(x => x.Name == customerTypeEntity.Name)))
                 {
-                    var updatedCustomerTypeEntity = customerTypeRepository.Update(customerTypeEntity);
-                    _unitOfWork.SaveChanges();
+                    var updatedCustomerTypeEntity = _customerTypeRepository.Update(customerTypeEntity);
+                    unitOfWork.SaveChanges();
 
-                    updatedCustomerTypeDTO = _mapper.Map<DTOCustomerType>(updatedCustomerTypeEntity);
+                    updatedCustomerTypeDTO = mapper.Map<DTOCustomerType>(updatedCustomerTypeEntity);
 
                     return new DataResult<DTOCustomerType> { Errors = new List<ErrorDescriber>(), Target = updatedCustomerTypeDTO };
                 }
@@ -132,10 +126,10 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                if (!customerRepository.ExistByCondition(x => x.CustomerTypeId == customerTypeId))
+                if (!_customerRepository.ExistByCondition(x => x.CustomerTypeId == customerTypeId))
                 {
-                    customerTypeRepository.Delete(customerTypeId);
-                    _unitOfWork.SaveChanges();
+                    _customerTypeRepository.Delete(customerTypeId);
+                    unitOfWork.SaveChanges();
 
                     return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
                 }

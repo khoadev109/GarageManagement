@@ -7,7 +7,8 @@ using System.Linq.Expressions;
 using Common.Core.AutoGenerate;
 using System.Collections.Generic;
 using GarageManagement.ServiceInterface;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.Extension;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.Garage.Entity.Context;
@@ -15,24 +16,20 @@ using GarageManagement.Garage.Entity.Entities;
 using GarageManagement.RepositoryInterface;
 using GarageManagement.RepositoryInterface.Paging;
 using static Common.Core.Extension.AttributeExtensions;
-using Common.Core.Extension;
 
 namespace GarageManagement.Business.Garage
 {
     public class CarBusinessService : ServiceBase<GarageDbContext>, ICarBusinessService
     {
-        public IMapper _mapper;
+        private readonly IRepository<Car> _carRepository;
+        private readonly IRepository<GarageInfo> _garageInfoRepository;
+        private readonly IRepository<CustomerExchange> _customerExchangeRepository;
 
-        private readonly IRepository<Car> carRepository;
-        private readonly IRepository<GarageInfo> garageInfoRepository;
-        private readonly IRepository<CustomerExchange> customerExchangeRepository;
-
-        public CarBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public CarBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            carRepository = _unitOfWork.GetRepository<Car>();
-            garageInfoRepository = _unitOfWork.GetRepository<GarageInfo>();
-            customerExchangeRepository = _unitOfWork.GetRepository<CustomerExchange>();
+            _carRepository = base.unitOfWork.GetRepository<Car>();
+            _garageInfoRepository = base.unitOfWork.GetRepository<GarageInfo>();
+            _customerExchangeRepository = base.unitOfWork.GetRepository<CustomerExchange>();
         }
 
         public Task<DataResult<DTOCar>> GetCarByIdAsync(string carId)
@@ -40,12 +37,12 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var carDTO = new DTOCar();
-                var carRepository = _unitOfWork.GetRepository<Car>();
+                var carRepository = unitOfWork.GetRepository<Car>();
 
-                var car = _unitOfWork.GetRepository<Car>().GetById(carId);
+                var car = unitOfWork.GetRepository<Car>().GetById(carId);
                 if (car != null)
                 {
-                    carDTO = _mapper.Map<DTOCar>(car);
+                    carDTO = mapper.Map<DTOCar>(car);
                 }
                 else
                 {
@@ -62,11 +59,11 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var carDTO = new DTOCar();
-                var carRepository = _unitOfWork.GetRepository<Car>();
+                var carRepository = unitOfWork.GetRepository<Car>();
 
                 Expression<Func<CustomerExchange, object>>[] includes = { x => x.Car, x => x.Customer };
 
-                var customerExchange = _unitOfWork.GetRepository<CustomerExchange>().Get(x => x.CustomerId == customerId &&
+                var customerExchange = unitOfWork.GetRepository<CustomerExchange>().Get(x => x.CustomerId == customerId &&
                                                                                               !x.Transferred.HasValue && !x.Transferred.Value &&
                                                                                               string.IsNullOrEmpty(x.TransfereeId) &&
                                                                                               string.IsNullOrEmpty(x.Transferee) &&
@@ -74,7 +71,7 @@ namespace GarageManagement.Business.Garage
                 var car = customerExchange.Car;
                 if (car != null)
                 {
-                    carDTO = _mapper.Map<DTOCar>(car);
+                    carDTO = mapper.Map<DTOCar>(car);
                 }
                 return new DataResult<DTOCar> { Errors = new List<ErrorDescriber>(), Target = carDTO };
             });
@@ -100,12 +97,12 @@ namespace GarageManagement.Business.Garage
                                                x.ModelName.Contains(searchTerm) ||
                                                x.YearName.Contains(searchTerm));
 
-                var pagedCars = _unitOfWork.GetRepository<Car>().Search(searchQuery);
+                var pagedCars = unitOfWork.GetRepository<Car>().Search(searchQuery);
 
                 return new DataResult<IPagedListResult<DTOCar>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOCar, Car>(_mapper, pagedCars)
+                    Target = GetDefaultPagingDtoResult<DTOCar, Car>(mapper, pagedCars)
                 };
 
             }, cancellationToken);
@@ -115,7 +112,7 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var ownedCarDTOs = customerExchangeRepository.Get(filter: x => x.CustomerId == customerId && !string.IsNullOrEmpty(x.CarId),
+                var ownedCarDTOs = _customerExchangeRepository.Get(filter: x => x.CustomerId == customerId && !string.IsNullOrEmpty(x.CarId),
                                                                   orderBy: x => x.OrderByDescending(o => o.Car.CreatedDate),
                                                                   includes: new Expression<Func<CustomerExchange, object>>[] { x => x.Car, x => x.Customer })
                                                           .Select(x => new DTOCar
@@ -138,21 +135,21 @@ namespace GarageManagement.Business.Garage
                 var createdCarDTO = new DTOCar();
                 var passingCarOwnerId = carDTO.CurrentCarOwnerId;
 
-                if (carRepository.ExistByCondition(x => x.LicensePlates == carDTO.LicensePlates && !string.IsNullOrEmpty(x.LicensePlates)))
+                if (_carRepository.ExistByCondition(x => x.LicensePlates == carDTO.LicensePlates && !string.IsNullOrEmpty(x.LicensePlates)))
                     return new DataResult<DTOCar> { Errors = new List<ErrorDescriber> { new ErrorDescriber("Existed Car License Plates") }, Target = carDTO };
 
-                var carEntity = _mapper.Map<Car>(carDTO);
+                var carEntity = mapper.Map<Car>(carDTO);
                 carEntity.CreatedDate = DateTime.Now;
 
-                string garageShortName = garageInfoRepository.GetFirstOrDefault()?.ShortName;
-                var identityNumber = carRepository.Identity(x => x.GenerateId) != null ? carRepository.Identity(x => x.GenerateId).GenerateId : 0;
+                string garageShortName = _garageInfoRepository.GetFirstOrDefault()?.ShortName;
+                var identityNumber = _carRepository.Identity(x => x.GenerateId) != null ? _carRepository.Identity(x => x.GenerateId).GenerateId : 0;
 
                 carEntity.Id = garageShortName + IdentityGenerate.Create(identityNumber, new string[] { "", EntityPrefix.Car.ToDefaultValue() }, NumberUnitType.Large);
 
-                var createdCarEntity = carRepository.Insert(carEntity);
-                _unitOfWork.SaveChanges();
+                var createdCarEntity = _carRepository.Insert(carEntity);
+                unitOfWork.SaveChanges();
 
-                createdCarDTO = _mapper.Map<DTOCar>(createdCarEntity);
+                createdCarDTO = mapper.Map<DTOCar>(createdCarEntity);
 
                 return new DataResult<DTOCar> { Errors = new List<ErrorDescriber>(), Target = createdCarDTO };
             });
@@ -162,19 +159,19 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var carRepository = _unitOfWork.GetRepository<Car>();
+                var carRepository = unitOfWork.GetRepository<Car>();
 
                 if (carRepository.ExistByCondition(x => x.LicensePlates == carDTO.LicensePlates && x.Id != carDTO.Id))
                     return new DataResult<DTOCar> { Errors = new List<ErrorDescriber> { new ErrorDescriber("Existed Car License Plates") }, Target = carDTO };
 
-                var carEntity = _mapper.Map<Car>(carDTO);
+                var carEntity = mapper.Map<Car>(carDTO);
 
                 carEntity.ModifiedDate = DateTime.Now;
 
                 var updatedCarEntity = carRepository.Update(carEntity);
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                var updatedCarDTO = _mapper.Map<DTOCar>(updatedCarEntity);
+                var updatedCarDTO = mapper.Map<DTOCar>(updatedCarEntity);
 
                 return new DataResult<DTOCar> { Errors = new List<ErrorDescriber>(), Target = updatedCarDTO };
             });
@@ -184,10 +181,10 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                if (!customerExchangeRepository.ExistByCondition(x => x.CarId == carId))
+                if (!_customerExchangeRepository.ExistByCondition(x => x.CarId == carId))
                 {
-                    carRepository.Delete(carId);
-                    _unitOfWork.SaveChanges();
+                    _carRepository.Delete(carId);
+                    unitOfWork.SaveChanges();
 
                     return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
                 }

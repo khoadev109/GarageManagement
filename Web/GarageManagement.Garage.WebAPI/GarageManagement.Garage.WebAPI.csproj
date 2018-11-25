@@ -266,9 +266,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Attributes\APIAuthorize.cs" />
     <Compile Include="Attributes\UnauthorizedResult.cs" />
-    <Compile Include="Builder\Retry\RetryBuilder.cs" />
-    <Compile Include="Builder\Retry\IRetryBuilder.cs" />
-    <Compile Include="Builder\Retry\Parameter.cs" />
     <Compile Include="Builder\Service\IServiceBuilder.cs" />
     <Compile Include="Builder\Service\DependencyParameter.cs" />
     <Compile Include="Builder\Service\ServiceBuilder.cs" />

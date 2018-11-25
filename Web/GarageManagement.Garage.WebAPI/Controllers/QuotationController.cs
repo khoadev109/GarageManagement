@@ -9,9 +9,10 @@ using System.Web.Http.ModelBinding;
 using GarageManagement.Garage.Entity.Entities;
 using GarageManagement.Garage.WebAPI.ModelBinder;
 using GarageManagement.Garage.WebAPI.Attributes;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
+using static Common.Core.WebAPI.Authentication.Utilities.ClaimExtension;
 
 namespace GarageManagement.Garage.WebAPI.Controllers
 {

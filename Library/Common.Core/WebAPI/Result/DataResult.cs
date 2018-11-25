@@ -1,4 +1,4 @@
-﻿namespace GarageManagement.ServiceInterface.Result
+﻿namespace Common.Core.WebAPI.Result
 {
     public class DataResult<T> : ErrorLog
     {

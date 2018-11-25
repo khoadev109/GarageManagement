@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.RepositoryInterface;
@@ -12,16 +12,14 @@ namespace GarageManagement.Business.Garage
 {
     public class GarageBusinessService : ServiceBase<GarageDbContext>, IGarageBusinessService
     {
-        public IMapper _mapper;
-
         private readonly IRepository<GarageInfo> _garageInfoRepository;
         private readonly IRepository<GarageSetting> _garageSettingRepository;
 
-        public GarageBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public GarageBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            _garageInfoRepository = _unitOfWork.GetRepository<GarageInfo>();
-            _garageSettingRepository = _unitOfWork.GetRepository<GarageSetting>();
+            base.mapper = mapper;
+            _garageInfoRepository = base.unitOfWork.GetRepository<GarageInfo>();
+            _garageSettingRepository = base.unitOfWork.GetRepository<GarageSetting>();
         }
 
         public Task<DataResult<DTOGarage>> GetGarageSettingInformationAsync()
@@ -33,7 +31,7 @@ namespace GarageManagement.Business.Garage
                 return new DataResult<DTOGarage>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = _mapper.Map<DTOGarage>(garageSetting.Garage)
+                    Target = mapper.Map<DTOGarage>(garageSetting.Garage)
                 };
             });
         }
@@ -48,14 +46,14 @@ namespace GarageManagement.Business.Garage
                 return new DataResult<bool>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = _unitOfWork.SaveChanges() > 0
+                    Target = unitOfWork.SaveChanges() > 0
                 };
             });
         }
 
         private void CreateOrUpdateGarageInfo(DTOGarage garageDTO)
         {
-            var garageInfo = _mapper.Map<GarageInfo>(garageDTO);
+            var garageInfo = mapper.Map<GarageInfo>(garageDTO);
 
             if (garageDTO.Id == 0)
                 _garageInfoRepository.Insert(garageInfo);
@@ -65,7 +63,7 @@ namespace GarageManagement.Business.Garage
 
         private void CreateOrUpdateGarageSetting(DTOGarage garageDTO)
         {
-            var garageSetting = _mapper.Map<GarageSetting>(garageDTO);
+            var garageSetting = mapper.Map<GarageSetting>(garageDTO);
             
             if (garageDTO.Id == 0)
                 _garageSettingRepository.Insert(garageSetting);

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using GarageManagement.RepositoryInterface;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
 
@@ -15,14 +15,12 @@ namespace GarageManagement.Business.Garage
 {
     public class MaintenanceScheduleBusinessService : ServiceBase<GarageDbContext>, IMaintenanceScheduleBusinessService
     {
-        public IMapper _mapper;
-
         private readonly IRepository<MaintenanceSchedule> _maintenanceScheduleRepository;
 
-        public MaintenanceScheduleBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public MaintenanceScheduleBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            _maintenanceScheduleRepository = _unitOfWork.GetRepository<MaintenanceSchedule>();
+            base.mapper = mapper;
+            _maintenanceScheduleRepository = base.unitOfWork.GetRepository<MaintenanceSchedule>();
         }
 
         public Task<DataResult<List<DTOTemplateSchedule>>> GetQueuedItemsPrepareToSendAsync()
@@ -60,17 +58,17 @@ namespace GarageManagement.Business.Garage
 
         public Task<DataResult<DTOMaintenanceSchedule>> CreateAsync(DTOMaintenanceSchedule maintenanceScheduleDTO)
         {
-            var entity = _mapper.Map<MaintenanceSchedule>(maintenanceScheduleDTO);
+            var entity = mapper.Map<MaintenanceSchedule>(maintenanceScheduleDTO);
             var createdEntity = _maintenanceScheduleRepository.Insert(entity);
 
-            _unitOfWork.SaveChanges();
+            unitOfWork.SaveChanges();
 
             return Task.Run(() =>
             {
                 return new DataResult<DTOMaintenanceSchedule>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = _mapper.Map<DTOMaintenanceSchedule>(createdEntity)
+                    Target = mapper.Map<DTOMaintenanceSchedule>(createdEntity)
                 };
             });
         }

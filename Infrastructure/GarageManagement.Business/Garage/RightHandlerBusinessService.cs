@@ -8,7 +8,8 @@ namespace GarageManagement.Business.Garage
 {
     public class RightHandlerBusinessService : ServiceBase<GarageDbContext>, IRightHandlerBusinessService
     {
-        public RightHandlerBusinessService(IUnitOfWork<GarageDbContext> _unitOfWork) : base(_unitOfWork) { }
+        public RightHandlerBusinessService(IUnitOfWork<GarageDbContext> unitOfWork) : base(unitOfWork)
+        { }
 
         public bool CheckPermissionOfUser(int userId, int? roleId, int moduleId, int rightValue)
         {
@@ -18,11 +19,10 @@ namespace GarageManagement.Business.Garage
 
         private bool RightHandler(int userId, int? roleId, int moduleId, int rightValue)
         {
-            var db = _unitOfWork.DbContext;            
             try
             {
-                var valueUserGroup = db.RoleRightModules.FirstOrDefault(x => x.RoleId == roleId && x.ModuleId == moduleId);
-                var valueUser = db.RoleRightModules.FirstOrDefault(x => x.UserId == userId && x.ModuleId == moduleId);
+                var valueUserGroup = Context.RoleRightModules.FirstOrDefault(x => x.RoleId == roleId && x.ModuleId == moduleId);
+                var valueUser = Context.RoleRightModules.FirstOrDefault(x => x.UserId == userId && x.ModuleId == moduleId);
 
                 bool checkUserGroup = true;
                 bool checkUser = true;
@@ -67,7 +67,7 @@ namespace GarageManagement.Business.Garage
             catch (Exception ex)
             {
                 return false;
-            }            
+            }
         }
     }
 }

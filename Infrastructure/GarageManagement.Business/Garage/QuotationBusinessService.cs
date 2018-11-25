@@ -11,7 +11,7 @@ using GarageManagement.Garage.Entity.Enum;
 using GarageManagement.Garage.Entity.Context;
 using GarageManagement.Garage.Entity.Entities;
 using GarageManagement.ServiceInterface;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
 using GarageManagement.RepositoryInterface;
@@ -22,8 +22,6 @@ namespace GarageManagement.Business.Garage
 {
     public class QuotationBusinessService : ServiceBase<GarageDbContext>, IQuotationBusinessService
     {
-        public IMapper _mapper;
-
         private readonly IRepository<Car> carRepository;
         private readonly IRepository<Branch> branchRepository;
         private readonly IRepository<Customer> customerRepository;
@@ -44,27 +42,26 @@ namespace GarageManagement.Business.Garage
         private readonly IRepository<PrintTemplate> printTemplateRepository;
         private readonly IAuditTrailLogRepository _auditTrailLogRepository;
 
-        public QuotationBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper, IAuditTrailLogRepository auditTrailLogRepository) : base(unitOfWork)
+        public QuotationBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper, IAuditTrailLogRepository auditTrailLogRepository) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            carRepository = _unitOfWork.GetRepository<Car>();
-            branchRepository = _unitOfWork.GetRepository<Branch>();
-            customerRepository = _unitOfWork.GetRepository<Customer>();
-            employeeRepository = _unitOfWork.GetRepository<Employee>();
-            serviceRepository = _unitOfWork.GetRepository<Service>();
-            accessaryRepository = _unitOfWork.GetRepository<Accessary>();
-            serviceUnitRepository = _unitOfWork.GetRepository<ServiceUnit>();
-            accessaryUnitRepository = _unitOfWork.GetRepository<AccessaryUnit>();
-            categoryRepository = _unitOfWork.GetRepository<Category>();
-            serviceTypeRepository = _unitOfWork.GetRepository<ServiceType>();
-            quotationRepository = _unitOfWork.GetRepository<Quotation>();
-            quotationNoteRepository = _unitOfWork.GetRepository<QuotationNote>();
-            quotationItemRepository = _unitOfWork.GetRepository<QuotationItem>();
-            quotationStatusRepository = _unitOfWork.GetRepository<QuotationStatus>();
-            quotationEmployeeRepository = _unitOfWork.GetRepository<QuotationEmployee>();
-            receiptsBillRepository = _unitOfWork.GetRepository<ReceiptsBill>();
-            paySlipBillRepository = _unitOfWork.GetRepository<PaySlipBill>();
-            printTemplateRepository = _unitOfWork.GetRepository<PrintTemplate>();
+            carRepository = base.unitOfWork.GetRepository<Car>();
+            branchRepository = base.unitOfWork.GetRepository<Branch>();
+            customerRepository = base.unitOfWork.GetRepository<Customer>();
+            employeeRepository = base.unitOfWork.GetRepository<Employee>();
+            serviceRepository = base.unitOfWork.GetRepository<Service>();
+            accessaryRepository = base.unitOfWork.GetRepository<Accessary>();
+            serviceUnitRepository = base.unitOfWork.GetRepository<ServiceUnit>();
+            accessaryUnitRepository = base.unitOfWork.GetRepository<AccessaryUnit>();
+            categoryRepository = base.unitOfWork.GetRepository<Category>();
+            serviceTypeRepository = base.unitOfWork.GetRepository<ServiceType>();
+            quotationRepository = base.unitOfWork.GetRepository<Quotation>();
+            quotationNoteRepository = base.unitOfWork.GetRepository<QuotationNote>();
+            quotationItemRepository = base.unitOfWork.GetRepository<QuotationItem>();
+            quotationStatusRepository = base.unitOfWork.GetRepository<QuotationStatus>();
+            quotationEmployeeRepository = base.unitOfWork.GetRepository<QuotationEmployee>();
+            receiptsBillRepository = base.unitOfWork.GetRepository<ReceiptsBill>();
+            paySlipBillRepository = base.unitOfWork.GetRepository<PaySlipBill>();
+            printTemplateRepository = base.unitOfWork.GetRepository<PrintTemplate>();
             _auditTrailLogRepository = auditTrailLogRepository;
         }
 
@@ -77,7 +74,7 @@ namespace GarageManagement.Business.Garage
                 var note = quotationNoteRepository.GetFirstOrDefault(x => x.QuotationId == quotationId && x.StatusId == statusId,
                                                                      includes: new Expression<Func<QuotationNote, object>>[] { x => x.Quotation, x => x.Status });
                 if (note != null)
-                    noteDTO = _mapper.Map<DTOQuotationNote>(note);
+                    noteDTO = mapper.Map<DTOQuotationNote>(note);
 
                 return new DataResult<DTOQuotationNote> { Errors = new List<ErrorDescriber>(), Target = noteDTO };
             });
@@ -100,7 +97,7 @@ namespace GarageManagement.Business.Garage
 
                 var quotation = quotationRepository.GetFirstOrDefault(x => x.Id == quotationId, includes: includes);
                 if (quotation != null)
-                    quotationDTO = _mapper.Map<DTOQuotation>(quotation);
+                    quotationDTO = mapper.Map<DTOQuotation>(quotation);
 
                 return new DataResult<DTOQuotation> { Errors = new List<ErrorDescriber>(), Target = quotationDTO };
             });
@@ -142,7 +139,7 @@ namespace GarageManagement.Business.Garage
                 var quotationItems = quotationItemRepository.Get(x => x.QuotationId == quotationId, includes: includes);
                 if (quotationItems != null && quotationItems.Count > 0)
                 {
-                    quotationItemDTOs = _mapper.Map<List<DTOQuotationItem>>(quotationItems);
+                    quotationItemDTOs = mapper.Map<List<DTOQuotationItem>>(quotationItems);
                     quotationItemDTOs = quotationItemDTOs.Select(item =>
                     {
                         item.AccessaryName = accessaryRepository.GetById(item.AccessaryId)?.Name;
@@ -182,8 +179,8 @@ namespace GarageManagement.Business.Garage
                     if (items.Count > 0)
                     {
                         var itemsWithParentCategory = new DTOParentCategoryWithItems();
-                        itemsWithParentCategory.ParentCategory = _mapper.Map<DTOCategory>(parentCategory);
-                        itemsWithParentCategory.Items = _mapper.Map<List<DTOQuotationItem>>(items);
+                        itemsWithParentCategory.ParentCategory = mapper.Map<DTOCategory>(parentCategory);
+                        itemsWithParentCategory.Items = mapper.Map<List<DTOQuotationItem>>(items);
                         itemsWithParentCategories.Add(itemsWithParentCategory);
                     }
                 });
@@ -211,8 +208,8 @@ namespace GarageManagement.Business.Garage
                     if (items.Count > 0)
                     {
                         var itemsWithParentService = new DTOParentServiceTypeWithItems();
-                        itemsWithParentService.ParentServiceType = _mapper.Map<DTOServiceType>(parentServiceType);
-                        itemsWithParentService.Items = _mapper.Map<List<DTOQuotationItem>>(items);
+                        itemsWithParentService.ParentServiceType = mapper.Map<DTOServiceType>(parentServiceType);
+                        itemsWithParentService.Items = mapper.Map<List<DTOQuotationItem>>(items);
                         itemsWithParentServiceTypes.Add(itemsWithParentService);
                     }
                 });
@@ -232,7 +229,7 @@ namespace GarageManagement.Business.Garage
                 var quotationItem = quotationItemRepository.GetFirstOrDefault(x => x.Id == quotationItemId, includes: includes);
                 if (quotationItem != null)
                 {
-                    quotationItemDTO = _mapper.Map<DTOQuotationItem>(quotationItem);
+                    quotationItemDTO = mapper.Map<DTOQuotationItem>(quotationItem);
                 }
 
                 return new DataResult<DTOQuotationItem> { Errors = new List<ErrorDescriber>(), Target = quotationItemDTO };
@@ -247,7 +244,7 @@ namespace GarageManagement.Business.Garage
 
                 var paySlipEntity = paySlipBillRepository.GetById(paySlipId);
                 if (paySlipEntity != null)
-                    paySlipDTO = _mapper.Map<DTOPaySlipBill>(paySlipEntity);
+                    paySlipDTO = mapper.Map<DTOPaySlipBill>(paySlipEntity);
 
                 return new DataResult<DTOPaySlipBill> { Errors = new List<ErrorDescriber>(), Target = paySlipDTO };
             });
@@ -261,7 +258,7 @@ namespace GarageManagement.Business.Garage
 
                 var receiptsEntity = receiptsBillRepository.GetById(receiptId);
                 if (receiptsEntity != null)
-                    receiptsDTO = _mapper.Map<DTOReceiptsBill>(receiptsEntity);
+                    receiptsDTO = mapper.Map<DTOReceiptsBill>(receiptsEntity);
 
                 return new DataResult<DTOReceiptsBill> { Errors = new List<ErrorDescriber>(), Target = receiptsDTO };
             });
@@ -289,7 +286,7 @@ namespace GarageManagement.Business.Garage
                 return new DataResult<IPagedListResult<DTOReceiptsBill>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOReceiptsBill, ReceiptsBill>(_mapper, pagedReceipts)
+                    Target = GetDefaultPagingDtoResult<DTOReceiptsBill, ReceiptsBill>(mapper, pagedReceipts)
                 };
 
             }, cancellationToken);
@@ -317,7 +314,7 @@ namespace GarageManagement.Business.Garage
                 return new DataResult<IPagedListResult<DTOPaySlipBill>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOPaySlipBill, PaySlipBill>(_mapper, pagedPayslips)
+                    Target = GetDefaultPagingDtoResult<DTOPaySlipBill, PaySlipBill>(mapper, pagedPayslips)
                 };
 
             }, cancellationToken);
@@ -343,12 +340,12 @@ namespace GarageManagement.Business.Garage
                 if (!string.IsNullOrEmpty(searchTerm))
                     searchQuery.AddFilter(x => x.Service.Name.Contains(searchTerm) || x.Accessary.Name.Contains(searchTerm));
 
-                var pagedQuotationItems = _unitOfWork.GetRepository<QuotationItem>().Search(searchQuery);
+                var pagedQuotationItems = unitOfWork.GetRepository<QuotationItem>().Search(searchQuery);
                 
                 return new DataResult<IPagedListResult<DTOQuotationItem>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOQuotationItem, QuotationItem>(_mapper, pagedQuotationItems)
+                    Target = GetDefaultPagingDtoResult<DTOQuotationItem, QuotationItem>(mapper, pagedQuotationItems)
                 };
 
             }, cancellationToken);
@@ -375,12 +372,12 @@ namespace GarageManagement.Business.Garage
                     searchQuery.AddFilter(searchCondition);
                 }
 
-                var pagedQuotations = _unitOfWork.GetRepository<Quotation>().Search(searchQuery);
+                var pagedQuotations = unitOfWork.GetRepository<Quotation>().Search(searchQuery);
                 
                 return new DataResult<IPagedListResult<DTOQuotation>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOQuotation, Quotation>(_mapper, pagedQuotations)
+                    Target = GetDefaultPagingDtoResult<DTOQuotation, Quotation>(mapper, pagedQuotations)
                 };
 
             }, cancellationToken);
@@ -419,7 +416,7 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var quotation = _mapper.Map<Quotation>(quotationDTO);
+                var quotation = mapper.Map<Quotation>(quotationDTO);
 
                 quotation.UpdateDate = DateTime.Now;
 
@@ -434,12 +431,12 @@ namespace GarageManagement.Business.Garage
                 }
 
                 var original = quotationRepository.GetById(quotationDTO.Id);
-                var dtoOriginal = _mapper.Map<DTOQuotation>(original);
+                var dtoOriginal = mapper.Map<DTOQuotation>(original);
 
                 quotationRepository.Update(quotation);
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                var dto = _mapper.Map<DTOQuotation>(quotation);
+                var dto = mapper.Map<DTOQuotation>(quotation);
                 _auditTrailLogRepository.InsertLogForUpdateAction(ModuleEnum.Quotation, dto.UserName, dto, dtoOriginal);
 
                 return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
@@ -458,12 +455,12 @@ namespace GarageManagement.Business.Garage
                 }
 
                 var original = quotationRepository.GetById(quotationId);
-                var dtoOriginal = _mapper.Map<DTOQuotation>(original);
+                var dtoOriginal = mapper.Map<DTOQuotation>(original);
 
                 var updatedQuotation = quotationRepository.Update(quotation);
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                var dto = _mapper.Map<DTOQuotation>(quotation);
+                var dto = mapper.Map<DTOQuotation>(quotation);
                 _auditTrailLogRepository.InsertLogForUpdateAction(ModuleEnum.Quotation, dto.UserName, dto, dtoOriginal);
 
                 return new DataResult<int>
@@ -482,7 +479,7 @@ namespace GarageManagement.Business.Garage
 
                 if (!quotationRepository.ExistByCondition(x => x.Id == quotationDTO.Id))
                 {
-                    var quotation = _mapper.Map<Quotation>(quotationDTO);
+                    var quotation = mapper.Map<Quotation>(quotationDTO);
 
                     var lastQuotation = quotationRepository.Identity(x => x.GenerateId);
                     var identityNumber = lastQuotation != null ? lastQuotation.GenerateId : 0;
@@ -497,11 +494,11 @@ namespace GarageManagement.Business.Garage
                     quotation.Status = quotationStatusRepository.GetById(quotation.StatusId);
 
                     var result = quotationRepository.Insert(quotation);
-                    _unitOfWork.SaveChanges();
+                    unitOfWork.SaveChanges();
 
-                    createdQuotationDTO = _mapper.Map<DTOQuotation>(quotation);
+                    createdQuotationDTO = mapper.Map<DTOQuotation>(quotation);
 
-                    var createdQuotation = _mapper.Map<Quotation>(createdQuotationDTO);
+                    var createdQuotation = mapper.Map<Quotation>(createdQuotationDTO);
                     _auditTrailLogRepository.InsertLogForCreateAction(ModuleEnum.Quotation, quotationDTO.UserName, createdQuotation);
                 }
                 return new DataResult<DTOQuotation> { Errors = new List<ErrorDescriber>(), Target = createdQuotationDTO };
@@ -513,12 +510,12 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var createdQuotationItemDTO = new DTOQuotationItem();
-                var quotationItem = _mapper.Map<QuotationItem>(quotationItemDTO);
+                var quotationItem = mapper.Map<QuotationItem>(quotationItemDTO);
 
                 var createdQuotationItem = quotationItemRepository.Insert(quotationItem);
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                createdQuotationItemDTO = _mapper.Map<DTOQuotationItem>(createdQuotationItem);
+                createdQuotationItemDTO = mapper.Map<DTOQuotationItem>(createdQuotationItem);
                 
                 _auditTrailLogRepository.InsertLogForCreateAction(ModuleEnum.Quotation, createdQuotationItemDTO.UserName, createdQuotationItemDTO);
 
@@ -530,18 +527,18 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var quotationItem = _mapper.Map<QuotationItem>(quotationItemDTO);
+                var quotationItem = mapper.Map<QuotationItem>(quotationItemDTO);
 
                 var original = quotationItemRepository.GetById(quotationItemDTO.Id);
-                var dtoOriginal = _mapper.Map<DTOQuotationItem>(original);
+                var dtoOriginal = mapper.Map<DTOQuotationItem>(original);
 
                 var updatedQuotationItem = quotationItemRepository.Update(quotationItem);
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                var dto = _mapper.Map<DTOQuotationItem>(updatedQuotationItem);
+                var dto = mapper.Map<DTOQuotationItem>(updatedQuotationItem);
                 _auditTrailLogRepository.InsertLogForUpdateAction(ModuleEnum.Quotation, dto.UserName, dto, dtoOriginal);
 
-                return new DataResult<DTOQuotationItem> { Errors = new List<ErrorDescriber>(), Target = _mapper.Map<DTOQuotationItem>(updatedQuotationItem) };
+                return new DataResult<DTOQuotationItem> { Errors = new List<ErrorDescriber>(), Target = mapper.Map<DTOQuotationItem>(updatedQuotationItem) };
             });
         }
 
@@ -551,9 +548,9 @@ namespace GarageManagement.Business.Garage
             {
                 var quotationItem = quotationItemRepository.GetById(quotationItemId);
                 quotationItemRepository.Delete(quotationItemId);
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                var dto = _mapper.Map<DTOQuotationItem>(quotationItem);
+                var dto = mapper.Map<DTOQuotationItem>(quotationItem);
                 _auditTrailLogRepository.InsertLogForDeleteAction(ModuleEnum.Quotation, dto.UserName, dto);
 
                 return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
@@ -571,7 +568,7 @@ namespace GarageManagement.Business.Garage
 
                     if (noteEntity == null)
                     {
-                        noteEntity = _mapper.Map<QuotationNote>(noteDTO);
+                        noteEntity = mapper.Map<QuotationNote>(noteDTO);
                         quotationNote = quotationNoteRepository.Insert(noteEntity);
                     }
                     else
@@ -580,7 +577,7 @@ namespace GarageManagement.Business.Garage
                         quotationNote = quotationNoteRepository.Update(noteEntity);
                     }
 
-                    _unitOfWork.SaveChanges();
+                    unitOfWork.SaveChanges();
                 }
 
                 return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
@@ -591,7 +588,7 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var quotationItems = _mapper.Map<List<QuotationItem>>(quotationItemDTOs);
+                var quotationItems = mapper.Map<List<QuotationItem>>(quotationItemDTOs);
                 quotationItems = quotationItems.Select(item =>
                 {
 
@@ -605,9 +602,9 @@ namespace GarageManagement.Business.Garage
                 }).ToList();
 
                 quotationItemRepository.InsertMultiple(quotationItems);
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                var dtos = _mapper.Map<List<DTOQuotationItem>>(quotationItems);
+                var dtos = mapper.Map<List<DTOQuotationItem>>(quotationItems);
                 dtos.ForEach(x =>
                 {
                     _auditTrailLogRepository.InsertLogForCreateAction(ModuleEnum.Quotation, x.UserName, x);
@@ -637,9 +634,9 @@ namespace GarageManagement.Business.Garage
                 quotationEmployeeRepository.Delete(x => x.QuotationId == quotationId);
                 quotationEmployeeRepository.InsertMultiple(quotationEmployees);
 
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                var dto = _mapper.Map<DTOQuotationItem>(quotationEmployees);
+                var dto = mapper.Map<DTOQuotationItem>(quotationEmployees);
                 _auditTrailLogRepository.InsertLogForCreateAction(ModuleEnum.Quotation, dto.UserName, dto);
 
                 int? lastQuotationEmployeeId = quotationEmployeeRepository.Get(x => x.Id > 0, orderBy: x => x.OrderByDescending(qe => qe.Id))?.FirstOrDefault()?.Id;
@@ -652,7 +649,7 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var quotationItems = _mapper.Map<List<QuotationItem>>(quotationItemDTOs);
+                var quotationItems = mapper.Map<List<QuotationItem>>(quotationItemDTOs);
 
                 quotationItemRepository.Delete(x => x.QuotationId == quotationId);
 
@@ -664,9 +661,9 @@ namespace GarageManagement.Business.Garage
 
                 quotationItemRepository.InsertMultiple(quotationItems);
 
-                _unitOfWork.SaveChanges();
+                unitOfWork.SaveChanges();
 
-                var dtos = _mapper.Map<List<DTOQuotationItem>>(quotationItems);
+                var dtos = mapper.Map<List<DTOQuotationItem>>(quotationItems);
                 dtos.ForEach(x =>
                 {
                     _auditTrailLogRepository.InsertLogForCreateAction(ModuleEnum.Quotation, x.UserName, x);
@@ -712,7 +709,7 @@ namespace GarageManagement.Business.Garage
 
         private DTOReceiptsBill CreateOrUpdateReceiptsBillBaseOnCondition(DTOReceiptsBill receiptsBillDTO, bool existedConditionToCheck)
         {
-            var receiptsBillEntity = _mapper.Map<ReceiptsBill>(receiptsBillDTO);
+            var receiptsBillEntity = mapper.Map<ReceiptsBill>(receiptsBillDTO);
             if (existedConditionToCheck)
             {
                 receiptsBillEntity.ModifiedDate = DateTime.Now;
@@ -724,16 +721,16 @@ namespace GarageManagement.Business.Garage
                 receiptsBillEntity = receiptsBillRepository.Insert(receiptsBillEntity);
             }
 
-            _unitOfWork.SaveChanges();
-            var dto = _mapper.Map<DTOReceiptsBill>(receiptsBillEntity);
+            unitOfWork.SaveChanges();
+            var dto = mapper.Map<DTOReceiptsBill>(receiptsBillEntity);
             _auditTrailLogRepository.InsertLogForCreateAction(ModuleEnum.ReceiptBill, dto.UserName, dto);
 
-            return _mapper.Map<DTOReceiptsBill>(receiptsBillEntity);
+            return mapper.Map<DTOReceiptsBill>(receiptsBillEntity);
         }
 
         private DTOPaySlipBill CreateOrUpdatePaySlipBillBaseOnCondition(DTOPaySlipBill paySlipBillDTO, bool existedConditionToCheck)
         {
-            var paySlipBillEntity = _mapper.Map<PaySlipBill>(paySlipBillDTO);
+            var paySlipBillEntity = mapper.Map<PaySlipBill>(paySlipBillDTO);
 
             if (existedConditionToCheck)
             {
@@ -746,11 +743,11 @@ namespace GarageManagement.Business.Garage
                 paySlipBillEntity = paySlipBillRepository.Insert(paySlipBillEntity);
             }
 
-            _unitOfWork.SaveChanges();
-            var dto = _mapper.Map<DTOPaySlipBill>(paySlipBillEntity);
+            unitOfWork.SaveChanges();
+            var dto = mapper.Map<DTOPaySlipBill>(paySlipBillEntity);
             _auditTrailLogRepository.InsertLogForCreateAction(ModuleEnum.PayslipBill, dto.UserName, dto);
 
-            return _mapper.Map<DTOPaySlipBill>(paySlipBillEntity);
+            return mapper.Map<DTOPaySlipBill>(paySlipBillEntity);
         }
 
         private List<DTOEmployee> BindEmployeesByQuotationEmployee(List<QuotationEmployee> quotationEmployees)
@@ -798,7 +795,7 @@ namespace GarageManagement.Business.Garage
 
                 var printTemplateEntity = printTemplateRepository.GetFirstOrDefault(x => x.StatusId == statusId);
                 if (printTemplateEntity != null)
-                    printTemplateDTO = _mapper.Map<DTOPrintTemplate>(printTemplateEntity);
+                    printTemplateDTO = mapper.Map<DTOPrintTemplate>(printTemplateEntity);
 
                 return new DataResult<DTOPrintTemplate> { Errors = new List<ErrorDescriber>(), Target = printTemplateDTO };
             });
@@ -810,7 +807,7 @@ namespace GarageManagement.Business.Garage
             {
                 var result = new DataResult<bool>();
 
-                var entity = _mapper.Map<PrintTemplate>(printTemplateDto);
+                var entity = mapper.Map<PrintTemplate>(printTemplateDto);
 
                 if (entity.Id == 0)
                 {
@@ -821,8 +818,8 @@ namespace GarageManagement.Business.Garage
                     entity = printTemplateRepository.Update(entity);
                 }
 
-                var rowUpdated = _unitOfWork.SaveChanges();
-                var dto = _mapper.Map<DTOPaySlipBill>(entity);
+                var rowUpdated = unitOfWork.SaveChanges();
+                var dto = mapper.Map<DTOPaySlipBill>(entity);
                 _auditTrailLogRepository.InsertLogForCreateAction(ModuleEnum.PrintTemplate, dto.UserName, dto);
 
                 return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = rowUpdated > 0 ? true : false };

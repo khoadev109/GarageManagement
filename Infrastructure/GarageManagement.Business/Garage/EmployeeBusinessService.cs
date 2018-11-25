@@ -12,23 +12,20 @@ using GarageManagement.RepositoryInterface;
 using GarageManagement.RepositoryInterface.Paging;
 using GarageManagement.ServiceInterface.Garage;
 using GarageManagement.ServiceInterface.Garage.DTO;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.WebAPI.Result;
 using GarageManagement.ServiceInterface;
 
 namespace GarageManagement.Business.Garage
 {
     public class EmployeeBusinessService : ServiceBase<GarageDbContext>, IEmployeeBusinessService
     {
-        public IMapper _mapper;
+        private readonly IRepository<Employee> _employeeRepository;
+        private readonly IRepository<User> _userRepository;
 
-        private readonly IRepository<Employee> employeeRepository;
-        private readonly IRepository<User> userRepository;
-
-        public EmployeeBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork)
+        public EmployeeBusinessService(IUnitOfWork<GarageDbContext> unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _mapper = mapper;
-            employeeRepository = _unitOfWork.GetRepository<Employee>();
-            userRepository = _unitOfWork.GetRepository<User>();
+            _employeeRepository = base.unitOfWork.GetRepository<Employee>();
+            _userRepository = base.unitOfWork.GetRepository<User>();
         }
 
         public Task<DataResult<DTOEmployee>> GetEmployeeByIdAsync(string employeeId)
@@ -37,14 +34,14 @@ namespace GarageManagement.Business.Garage
             {
                 var employeeDTO = new DTOEmployee();
 
-                var employee = employeeRepository.GetById(employeeId);
+                var employee = _employeeRepository.GetById(employeeId);
                 if (employee != null)
                 {
-                    employeeDTO = _mapper.Map<DTOEmployee>(employee);
+                    employeeDTO = mapper.Map<DTOEmployee>(employee);
                 }
                 else
                 {
-                    var identityNumber = employeeRepository.Identity(x => x.GenerateId) != null ? employeeRepository.Identity(x => x.GenerateId).GenerateId : 0;
+                    var identityNumber = _employeeRepository.Identity(x => x.GenerateId) != null ? _employeeRepository.Identity(x => x.GenerateId).GenerateId : 0;
                     employeeDTO.Id = IdentityGenerate.Create(identityNumber, new string[] { "", EntityPrefix.Employee.ToDefaultValue() }, NumberUnitType.Large);
                 }
 
@@ -58,9 +55,9 @@ namespace GarageManagement.Business.Garage
             {
                 var employeeDTOs = new List<DTOEmployee>();
 
-                var employees = employeeRepository.GetAll().ToList();
+                var employees = _employeeRepository.GetAll().ToList();
                 if (employees != null && employees.Count > 0)
-                    employeeDTOs = _mapper.Map<List<DTOEmployee>>(employees);
+                    employeeDTOs = mapper.Map<List<DTOEmployee>>(employees);
 
                 return new DataResult<List<DTOEmployee>> { Errors = new List<ErrorDescriber>(), Target = employeeDTOs };
             });
@@ -70,11 +67,8 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var searchQuery = new SearchQuery<Employee>();
+                var searchQuery = GenerateDefaultSearchQuery<Employee>(pageIndex, pageSize);
 
-                searchQuery.CurrentPage = pageIndex;
-                searchQuery.Skip = pageSize * (pageIndex - 1);
-                searchQuery.Take = pageSize;
                 searchQuery.IncludeProperties = "Branch";
 
                 var sort = new FieldSortCriteria<Employee>(sortName, (SortDirection)Enum.Parse(typeof(SortDirection), sortDirection));
@@ -83,12 +77,12 @@ namespace GarageManagement.Business.Garage
                 if (!string.IsNullOrEmpty(searchTerm))
                     searchQuery.AddFilter(x => x.Name.Contains(searchTerm) || x.Phone.Contains(searchTerm));
 
-                var pagedEmployees = employeeRepository.Search(searchQuery);
+                var pagedEmployees = _employeeRepository.Search(searchQuery);
 
                 return new DataResult<IPagedListResult<DTOEmployee>>
                 {
                     Errors = new List<ErrorDescriber>(),
-                    Target = GetDefaultPagingDtoResult<DTOEmployee, Employee>(_mapper, pagedEmployees)
+                    Target = GetDefaultPagingDtoResult<DTOEmployee, Employee>(mapper, pagedEmployees)
                 };
 
             }, cancellationToken);
@@ -99,15 +93,15 @@ namespace GarageManagement.Business.Garage
             return Task.Run(() =>
             {
                 var createdEmployeeDTO = new DTOEmployee();
-                var employeeEntity = _mapper.Map<Employee>(employeeDTO);
+                var employeeEntity = mapper.Map<Employee>(employeeDTO);
 
-                if (!employeeRepository.ExistByCondition(x => x.Name == employeeEntity.Name ||
+                if (!_employeeRepository.ExistByCondition(x => x.Name == employeeEntity.Name ||
                                                         (!string.IsNullOrEmpty(x.Email) && x.Email == employeeEntity.Email)))
                 {
-                    var createdEmployeeEntity = employeeRepository.Insert(employeeEntity);
-                    _unitOfWork.SaveChanges();
+                    var createdEmployeeEntity = _employeeRepository.Insert(employeeEntity);
+                    unitOfWork.SaveChanges();
 
-                    createdEmployeeDTO = _mapper.Map<DTOEmployee>(createdEmployeeEntity);
+                    createdEmployeeDTO = mapper.Map<DTOEmployee>(createdEmployeeEntity);
                 }
 
                 return new DataResult<DTOEmployee> { Errors = new List<ErrorDescriber>(), Target = createdEmployeeDTO };
@@ -118,14 +112,14 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                var employeeEntity = _mapper.Map<Employee>(employeeDTO);
+                var employeeEntity = mapper.Map<Employee>(employeeDTO);
                 var updatedEmployeeDTO = new DTOEmployee();
-                if ((employeeRepository.ExistByCondition(x => (x.Name == employeeEntity.Name && x.Id == employeeEntity.Id))) || (!employeeRepository.ExistByCondition(x => x.Name == employeeEntity.Name)))
+                if ((_employeeRepository.ExistByCondition(x => (x.Name == employeeEntity.Name && x.Id == employeeEntity.Id))) || (!_employeeRepository.ExistByCondition(x => x.Name == employeeEntity.Name)))
                 {
-                    var updatedEmployeeEntity = employeeRepository.Update(employeeEntity);
-                    _unitOfWork.SaveChanges();
+                    var updatedEmployeeEntity = _employeeRepository.Update(employeeEntity);
+                    unitOfWork.SaveChanges();
 
-                    updatedEmployeeDTO = _mapper.Map<DTOEmployee>(updatedEmployeeEntity);
+                    updatedEmployeeDTO = mapper.Map<DTOEmployee>(updatedEmployeeEntity);
 
                     return new DataResult<DTOEmployee> { Errors = new List<ErrorDescriber>(), Target = updatedEmployeeDTO };
                 }
@@ -140,10 +134,10 @@ namespace GarageManagement.Business.Garage
         {
             return Task.Run(() =>
             {
-                if (!userRepository.ExistByCondition(x => x.EmployeeId == employeeId))
+                if (!_userRepository.ExistByCondition(x => x.EmployeeId == employeeId))
                 {
-                    employeeRepository.Delete(employeeId);
-                    _unitOfWork.SaveChanges();
+                    _employeeRepository.Delete(employeeId);
+                    unitOfWork.SaveChanges();
 
                     return new DataResult<bool> { Errors = new List<ErrorDescriber>(), Target = true };
                 }

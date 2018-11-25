@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using GarageManagement.ServiceInterface.Result;
+using Common.Core.WebAPI.Result;
 
-namespace GarageManagement.Garage.WebAPI.Builder.Retry
+namespace DesignPattern.Builder.Retry
 {
     public interface IRetryBuilder<T>
     {

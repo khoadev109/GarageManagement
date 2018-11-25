@@ -110,10 +110,6 @@
     <Compile Include="IServiceBase.cs" />
     <Compile Include="Garage\IAccessaryUnitBusinessService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Result\DataResult.cs" />
-    <Compile Include="Result\ErrorDescriber.cs" />
-    <Compile Include="Result\ErrorLog.cs" />
-    <Compile Include="Tracking\DTO\DTOBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Library\Common.Core\Common.Core.csproj">
@@ -131,10 +127,6 @@
     <ProjectReference Include="..\GarageManagement.RepositoryInterface\GarageManagement.RepositoryInterface.csproj">
       <Project>{38e72635-8fcb-402c-bc1b-5c23d0028161}</Project>
       <Name>GarageManagement.RepositoryInterface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GarageManagement.Tracking.Entity\GarageManagement.Tracking.Entity.csproj">
-      <Project>{65f51918-b3a3-414f-9e12-5d02dc4d461a}</Project>
-      <Name>GarageManagement.Tracking.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
