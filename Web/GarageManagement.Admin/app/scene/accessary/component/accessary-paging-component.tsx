@@ -50,11 +50,11 @@ class AccessaryPaging extends BasePagingComponent<CombinedProps, IAccessary> {
                 <td>{item.Price}</td>
                 <td><input type="checkbox" disabled { ...item.OutOfStock && { "checked" : false }} /></td>
                 <td className="text-center">
-                    <Anchor click={this.alertCreateOrUpdatePopup.bind(this, "phụ tùng", item.Id)}
+                    <Anchor click={this.showCreateOrUpdatePopup.bind(this, "phụ tùng", item.Id)}
                             content={<i className="fa fa-pencil text-navy" aria-hidden="true"/>} />
                 </td>
                 <td className="text-center">
-                    <Anchor click={this.alertConfirmDeletePopup.bind(this, "danh mục", item.Id)} 
+                    <Anchor click={this.showConfirmDeletePopup.bind(this, "danh mục", item.Id)} 
                             content={<i className="fa fa-times text-navy" aria-hidden="true"/>} />
                 </td>
             </tr>
@@ -101,7 +101,7 @@ class AccessaryPaging extends BasePagingComponent<CombinedProps, IAccessary> {
                                 <div className="row">
                                     <div className="col-lg-12 text-right">
                                         <WrapperButton moreClass="btn-w-m" textAlign="text-right" text="Thêm mới"
-                                                       click={this.alertCreateOrUpdatePopup.bind(this, "phụ tùng")} />
+                                                       click={this.showCreateOrUpdatePopup.bind(this, "phụ tùng")} />
                                     </div>
                                 </div>
                             </div>

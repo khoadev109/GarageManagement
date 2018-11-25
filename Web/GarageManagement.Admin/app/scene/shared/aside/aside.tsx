@@ -207,10 +207,10 @@ class Aside extends AppCommon.BaseComponent<any, IAsideState> {
                                     <NavLink to="/admin/service-types" activeClassName="active"
                                         onClick={() => { this.openOrCollapseParentLink(ActiveParentLink.GeneralCategory) }}>Loại dịch vụ</NavLink>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <NavLink to="/admin/public-service" activeClassName="active"
                                         onClick={() => { this.openOrCollapseParentLink(ActiveParentLink.GeneralCategory) }}>Công dịch vụ</NavLink>
-                                </li>
+                                </li> */}
                                 <li>
                                     <NavLink to="/admin/public-service-unit" activeClassName="active"
                                         onClick={() => { this.openOrCollapseParentLink(ActiveParentLink.GeneralCategory) }}>Đơn vị tính - Dịch vụ</NavLink>
@@ -322,10 +322,10 @@ class Aside extends AppCommon.BaseComponent<any, IAsideState> {
                                     <NavLink to="/admin/history" activeClassName="active"
                                         onClick={() => { this.openOrCollapseParentLink(ActiveParentLink.Setting) }}>Lịch sử thao tác</NavLink>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <NavLink to="/admin/role-right-module" activeClassName="active"
                                         onClick={() => { this.openOrCollapseParentLink(ActiveParentLink.Setting) }}>Phân quyền</NavLink>
-                                </li>
+                                </li> */}
                             </ul>
                         </li>
                     </ul>

@@ -47,11 +47,11 @@ class AccessaryUnitPaging extends BasePagingComponent<CombinedProps, IAccessaryU
                 <td className="sorting_1">{item.Id}</td>
                 <td>{item.Name}</td>
                 <td className="text-center">
-                    <Anchor click={() => { this.alertCreateOrUpdatePopup("đơn vị tính phụ tùng", item.Id) }} 
+                    <Anchor click={() => { this.showCreateOrUpdatePopup("đơn vị tính phụ tùng", item.Id) }} 
                             content={<i className="fa fa-pencil text-navy" aria-hidden="true"/>} />
                 </td>
                 <td className="text-center">
-                    <Anchor click={() => { this.alertConfirmDeletePopup("đơn vị tính phụ tùng", item.Id) }} 
+                    <Anchor click={() => { this.showConfirmDeletePopup("đơn vị tính phụ tùng", item.Id) }} 
                             content={<i className="fa fa-times text-navy" aria-hidden="true"/>} />
                 </td>
             </tr>
@@ -91,7 +91,7 @@ class AccessaryUnitPaging extends BasePagingComponent<CombinedProps, IAccessaryU
                                 <div className="row">
                                     <div className="col-lg-12 text-right">
                                         <WrapperButton moreClass="btn-w-m" textAlign="text-right" text="Thêm mới"
-                                                       click={() => this.alertCreateOrUpdatePopup("đơn vị tính phụ tùng")} />
+                                                       click={() => this.showCreateOrUpdatePopup("đơn vị tính phụ tùng")} />
                                     </div>
                                 </div>
                             </div>

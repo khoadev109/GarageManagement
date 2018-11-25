@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import * as FetchAction from "../../../action/fetch-action";
 import * as PostAction from "../../../action/post-action";
 
-import { CarInfo } from "../../presentation/car-info";
-import { CustomerInfo } from "../../presentation/customer-info";
+import { CarInfo } from "../../presentation/car-info-component";
+import { CustomerInfo } from "../../presentation/customer-info-component";
 
 import { ICarInfo } from "../../../model/car-info-model";
 import { ICustomerInfo } from "../../../model/customer-info-model";

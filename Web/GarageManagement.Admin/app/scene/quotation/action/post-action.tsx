@@ -1,351 +1,146 @@
-import { ActionType } from "./action-type";
-import { IBaseAction } from "core/redux/action";
+import { ActionType as AT } from "./action-type";
+import { BaseAction, IPostAction } from "../../../core/redux/action";
 import * as PostService from "../service/post-service";
 
-export class QuotationCreateAction implements IBaseAction {
+export class QuotationCreateAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_CREATE_REQUEST;
+    successAction = AT.QUOTATION_CREATE_SUCCESS;    
+    errorAction = AT.QUOTATION_CREATE_ERROR;
+    
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationCreateService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_CREATE_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_CREATE_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_CREATE_ERROR, error } 
+        this.dispatching(entry, new PostService.QuotationCreateService());
     }
 }
 
-export class QuotationEditAction implements IBaseAction {
+export class QuotationEditAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_UPDATE_REQUEST;
+    successAction = AT.QUOTATION_UPDATE_SUCCESS;    
+    errorAction = AT.QUOTATION_UPDATE_ERROR;
+    
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationEditService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_UPDATE_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_UPDATE_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_UPDATE_ERROR, error } 
+        this.dispatching(entry, new PostService.QuotationEditService());
     }
 }
 
-export class QuotationEditOnlyQuotationInfoAction implements IBaseAction {
+export class QuotationEditOnlyQuotationInfoAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_REQUEST;
+    successAction = AT.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_SUCCESS;    
+    errorAction = AT.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_ERROR;
+    
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationEditOnlyQuotationInfoService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_ERROR, error } 
+        this.dispatching(entry, new PostService.QuotationEditOnlyQuotationInfoService());
     }
 }
 
-export class QuotationChangeStatusAction implements IBaseAction {
+export class QuotationChangeStatusAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_CHANGE_STATUS_REQUEST;
+    successAction = AT.QUOTATION_CHANGE_STATUS_SUCCESS;    
+    errorAction = AT.QUOTATION_CHANGE_STATUS_ERROR;
+    
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationChangeStatusService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_CHANGE_STATUS_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_CHANGE_STATUS_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_CHANGE_STATUS_ERROR, error } 
+        this.dispatching(entry, new PostService.QuotationChangeStatusService());
     }
 }
 
-export class QuotationItemCreateAction implements IBaseAction {
+export class QuotationItemCreateAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_ITEM_CREATE_REQUEST;
+    successAction = AT.QUOTATION_ITEM_CREATE_SUCCESS;    
+    errorAction = AT.QUOTATION_ITEM_CREATE_ERROR;
+    
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationItemCreateService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_ITEM_CREATE_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_ITEM_CREATE_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_ITEM_CREATE_ERROR, error } 
+        this.dispatching(entry, new PostService.QuotationItemCreateService());
     }
 }
 
-export class QuotationItemEditAction implements IBaseAction {
+export class QuotationItemEditAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_ITEM_EDIT_REQUEST;
+    successAction = AT.QUOTATION_ITEM_EDIT_SUCCESS;    
+    errorAction = AT.QUOTATION_ITEM_EDIT_ERROR;
+    
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationItemEditService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_ITEM_EDIT_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_ITEM_EDIT_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_ITEM_EDIT_ERROR, error } 
+        this.dispatching(entry, new PostService.QuotationItemEditService());
     }
 }
 
-export class QuotationItemDeleteAction implements IBaseAction {
+export class QuotationItemDeleteAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_ITEM_DELETE_REQUEST;
+    successAction = AT.QUOTATION_ITEM_DELETE_SUCCESS;    
+    errorAction = AT.QUOTATION_ITEM_DELETE_ERROR;
+    
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationItemDeleteService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_ITEM_DELETE_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_ITEM_DELETE_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_ITEM_DELETE_ERROR, error } 
+        this.dispatching(entry, new PostService.QuotationItemDeleteService());
     }
 }
 
-export class QuotationMultipleItemCreateAction implements IBaseAction {
+export class QuotationMultipleItemCreateAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_MULTIPLE_ITEM_CREATE_REQUEST;
+    successAction = AT.QUOTATION_MULTIPLE_ITEM_CREATE_SUCCESS;    
+    errorAction = AT.QUOTATION_MULTIPLE_ITEM_CREATE_ERROR;
+    
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationMultipleItemCreateService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_UPDATE_ITEMS_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_UPDATE_ITEMS_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_UPDATE_ITEMS_ERROR, error } 
+        this.dispatching(entry, new PostService.QuotationMultipleItemCreateService());
     }
 }
 
-export class QuotationItemsUpdateAction implements IBaseAction {
+export class QuotationItemsUpdateAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_UPDATE_ITEMS_REQUEST;
+    successAction = AT.QUOTATION_UPDATE_ITEMS_SUCCESS;    
+    errorAction = AT.QUOTATION_UPDATE_ITEMS_ERROR;
+    
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationUpdateItemsService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_UPDATE_ITEMS_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_UPDATE_ITEMS_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_UPDATE_ITEMS_ERROR, error } 
+        this.dispatching(entry, new PostService.QuotationUpdateItemsService());
     }
 }
 
-export class QuotationEmployeesUpdateAction implements IBaseAction {
-    updateEmployees(quotationId: string, employeeIds: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(employeeIds));
-            
-            let service = new PostService.QuotationUpdateEmployeeService();
-            
-            var request = { 
-                QuotationId: quotationId, 
-                EmployeeIds: employeeIds 
-            };
-
-            service.execute(request).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
+export class QuotationEmployeesUpdateAction extends BaseAction implements IPostAction {
     
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_UPDATE_EMPLOYEES_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.QUOTATION_UPDATE_EMPLOYEES_SUCCESS, result }
-    }
+    requestAction = AT.QUOTATION_UPDATE_EMPLOYEES_REQUEST;
+    successAction = AT.QUOTATION_UPDATE_EMPLOYEES_SUCCESS;    
+    errorAction = AT.QUOTATION_UPDATE_EMPLOYEES_ERROR;
     
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_UPDATE_EMPLOYEES_ERROR, error } 
-    }
-}
-
-export class ReceiptsCreateOrUpdateAction implements IBaseAction {
-    createOrUpdate(receiptsBillId: number, receipts: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(receipts));
-            
-            let service = new PostService.ReceiptsCreateOrUpdateService();
-            var request = { Id: receiptsBillId, Receipts: receipts };
-
-            service.execute(request).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.RECEIPTS_CREATE_OR_UPDATE_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.RECEIPTS_CREATE_OR_UPDATE_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.RECEIPTS_CREATE_OR_UPDATE_ERROR, error } 
-    }
-}
-
-export class PaySlipCreateOrUpdateAction implements IBaseAction {
-    createOrUpdate(paySlipBillId: number, paySlip: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(paySlip));
-            
-            let service = new PostService.PaySlipCreateOrUpdateService();
-            var request = { Id: paySlipBillId, PaySlip: paySlip };
-
-            service.execute(request).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
-    }
-    
-    request(entry: any) { 
-        return { type: ActionType.PAYSLIP_CREATE_OR_UPDATE_REQUEST, entry } 
-    }
-
-    success(result: any) {
-        return { type: ActionType.PAYSLIP_CREATE_OR_UPDATE_SUCCESS, result }
-    }
-    
-    failure(error: Error) { 
-        return { type: ActionType.PAYSLIP_CREATE_OR_UPDATE_ERROR, error } 
-    }
-}
-
-export class QuotationNoteUpdateSpecifyStepAction implements IBaseAction {
     post(entry: any) {
-        return (dispatch: any) => {
-            dispatch(this.request(entry));
-            
-            let service = new PostService.QuotationNoteUpdateSpecifyStepService();
-            service.execute(entry).then(
-                result => dispatch(this.success(result)),
-                error => dispatch(this.failure(error))
-            );
-        };
+        this.dispatching(entry, new PostService.QuotationUpdateItemsService());
     }
-    
-    request(entry: any) { 
-        return { type: ActionType.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_REQUEST, entry } 
-    }
+}
 
-    success(result: any) {
-        return { type: ActionType.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_SUCCESS, result }
-    }
+export class ReceiptsCreateOrUpdateAction extends BaseAction implements IPostAction {
     
-    failure(error: Error) { 
-        return { type: ActionType.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_ERROR, error } 
+    requestAction = AT.RECEIPTS_CREATE_OR_UPDATE_REQUEST;
+    successAction = AT.RECEIPTS_CREATE_OR_UPDATE_SUCCESS;    
+    errorAction = AT.RECEIPTS_CREATE_OR_UPDATE_ERROR;
+    
+    post(entry: any) {
+        this.dispatching(entry, new PostService.ReceiptsCreateOrUpdateService());
+    }
+}
+
+export class PaySlipCreateOrUpdateAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.PAYSLIP_CREATE_OR_UPDATE_REQUEST;
+    successAction = AT.PAYSLIP_CREATE_OR_UPDATE_SUCCESS;    
+    errorAction = AT.PAYSLIP_CREATE_OR_UPDATE_ERROR;
+    
+    post(entry: any) {
+        this.dispatching(entry, new PostService.PaySlipCreateOrUpdateService());
+    }
+}
+
+export class QuotationNoteUpdateSpecifyStepAction extends BaseAction implements IPostAction {
+    
+    requestAction = AT.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_REQUEST;
+    successAction = AT.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_SUCCESS;    
+    errorAction = AT.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_ERROR;
+    
+    post(entry: any) {
+        this.dispatching(entry, new PostService.QuotationNoteUpdateSpecifyStepService());
     }
 }

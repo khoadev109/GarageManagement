@@ -20,11 +20,11 @@ import { GeneralModal } from "component/common/modal-component";
 import { CustomerForm } from "../../../customer/component/customer-form-component";
 import { QuotationItemsEdit } from "../container/quotation-items-edit";
 
-import { CarInfo } from "../presentation/car-info";
-import { CustomerInfo } from "../presentation/customer-info";
-import { PendingQuotations } from "../presentation/pending-quotations";
-import { QuotationMenu } from "../presentation/quotation-menu";
-import { QuotationFunctional } from "../presentation/main-quotation-functional";
+import { CarInfo } from "../presentation/car-info-component";
+import { CustomerInfo } from "../presentation/customer-info-component";
+import { PendingQuotations } from "../presentation/pending-quotations-component";
+import { QuotationMenu } from "../presentation/quotation-menu-component";
+import { QuotationFunctional } from "../presentation/quotation-functional-component";
 
 import { ICarInfo } from "../../model/car-info-model";
 import { IEmployee } from "../../model/employee-info-model";
@@ -46,6 +46,7 @@ import {
     setNextStatusIdForQuotation, setPreviousStatusIdForQuotation,
     setNextStatusForCurrentQuotation, setPreviousStatusForCurrentQuotation
 } from "../../model/initialization";
+import { MainQuotationMapping } from "scene/quotation/redux-mapping/main-quotation-mapping";
 
 interface IQuotationNote {
     Id: number,
@@ -616,43 +617,5 @@ class MainQuotation extends React.Component<any, IMainQuotationState> implements
     }
 }
 
-const mapStateToProps = (state: any, ownProps: any) => {
-    return {
-        quotationId: ownProps.match.params.quotationId, 
-        quotationStatusId: ownProps.match.params.statusId,
-        quotationResult: state.QuotationReducer,
-        specifyQuotationNoteResult: state.SpecifyQuotationNoteReducer,
-        pendingQuotationsResult: state.PendingQuotationsReducer,
-        updateQuotationResult: state.QuotationEditReducer,
-        updateQuotationItemsResult: state.QuotationItemsUpdateReducer,
-        changeQuotationsStatusResult: state.QuotationChangeStatusReducer,
-        quotationNoteUpdateSpecifyStepResult: state.QuotationNoteUpdateSpecifyStepReducer
-    };
-}
-
-const mapDispatchToProps = (dispatch: any) => {
-    let quotationInfoAction = new FetchAction.QuotationAction();
-    let carLoadInfoAction = new CarFetchAction.CarByCustomerAction();
-    let pendingQuotationsAction = new FetchAction.PendingQuotationsAction();
-    let specifyQuotationNoteAction = new FetchAction.SpecifyQuotationNoteAction();
-
-    let quotationItemsUpdateAction = new PostAction.QuotationItemsUpdateAction();
-    let quotationEditAction = new PostAction.QuotationEditAction();
-    let changeQuotationStatusAction = new PostAction.QuotationChangeStatusAction();
-    let quotationNoteUpdateSpecifyStepAction = new PostAction.QuotationNoteUpdateSpecifyStepAction(); 
-    
-    return {
-        getQuotation: (entry: any) => dispatch(quotationInfoAction.fetch(entry)),
-        getQuotationNote: (quotationId: string, statusId: number) => dispatch(specifyQuotationNoteAction.fetch({ quotationId: quotationId, statusId: statusId })), 
-        getPendingQuotations: (statusId: number, searchTerm: string) => dispatch(pendingQuotationsAction.fetch({ statusId: statusId, searchTerm: searchTerm })),
-        
-        updateNote: (request) => dispatch(quotationNoteUpdateSpecifyStepAction.post(request)),
-        changeQuotationStatus: (request) => dispatch(changeQuotationStatusAction.post(request)),
-        updateQuotationItems: (quotationId: string, items: Array<IQuotationItem>) => dispatch(quotationItemsUpdateAction.post({ quotationId, items })),
-        updateQuotationInfo: (quotationId: string, quotation: IQuotation) => 
-            dispatch(quotationEditAction.post({ quotationId: quotationId, quotationDTO: quotation})),
-    }
-}
-
-const connectedQuotation = connect(mapStateToProps, mapDispatchToProps)(MainQuotation);
-export { connectedQuotation as MainQuotation };
+const connectedComponent = new MainQuotationMapping().connectComponent(MainQuotation);
+export { connectedComponent as MainQuotation };

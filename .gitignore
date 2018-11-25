@@ -206,6 +206,16 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 
+# vim
+*.txt~
+*.swp
+*.swo
+
+# file
+*.FileListAbsolute.txt
+*.project.assets.json
+*.props
+
 # Configs
 *.config
 

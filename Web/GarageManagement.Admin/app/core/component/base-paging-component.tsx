@@ -88,7 +88,7 @@ export abstract class BasePagingComponent<P, OS>
         });
     }
     
-    protected alertCreateOrUpdatePopup(title: string, Id?: stringOrNumberType) {
+    protected showCreateOrUpdatePopup(title: string, Id?: stringOrNumberType) {
         this.setState({
             Title: Id ? `Cập nhật ${title}` : `Thêm mới ${title}`,
             SelectedIdOnRow: Id ? Id : "",
@@ -96,7 +96,7 @@ export abstract class BasePagingComponent<P, OS>
         });
     }
     
-    protected alertConfirmDeletePopup(title: string, Id: stringOrNumberType) {
+    protected showConfirmDeletePopup(title: string, Id: stringOrNumberType) {
         this.setState({
             Title: `Bạn có chắc muốn xóa ${title} này không?`,
             SelectedIdOnRow: Id,

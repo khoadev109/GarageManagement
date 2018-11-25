@@ -10,9 +10,9 @@ import { IQuotation } from "../../../model/quotation-info-model";
 import { ICarInfo } from "../../../model/car-info-model";
 import { ICustomerInfo } from "../../../model/customer-info-model";
 import { IGarage } from "../../../../garage/model/garage-model";
-import { ReceiptsInfo } from "../../presentation/print/bill/receipts-info";
-import { PaySlipInfo } from "../../presentation/print/bill/payslip-info";
-import { CustomerCarInfo } from "../../presentation/print/bill/customer-car-info";
+import { ReceiptsInfo } from "../../presentation/print/bill/receipts-info-component";
+import { PaySlipInfo } from "../../presentation/print/bill/payslip-info-component";
+import { CustomerCarInfo } from "../../presentation/print/bill/customer-car-info-component";
 
 import { hideLeftAsideForFullPagePrinting } from "core/component/component";
 import { returnBooleanOrDefaultValue, returnNumberOrDefaultValue, returnStringOrDefaultValue } from "../../../../../core/library/data-type";

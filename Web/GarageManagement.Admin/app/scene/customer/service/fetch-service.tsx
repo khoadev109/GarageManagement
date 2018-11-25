@@ -5,7 +5,7 @@ import Environment from "environment";
 export class CustomerService implements ServiceProvider.IService {
     execute = (request: any) => {  
         return new FetchApi.Caller().Get(
-            Environment.GetApiUrl("Customer/Get"), 
+            Environment.GetApiUrl("Customer/GetCustomerWithCar"), 
             `?customerId=${request}`
         );
     }

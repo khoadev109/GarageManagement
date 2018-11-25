@@ -14,7 +14,7 @@ import { ICarInfo } from "../../model/car-info-model";
 import { ICustomerInfo } from "../../model/customer-info-model";
 import { IQuotationItem, IAccessaryItem, IServiceItem } from "../../model/quotation-item-model";
 import { IGarage } from "../../../garage/model/garage-model";
-import { PrintNavigationFooter } from "../presentation/print/print-navigation-footer";
+import { PrintNavigationFooter } from "../presentation/print/print-navigation-footer-component";
 import { hideLeftAsideForFullPagePrinting } from "core/component/component";
 
 import { 

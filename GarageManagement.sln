@@ -23,13 +23,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageManagement.Infrastruc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageManagement.Business", "Infrastructure\GarageManagement.Business\GarageManagement.Business.csproj", "{3CCCDE22-40E3-43DE-BCE1-9AEDB171890E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3FDC7F1C-9B0E-4624-B1DE-3A53F1D2826C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageManagement.Garage.WebAPI", "Web\GarageManagement.Garage.WebAPI\GarageManagement.Garage.WebAPI.csproj", "{DC55E855-A2D4-4528-A4A0-68A7CC5FCAFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageManagement.RepositoryInterface", "Domain\GarageManagement.RepositoryInterface\GarageManagement.RepositoryInterface.csproj", "{38E72635-8FCB-402C-BC1B-5C23D0028161}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageManagement.ServiceInterface", "Domain\GarageManagement.ServiceInterface\GarageManagement.ServiceInterface.csproj", "{7D990ACB-55E5-4BDD-B128-271551E2D0F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageManagement.Notification", "BackgroundService\GarageManagement.Notification\GarageManagement.Notification.csproj", "{54369898-9780-4279-A9EC-3EF2DED3F2C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +103,14 @@ Global
 		{7D990ACB-55E5-4BDD-B128-271551E2D0F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D990ACB-55E5-4BDD-B128-271551E2D0F7}.Release|x64.ActiveCfg = Release|Any CPU
 		{7D990ACB-55E5-4BDD-B128-271551E2D0F7}.Release|x64.Build.0 = Release|Any CPU
+		{54369898-9780-4279-A9EC-3EF2DED3F2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54369898-9780-4279-A9EC-3EF2DED3F2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54369898-9780-4279-A9EC-3EF2DED3F2C2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{54369898-9780-4279-A9EC-3EF2DED3F2C2}.Debug|x64.Build.0 = Debug|Any CPU
+		{54369898-9780-4279-A9EC-3EF2DED3F2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54369898-9780-4279-A9EC-3EF2DED3F2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54369898-9780-4279-A9EC-3EF2DED3F2C2}.Release|x64.ActiveCfg = Release|Any CPU
+		{54369898-9780-4279-A9EC-3EF2DED3F2C2}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +124,7 @@ Global
 		{DC55E855-A2D4-4528-A4A0-68A7CC5FCAFC} = {F9C8246D-E473-4AAD-A72B-84A8A48CBA55}
 		{38E72635-8FCB-402C-BC1B-5C23D0028161} = {69B39DF8-AF1D-4033-910E-D25B12F3A7B4}
 		{7D990ACB-55E5-4BDD-B128-271551E2D0F7} = {69B39DF8-AF1D-4033-910E-D25B12F3A7B4}
+		{54369898-9780-4279-A9EC-3EF2DED3F2C2} = {C56BBD33-765B-488E-B2A9-0321330D0866}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C746203B-114C-4713-B76F-6099EE5FC290}

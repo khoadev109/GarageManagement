@@ -36,8 +36,8 @@ import { initializeCustomer } from "../../../customer/model/initialization";
 import { setResponseStateForCar } from "../../../car/model/response-state-transform";
 import { setResponseStateForCustomer } from "../../../customer/model/response-state-transform";
 
-import { FullCarInfo } from "../presentation/new-quotation/full-car-info";
-import { FullCustomerInfo } from "../presentation/new-quotation/full-customer-info";
+import { FullCarInfo } from "../presentation/new-quotation/full-car-info-component";
+import { FullCustomerInfo } from "../presentation/new-quotation/full-customer-info-component";
 
 interface INewQuotationState extends IModal {
     IsValid?: boolean,

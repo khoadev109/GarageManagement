@@ -9,13 +9,9 @@ import { GarageInformationReducer } from "scene/garage/reducer/fetch-reducer";
 import { GarageUpdateReducer } from "scene/garage/reducer/post-reducer";
 
 import { CarCreateReducer, CarEditReducer, CarDeleteReducer } from "scene/car/reducer/post-reducer";
-import { 
-    CarReducer, CarByCustomerReducer, OwnedCarsReducer, 
-    CarsWithPagingReducer, ModelsByManufacturerReducer, YearsByModelReducer
-} 
-from "scene/car/reducer/fetch-reducer";
+import { CarReducer, CarByCustomerReducer, OwnedCarsReducer, CarsWithPagingReducer } from "scene/car/reducer/fetch-reducer";
 
-import { CustomerReducer, SpecifyCustomerCarReducer, CustomersWithPagingReducer } from "scene/customer/reducer/fetch-reducer";
+import { CustomerReducer, CustomersWithPagingReducer } from "scene/customer/reducer/fetch-reducer";
 import { CustomerCreateReducer, CustomerEditReducer, CustomerDeleteReducer } from "scene/customer/reducer/post-reducer";
 
 import { CustomerTypeReducer, CustomersTypeWithPagingReducer } from "scene/customer-type/reducer/fetch-reducer";
@@ -85,9 +81,6 @@ const rootReducer = combineReducers({
     LoginReducer,
     LogoutReducer,
 
-    ModelsByManufacturerReducer,
-    YearsByModelReducer,
-
     ProvincesReducer,
     DistrictsReducer,
     WardsReducer,
@@ -96,7 +89,6 @@ const rootReducer = combineReducers({
     GarageUpdateReducer,
     
     CustomerReducer,
-    SpecifyCustomerCarReducer,
     CustomersWithPagingReducer,
     CustomerCreateReducer,
     CustomerEditReducer,

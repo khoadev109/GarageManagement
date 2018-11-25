@@ -50,11 +50,11 @@ class EmployeePaging extends BasePagingComponent<CombinedProps, IEmployee> {
                 <td>{item.Phone}</td>
                 <td>{item.Email}</td>
                 <td className="text-center">
-                    <Anchor click={() => { this.alertCreateOrUpdatePopup("nhân viên", item.Id) }} 
+                    <Anchor click={() => { this.showCreateOrUpdatePopup("nhân viên", item.Id) }} 
                             content={<i className="fa fa-pencil text-navy" aria-hidden="true"/>} />
                 </td>
                 <td className="text-center">
-                    <Anchor click={() => { this.alertConfirmDeletePopup("nhân viên", item.Id) }} 
+                    <Anchor click={() => { this.showConfirmDeletePopup("nhân viên", item.Id) }} 
                             content={<i className="fa fa-times text-navy" aria-hidden="true"/>} />
                 </td>
             </tr>
@@ -106,7 +106,7 @@ class EmployeePaging extends BasePagingComponent<CombinedProps, IEmployee> {
                                 <div className="row">
                                     <div className="col-lg-12 text-right">
                                     <WrapperButton moreClass="btn-w-m" textAlign="text-right" text="Thêm mới"
-                                                   click={() => this.alertCreateOrUpdatePopup("nhân viên")} />
+                                                   click={() => this.showCreateOrUpdatePopup("nhân viên")} />
                                     </div>
                                 </div>
                             </div>

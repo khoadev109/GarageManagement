@@ -48,11 +48,11 @@ class ManufacturerPaging extends BasePagingComponent<CombinedProps, IManufacture
                 <td>{item.Name}</td>
                 <td>{item.Description}</td>
                 <td className="text-center">
-                    <Anchor click={this.alertCreateOrUpdatePopup.bind(this, "hãng sản xuất", item.Id)}
+                    <Anchor click={this.showCreateOrUpdatePopup.bind(this, "hãng sản xuất", item.Id)}
                             content={<i className="fa fa-pencil text-navy" aria-hidden="true"/>} />
                 </td>
                 <td className="text-center">
-                    <Anchor click={this.alertConfirmDeletePopup.bind(this, "hãng sản xuất", item.Id)} 
+                    <Anchor click={this.showConfirmDeletePopup.bind(this, "hãng sản xuất", item.Id)} 
                             content={<i className="fa fa-times text-navy" aria-hidden="true"/>} />
                 </td>
             </tr>
@@ -96,7 +96,7 @@ class ManufacturerPaging extends BasePagingComponent<CombinedProps, IManufacture
                                 <div className="row">
                                     <div className="col-lg-12 text-right">
                                         <WrapperButton moreClass="btn-w-m" textAlign="text-right" text="Thêm mới"
-                                                       click={this.alertCreateOrUpdatePopup.bind(this, "hãng sản xuất")} />
+                                                       click={this.showCreateOrUpdatePopup.bind(this, "hãng sản xuất")} />
                                     </div>
                                 </div>
                             </div>

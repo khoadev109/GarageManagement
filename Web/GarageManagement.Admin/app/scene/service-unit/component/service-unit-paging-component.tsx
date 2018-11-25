@@ -47,11 +47,11 @@ class ServiceUnitPaging extends BasePagingComponent<CombinedProps, IServiceUnit>
                 <td className="sorting_1">{item.Id}</td>
                 <td>{item.Name}</td>
                 <td className="text-center">
-                    <Anchor click={this.alertCreateOrUpdatePopup.bind(this, "đơn vị công dịch vụ", item.Id)}
+                    <Anchor click={this.showCreateOrUpdatePopup.bind(this, "đơn vị công dịch vụ", item.Id)}
                             content={<i className="fa fa-pencil text-navy" aria-hidden="true"/>} />
                 </td>
                 <td className="text-center">
-                    <Anchor click={this.alertConfirmDeletePopup.bind(this, "đơn vị công dịch vụ", item.Id)} 
+                    <Anchor click={this.showConfirmDeletePopup.bind(this, "đơn vị công dịch vụ", item.Id)} 
                             content={<i className="fa fa-times text-navy" aria-hidden="true"/>} />
                 </td>
             </tr>
@@ -92,7 +92,7 @@ class ServiceUnitPaging extends BasePagingComponent<CombinedProps, IServiceUnit>
                                 <div className="row">
                                     <div className="col-lg-12 text-right">
                                         <WrapperButton moreClass="btn-w-m" textAlign="text-right" text="Thêm mới"
-                                                       click={this.alertCreateOrUpdatePopup.bind(this, "đơn vị công dịch vụ")} />
+                                                       click={this.showCreateOrUpdatePopup.bind(this, "đơn vị công dịch vụ")} />
                                     </div>
                                 </div>
                             </div>

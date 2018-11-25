@@ -53,11 +53,11 @@ class BranchPaging extends BasePagingComponent<CombinedProps, IBranch> {
                 <td>{item.Phone}</td>
                 <td>{item.Email}</td>
                 <td className="text-center">
-                    <Anchor click={() => { this.alertCreateOrUpdatePopup("chi nhánh", item.Id) }} 
+                    <Anchor click={() => { this.showCreateOrUpdatePopup("chi nhánh", item.Id) }} 
                             content={<i className="fa fa-pencil text-navy" aria-hidden="true"/>} />
                 </td>
                 <td className="text-center">
-                    <Anchor click={() => { this.alertConfirmDeletePopup("chi nhánh", item.Id) }} 
+                    <Anchor click={() => { this.showConfirmDeletePopup("chi nhánh", item.Id) }} 
                             content={<i className="fa fa-times text-navy" aria-hidden="true"/>} />
                 </td>
             </tr>
@@ -106,7 +106,7 @@ class BranchPaging extends BasePagingComponent<CombinedProps, IBranch> {
                                 <div className="row">
                                     <div className="col-lg-12 text-right">
                                         <WrapperButton moreClass="btn-w-m" textAlign="text-right" text="Thêm mới"
-                                                       click={() => this.alertCreateOrUpdatePopup("chi nhánh")} />
+                                                       click={() => this.showCreateOrUpdatePopup("chi nhánh")} />
                                     </div>
                                 </div>
                             </div>

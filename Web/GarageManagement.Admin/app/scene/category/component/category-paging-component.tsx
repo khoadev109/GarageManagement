@@ -48,11 +48,11 @@ class CategoryPaging extends BasePagingComponent<CombinedProps, ICategory> {
                 <td>{item.Name}</td>
                 <td>{item.ParentName}</td>                
                 <td className="text-center">
-                    <Anchor click={() => { this.alertCreateOrUpdatePopup("danh mục", item.Id) }} 
+                    <Anchor click={() => { this.showCreateOrUpdatePopup("danh mục", item.Id) }} 
                             content={<i className="fa fa-pencil text-navy" aria-hidden="true"/>} />
                 </td>
                 <td className="text-center">
-                    <Anchor click={() => { this.alertConfirmDeletePopup("danh mục", item.Id) }} 
+                    <Anchor click={() => { this.showConfirmDeletePopup("danh mục", item.Id) }} 
                             content={<i className="fa fa-times text-navy" aria-hidden="true"/>} />
                 </td>
             </tr>
@@ -94,7 +94,7 @@ class CategoryPaging extends BasePagingComponent<CombinedProps, ICategory> {
                                 </div>
                                 <div className="row">
                                     <WrapperButton moreClass="btn-w-m" textAlign="text-right" text="Thêm mới"
-                                                   click={() => this.alertCreateOrUpdatePopup("danh mục")} />
+                                                   click={() => this.showCreateOrUpdatePopup("danh mục")} />
                                 </div>
                             </div>
                         </div>

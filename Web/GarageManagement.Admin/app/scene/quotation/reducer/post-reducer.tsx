@@ -1,315 +1,41 @@
-import * as React from "react";
-import { ActionType } from "../action/action-type";
-import * as CoreReducer from "core/redux/root-reducer";
+import { ActionType as AT } from "../action/action-type";
+import CoreReducer from "core/redux/reducer";
 
-export const QuotationCreateReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_CREATE_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_CREATE_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_CREATE_ERROR:
-            return {
-                ...state,
-                loading: false, 
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationCreateReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_CREATE_REQUEST), (typeof AT.QUOTATION_CREATE_SUCCESS), (typeof AT.QUOTATION_CREATE_ERROR)>(action);
 
-export const QuotationEditReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_UPDATE_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_UPDATE_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_UPDATE_ERROR:
-            return {
-                ...state,
-                loading: false, 
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationEditReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_UPDATE_REQUEST), (typeof AT.QUOTATION_UPDATE_SUCCESS), (typeof AT.QUOTATION_UPDATE_ERROR)>(action);
 
-export const QuotationEditOnlyQuotationInfoReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_ERROR:
-            return {
-                ...state,
-                loading: false, 
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationEditOnlyQuotationInfoReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_REQUEST), (typeof AT.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_SUCCESS), (typeof AT.QUOTATION_UPDATE_ONLY_QUOTATION_INFO_ERROR)>(action);
 
-export const QuotationChangeStatusReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_CHANGE_STATUS_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_CHANGE_STATUS_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_CHANGE_STATUS_ERROR:
-            return {
-                ...state,
-                loading: false,
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationChangeStatusReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_CHANGE_STATUS_REQUEST), (typeof AT.QUOTATION_CHANGE_STATUS_SUCCESS), (typeof AT.QUOTATION_CHANGE_STATUS_ERROR)>(action);
 
-export const QuotationItemCreateReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_ITEM_CREATE_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_ITEM_CREATE_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_ITEM_CREATE_ERROR:
-            return {
-                ...state,
-                loading: false, 
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationItemCreateReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_ITEM_CREATE_REQUEST), (typeof AT.QUOTATION_ITEM_CREATE_SUCCESS), (typeof AT.QUOTATION_ITEM_CREATE_ERROR)>(action);
 
-export const QuotationItemEditReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_ITEM_EDIT_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_ITEM_EDIT_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_ITEM_EDIT_ERROR:
-            return {
-                ...state,
-                loading: false, 
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationItemEditReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_ITEM_EDIT_REQUEST), (typeof AT.QUOTATION_ITEM_EDIT_SUCCESS), (typeof AT.QUOTATION_ITEM_EDIT_ERROR)>(action);
 
-export const QuotationItemDeleteReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_ITEM_DELETE_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_ITEM_DELETE_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_ITEM_DELETE_ERROR:
-            return {
-                ...state,
-                loading: false, 
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationItemDeleteReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_ITEM_DELETE_REQUEST), (typeof AT.QUOTATION_ITEM_DELETE_SUCCESS), (typeof AT.QUOTATION_ITEM_DELETE_ERROR)>(action);
 
-export const QuotationMultipleItemCreateReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_MULTIPLE_ITEM_CREATE_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_MULTIPLE_ITEM_CREATE_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_MULTIPLE_ITEM_CREATE_ERROR:
-            return {
-                ...state,
-                loading: false, 
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationMultipleItemCreateReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_MULTIPLE_ITEM_CREATE_REQUEST), (typeof AT.QUOTATION_MULTIPLE_ITEM_CREATE_SUCCESS), (typeof AT.QUOTATION_MULTIPLE_ITEM_CREATE_ERROR)>(action);
 
-export const QuotationEmployeesUpdateReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_UPDATE_EMPLOYEES_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_UPDATE_EMPLOYEES_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_UPDATE_EMPLOYEES_ERROR:
-            return {
-                ...state,
-                loading: false,
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationEmployeesUpdateReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_UPDATE_EMPLOYEES_REQUEST), (typeof AT.QUOTATION_UPDATE_EMPLOYEES_SUCCESS), (typeof AT.QUOTATION_UPDATE_EMPLOYEES_ERROR)>(action);
 
-export const QuotationItemsUpdateReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_UPDATE_ITEMS_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_UPDATE_ITEMS_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_UPDATE_ITEMS_ERROR:
-            return {
-                ...state,
-                loading: false,
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationItemsUpdateReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_UPDATE_ITEMS_REQUEST), (typeof AT.QUOTATION_UPDATE_ITEMS_SUCCESS), (typeof AT.QUOTATION_UPDATE_ITEMS_ERROR)>(action);
 
-export const ReceiptsCreateOrUpdateReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.RECEIPTS_CREATE_OR_UPDATE_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.RECEIPTS_CREATE_OR_UPDATE_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.RECEIPTS_CREATE_OR_UPDATE_ERROR:
-            return {
-                ...state,
-                loading: false,
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const ReceiptsCreateOrUpdateReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.RECEIPTS_CREATE_OR_UPDATE_REQUEST), (typeof AT.RECEIPTS_CREATE_OR_UPDATE_SUCCESS), (typeof AT.RECEIPTS_CREATE_OR_UPDATE_ERROR)>(action);
 
-export const PaySlipCreateOrUpdateReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.PAYSLIP_CREATE_OR_UPDATE_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.PAYSLIP_CREATE_OR_UPDATE_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.PAYSLIP_CREATE_OR_UPDATE_ERROR:
-            return {
-                ...state,
-                loading: false,
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const PaySlipCreateOrUpdateReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.PAYSLIP_CREATE_OR_UPDATE_REQUEST), (typeof AT.PAYSLIP_CREATE_OR_UPDATE_SUCCESS), (typeof AT.PAYSLIP_CREATE_OR_UPDATE_ERROR)>(action);
 
-export const QuotationNoteUpdateSpecifyStepReducer = (state = CoreReducer.ResponseState, action: any) => {
-    switch (action.type) {
-        case ActionType.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
-        case ActionType.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                target: action.result
-            }
-        case ActionType.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_ERROR:
-            return {
-                ...state,
-                loading: false,
-                error: action.error
-            }
-        default:
-            return state
-    }
-}
+export const QuotationNoteUpdateSpecifyStepReducer = 
+(action: any) => CoreReducer.Create<(typeof AT.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_REQUEST), (typeof AT.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_SUCCESS), (typeof AT.QUOTATION_NOTE_UPDATE_SPECIFY_STEP_ERROR)>(action);

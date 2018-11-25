@@ -49,11 +49,11 @@ class CustomerTypePaging extends BasePagingComponent<CombinedProps, ICustomerTyp
                 <td>{item.Name}</td>
                 <td>{item.Description}</td>
                 <td className="text-center">
-                    <Anchor click={() => { this.alertCreateOrUpdatePopup("loại khách hàng", item.Id) }} 
+                    <Anchor click={() => { this.showCreateOrUpdatePopup("loại khách hàng", item.Id) }} 
                             content={<i className="fa fa-pencil text-navy" aria-hidden="true"/>} />
                 </td>
                 <td className="text-center">
-                    <Anchor click={() => { this.alertConfirmDeletePopup("loại khách hàng", item.Id) }} 
+                    <Anchor click={() => { this.showConfirmDeletePopup("loại khách hàng", item.Id) }} 
                             content={<i className="fa fa-times text-navy" aria-hidden="true"/>} />
                 </td>
             </tr>
@@ -97,7 +97,7 @@ class CustomerTypePaging extends BasePagingComponent<CombinedProps, ICustomerTyp
                                 <div className="row">
                                     <div className="col-lg-12 text-right">
                                         <WrapperButton moreClass="btn-w-m" textAlign="text-right" text="Thêm mới"
-                                                       click={() => this.alertCreateOrUpdatePopup("loại khách hàng")} />
+                                                       click={() => this.showCreateOrUpdatePopup("loại khách hàng")} />
                                     </div>
                                 </div>
                             </div>
